@@ -44,11 +44,15 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                foreach ($get_list as $key => $rows) { ?>
+                                foreach ($get_list as $key => $rows) {
+                                    $cluster = $rows->Cluster;
+                                    $FormDate = $rows->FormDate;
+                                    ?>
                                     <tr>
-                                        <?php foreach ($rows as $k => $r) { ?>
-                                            <td><?php echo $r; ?></td>
-                                        <?php } ?>
+                                        <td onclick="getHousehold(this)" data-cluster="<?php echo $cluster ?>"
+                                            data-formDate="<?php echo $FormDate ?>"><?php echo $cluster ?></td>
+                                        <td><?php echo $FormDate ?></td>
+                                        <td><?php echo $rows->Synced; ?></td>
                                     </tr>
                                 <?php } ?>
                                 </tbody>
@@ -61,10 +65,68 @@
     </div>
     <?php echo $this->load->view('includes/footer'); ?>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="clusterModal" tabindex="-1" role="dialog" aria-labelledby="clusterModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="clusterModalLabel">Cluster Data</h5>
+                <p>Cluster: <span class="cluster_text"></span>, FormDate: <span class="formdate_text"></span></p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <h4>Households</h4>
+                <ul class="body_text" style="list-style: decimal;"></ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- ./wrapper -->
 <?php echo $this->load->view('includes/scripts'); ?>
 <!-- page script -->
 <script>
+
+    function getHousehold(obj) {
+        var cluster = $(obj).attr('data-cluster');
+        var formDate = $(obj).attr('data-formDate');
+        if (cluster != undefined && cluster != '' && formDate != undefined && formDate != '') {
+            $('.cluster_text').text(cluster);
+            $('.formdate_text').text(formDate);
+
+            $('#clusterModal').modal('show');
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php/Tpvics/getHousehold',
+                data: 'cluster=' + cluster + '&formDate=' + formDate,
+                method: 'POST',
+                success: function (res) {
+                    var items = '';
+                    if (res != '' && JSON.parse(res).length > 0) {
+                        var response = JSON.parse(res);
+                        try {
+                            $.each(response, function (i, v) {
+                                items += '<li>' + v.hhno + '</li>';
+                            })
+                        } catch (e) {
+                        }
+                    }
+                    $('.body_text').html(items);
+                }
+
+            })
+        } else {
+            alert('Invalid Cluster');
+        }
+    }
+
     $(document).ready(function () {
         var table = $('#get_list').DataTable({
             responsive: true,
@@ -73,6 +135,7 @@
             "pageLength": 25,
             "scrollX": true,
             "ordering": true,
+            "order": [[1, "desc"]]
 
         });
 

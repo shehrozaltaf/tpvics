@@ -19,11 +19,12 @@ class Tpvics extends MX_Controller
     }
 
 
-    function dashboard(){
+    function dashboard()
+    {
 
         $this->data['heading'] = "Coverage Evaluation Survey, Pakistan, 2020";
 
-        if($this->users->in_group('admin') || $this->users->in_group('management')){
+        if ($this->users->in_group('admin') || $this->users->in_group('management')) {
             $total_clusters_by_district = $this->clusters_by_district('');
             $clusters_by_district = array();
             foreach ($total_clusters_by_district->result() as $row) {
@@ -51,7 +52,7 @@ class Tpvics extends MX_Controller
 			from clusters  
 			group by SUBSTRING (clusters.dist_id, 1, 1) order by dist_id");
 
-           $c_r_clusters = $this->scans->query("select SUBSTRING (c.dist_id, 1, 1) as dist_id, c.cluster_no,
+            $c_r_clusters = $this->scans->query("select SUBSTRING (c.dist_id, 1, 1) as dist_id, c.cluster_no,
 			(select count(*) from bl_randomised where dist_id = c.dist_id and hh02 = c.cluster_no) as hh_randomized,
 			(select count(distinct hhno) from forms where dist_id = c.dist_id and cluster_code = c.cluster_no and cast(istatus as int) > 0 and cast(istatus as int) < 96 and istatus is not null and istatus != '' and istatus != 'null') as hh_collected
 			from clusters c   order by c.dist_id");
@@ -70,7 +71,7 @@ class Tpvics extends MX_Controller
             $rc_d7 = 0;
             $rc_d9 = 0;
 
-            foreach($c_r_clusters->result() as $r){
+            foreach ($c_r_clusters->result() as $r) {
 
                 if ($r->dist_id == '1') {
                     if ($r->hh_collected == 20) {
@@ -96,7 +97,7 @@ class Tpvics extends MX_Controller
                     } else {
                         $rc_d4 = $rc_d4 + 1;
                     }
-                }  else if ($r->dist_id == '7') {
+                } else if ($r->dist_id == '7') {
                     if ($r->hh_collected == 20) {
                         $cc_d7 = $cc_d7 + 1;
                     } else {
@@ -130,12 +131,12 @@ class Tpvics extends MX_Controller
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            if(!empty($this->uri->segment(3))){
+            if (!empty($this->uri->segment(3))) {
 
                 $type = substr($this->uri->segment(3), 0, 2);
-                $d    = substr($this->uri->segment(3), 4, 3);
+                $d = substr($this->uri->segment(3), 4, 3);
 
-                if($type == 'rc'){
+                if ($type == 'rc') {
 
                     $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
@@ -155,8 +156,7 @@ class Tpvics extends MX_Controller
 					order by l.enumcode,l.hh02");
 
 
-
-                } else if($type == 'cc'){
+                } else if ($type == 'cc') {
 
                     $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
@@ -176,7 +176,7 @@ class Tpvics extends MX_Controller
 					group by l.enumcode, l.hh02
 					order by l.enumcode,l.hh02");
 
-                } else if($type == 'ic'){
+                } else if ($type == 'ic') {
 
                     $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
@@ -214,28 +214,28 @@ class Tpvics extends MX_Controller
 				where 1=2 and  l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 				group by l.enumcode, l.hh02
 				order by l.enumcode,l.hh02");
-               /* $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
-				(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
-				(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,
-				sum(case when hh04 = '1' and hh15 != '1' then 1 else 0 end) as households,
-				sum(case when hh04 = '1' and hh15 != '1' and hh10 = '1' then 1 else 0 end) as eligible_households,
-				(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-				(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-				(select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,
-				(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-				(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
-				from clusters c
-				left join listings l on l.hh02 = c.cluster_no
-				where (c.randomized = '1' or c.randomized = '2')
-				and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
-				group by l.enumcode, l.hh02
-				order by l.enumcode,l.hh02");*/
+                /* $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
+                 (select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
+                 (select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,
+                 sum(case when hh04 = '1' and hh15 != '1' then 1 else 0 end) as households,
+                 sum(case when hh04 = '1' and hh15 != '1' and hh10 = '1' then 1 else 0 end) as eligible_households,
+                 (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
+                 (select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
+                 (select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,
+                 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
+                 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+                 from clusters c
+                 left join listings l on l.hh02 = c.cluster_no
+                 where (c.randomized = '1' or c.randomized = '2')
+                 and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+                 group by l.enumcode, l.hh02
+                 order by l.enumcode,l.hh02");*/
             }
 
 
         } else {
 
-            $id 	  = $this->users->get_user()->id;
+            $id = $this->users->get_user()->id;
             $district = $this->users->get_district($id);
 
             $this->data['clusters_by_district'] = $this->scans->query("select dist_id, 
@@ -262,19 +262,19 @@ class Tpvics extends MX_Controller
             $rc_d2 = 0;
             $rc_d3 = 0;
 
-            foreach($c_r_clusters->result() as $r){
+            foreach ($c_r_clusters->result() as $r) {
 
-                if($r->dist_id == '2'){
+                if ($r->dist_id == '2') {
 
-                    if($r->hh_collected == 20){
+                    if ($r->hh_collected == 20) {
                         $rc_d2 = $rc_d2 + 1;
                     } else {
                         $cc_d2 = $cc_d2 + 1;
                     }
 
-                } else if($r->dist_id == '3'){
+                } else if ($r->dist_id == '3') {
 
-                    if($r->hh_collected == 20){
+                    if ($r->hh_collected == 20) {
                         $rc_d3 = $rc_d3 + 1;
                     } else {
                         $cc_d3 = $cc_d3 + 1;
@@ -283,13 +283,13 @@ class Tpvics extends MX_Controller
             }
 
             // Completed Clusters
-            $this->data['cc_d2'] 	= $cc_d2;
-            $this->data['cc_d3'] 	= $cc_d3;
+            $this->data['cc_d2'] = $cc_d2;
+            $this->data['cc_d3'] = $cc_d3;
             $this->data['cc_total'] = $cc_d2 + $cc_d3;
 
             // Remaining Clusters
-            $this->data['rc_d2'] 	= $rc_d2;
-            $this->data['rc_d3'] 	= $rc_d3;
+            $this->data['rc_d2'] = $rc_d2;
+            $this->data['rc_d3'] = $rc_d3;
             $this->data['rc_total'] = $rc_d2 + $rc_d3;
 
 
@@ -312,7 +312,7 @@ class Tpvics extends MX_Controller
 
         }
 
-        $this->data['message']  	= $this->session->flashdata('message');
+        $this->data['message'] = $this->session->flashdata('message');
         $this->data['main_content'] = 'scans/dashboard';
         $this->load->view('includes/template', $this->data);
     }
@@ -390,7 +390,7 @@ class Tpvics extends MX_Controller
                 } else {
                     $rc_d4 = $rc_d4 + 1;
                 }
-            }  else if ($r->dist_id == '7') {
+            } else if ($r->dist_id == '7') {
                 if ($r->hh_collected == 20) {
                     $cc_d7 = $cc_d7 + 1;
                 } else {
@@ -1456,6 +1456,22 @@ ORDER BY
         $this->load->view('includes/template', $this->data);
     }
 
+    function getHousehold()
+    {
+        $cluster = $_POST['cluster'];
+        $formDate = $_POST['formDate'];
+        $query = "SELECT
+	hhno
+FROM
+	[dbo].[forms]
+WHERE
+	cluster_code = '" . $cluster . "'
+AND formdate LIKE  '" . $formDate . "%' ";
+        $getData = $this->scans->query($query);
+        echo json_encode($getData->result());
+    }
+
+
     function skipQuestions()
     {
         $this->data['heading'] = "Coverage Evaluation Survey, Pakistan, 2020";
@@ -1464,7 +1480,7 @@ ORDER BY
 	sq.total,
 	(
 		hh15 + hh18 + hh20 + ss04 + ss07 + ss09 + ss11 + ss22 + ss24
-	) / 9 AS average,
+	) / 9 AS SkipPecentage,
 	sq.hh15,
 	sq.hh18,
 	sq.hh20,
@@ -1483,7 +1499,7 @@ FROM
 	sq.total,
 	(
 		IM01 + IM02 +  IM08 + IM10 + IM14 + IM16 + IM18 + IM21 + IM23
-	) / 10 AS average,
+	) / 10 AS SkipPecentage,
 	sq.IM01,
 	sq.IM02,
 	 

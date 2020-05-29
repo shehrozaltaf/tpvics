@@ -37,7 +37,11 @@
                                 <thead>
                                 <tr>
                                     <?php foreach ($get_list[0] as $k => $r) { ?>
-                                        <th><?php echo strtoupper($k); ?></th>
+                                        <th><?php if ($k == 'SkipPecentage') {
+                                                echo 'Skip Pecentage';
+                                            } else {
+                                                echo strtoupper($k);
+                                            } ?></th>
 
                                     <?php } ?>
                                 </tr>
@@ -47,7 +51,7 @@
                                 foreach ($get_list as $key => $rows) { ?>
                                     <tr>
                                         <?php foreach ($rows as $k => $r) { ?>
-                                            <td> <?php if ($k == 'username' || $k == 'total' || $k == 'average') {
+                                            <td> <?php if ($k == 'username' || $k == 'total') {
                                                     echo $r;
                                                 } else {
                                                     echo $r . '%';
@@ -72,7 +76,11 @@
                                 <thead>
                                 <tr>
                                     <?php foreach ($get_list_childs[0] as $k => $r) { ?>
-                                        <th><?php echo strtoupper($k); ?></th>
+                                        <th><?php if ($k == 'SkipPecentage') {
+                                                echo 'Skip Pecentage';
+                                            } else {
+                                                echo strtoupper($k);
+                                            } ?></th>
 
                                     <?php } ?>
                                 </tr>
@@ -82,7 +90,7 @@
                                 foreach ($get_list_childs as $key => $rows) { ?>
                                     <tr>
                                         <?php foreach ($rows as $k => $r) { ?>
-                                            <td><?php if ($k == 'username' || $k == 'total' || $k == 'average') {
+                                            <td><?php if ($k == 'username' || $k == 'total') {
                                                     echo $r;
                                                 } else {
                                                     echo $r . '%';
