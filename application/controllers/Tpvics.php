@@ -16,6 +16,8 @@ class Tpvics extends MX_Controller
         if (!$this->users->logged_in()) {
             redirect('users/login', 'refresh');
         }
+
+
     }
 
 
@@ -739,6 +741,10 @@ class Tpvics extends MX_Controller
 
     function index()
     {
+        if (!$this->users->in_group('admin')) {
+            redirect('index.php/Tpvics/sync_report');
+        }
+
         $this->data['heading'] = "Coverage Evaluation Survey, Pakistan, 2020";
         if ($this->users->in_group('admin') || $this->users->in_group('management')) {
             $total_clusters_by_district = $this->clusters_by_district('');
