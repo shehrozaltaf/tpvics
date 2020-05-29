@@ -37,7 +37,7 @@
                                 <thead>
                                 <tr>
                                     <?php foreach ($get_list[0] as $k => $r) { ?>
-                                        <th><?php echo ucwords($k); ?></th>
+                                        <th><?php echo strtoupper($k); ?></th>
 
                                     <?php } ?>
                                 </tr>
@@ -72,7 +72,7 @@
             buttons: ['excel', 'csv'],
             "pageLength": 25,
             "scrollX": true,
-            "ordering": false,
+            "ordering": true,
 
         });
 

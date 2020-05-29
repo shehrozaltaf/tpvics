@@ -37,7 +37,7 @@
                                 <thead>
                                 <tr>
                                     <?php foreach ($get_list[0] as $k => $r) { ?>
-                                        <th><?php echo ucwords($k); ?></th>
+                                        <th><?php echo strtoupper($k); ?></th>
 
                                     <?php } ?>
                                 </tr>
@@ -47,7 +47,11 @@
                                 foreach ($get_list as $key => $rows) { ?>
                                     <tr>
                                         <?php foreach ($rows as $k => $r) { ?>
-                                            <td><?php echo $r; ?></td>
+                                            <td> <?php if ($k == 'username' || $k == 'total' || $k == 'average') {
+                                                    echo $r;
+                                                } else {
+                                                    echo $r . '%';
+                                                } ?></td>
                                         <?php } ?>
                                     </tr>
                                 <?php } ?>
@@ -68,7 +72,7 @@
                                 <thead>
                                 <tr>
                                     <?php foreach ($get_list_childs[0] as $k => $r) { ?>
-                                        <th><?php echo ucwords($k); ?></th>
+                                        <th><?php echo strtoupper($k); ?></th>
 
                                     <?php } ?>
                                 </tr>
@@ -78,7 +82,11 @@
                                 foreach ($get_list_childs as $key => $rows) { ?>
                                     <tr>
                                         <?php foreach ($rows as $k => $r) { ?>
-                                            <td><?php echo $r; ?></td>
+                                            <td><?php if ($k == 'username' || $k == 'total' || $k == 'average') {
+                                                    echo $r;
+                                                } else {
+                                                    echo $r . '%';
+                                                } ?></td>
 
                                         <?php } ?>
                                     </tr>
@@ -103,14 +111,14 @@
             dom: '<"top"Bfrt<"clear">>rt<"bottom"ilp>',
             buttons: ['excel', 'csv'],
             "scrollX": true,
-            "ordering": false,
+            "ordering": true,
         });
         $('#get_list_child').DataTable({
             responsive: true,
             dom: '<"top"Bfrt<"clear">>rt<"bottom"ilp>',
             buttons: ['excel', 'csv'],
             "scrollX": true,
-            "ordering": false,
+            "ordering": true,
         });
 
     });
