@@ -1433,6 +1433,29 @@ class Tpvics extends MX_Controller
 
     */
 
+    function sync_report()
+    {
+        $this->data['heading'] = "Sync Report";
+        $query = "SELECT
+	cluster_code as Cluster,
+	LEFT (formdate, 8) AS FormDate,
+	COUNT (*) AS Synced
+FROM
+	[dbo].[forms]
+WHERE
+	username NOT LIKE '%user%'
+GROUP BY
+	cluster_code,
+	LEFT (formdate, 8) 
+ORDER BY
+	formdate DESC";
+        $getData = $this->scans->query($query);
+        $this->data['get_list'] = $getData->result();
+        $this->data['message'] = $this->session->flashdata('message');
+        $this->data['main_content'] = 'scans/sync_report';
+        $this->load->view('includes/template', $this->data);
+    }
+
     function skipQuestions()
     {
         $this->data['heading'] = "Coverage Evaluation Survey, Pakistan, 2020";

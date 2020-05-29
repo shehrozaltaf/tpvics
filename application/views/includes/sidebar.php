@@ -15,13 +15,17 @@
             <li class="header" style=" font-size:20px;font-weight:900;color:#FFFFFF; text-shadow:#99FF66;">Navigation
             </li>
             <li <?php if ($this->uri->segment(1) == 'Tpvics' and $this->uri->segment(2) == 'index') { ?> class="active" <?php } ?>>
-                <a href="<?php echo base_url(); ?>index.php/Tpvics/index"><i class="fa fa-bar-chart"></i> <span>TPVICS Linelisting Progress</span></a>
+                <a href="<?php echo base_url(); ?>index.php/Tpvics/index"><i class="fa fa-bar-chart"></i> <span>Linelisting Progress</span></a>
             </li>
             <li <?php if ($this->uri->segment(1) == 'Tpvics' and $this->uri->segment(2) == 'dashboard') { ?> class="active" <?php } ?>>
-                <a href="<?php echo base_url(); ?>index.php/Tpvics/dashboard"><i class="fa fa-bar-chart"></i> <span>TPVICS Data Collection Progress</span></a>
+                <a href="<?php echo base_url(); ?>index.php/Tpvics/dashboard"><i class="fa fa-bar-chart"></i> <span>Data Collection Progress</span></a>
             </li>
             <li <?php if ($this->uri->segment(1) == 'Tpvics' and $this->uri->segment(2) == 'dashboard') { ?> class="active" <?php } ?>>
-                <a href="<?php echo base_url(); ?>index.php/Tpvics/skipQuestions"><i class="fa fa-bar-chart"></i> <span>TPVICS Skip Questions</span></a>
+                <a href="<?php echo base_url(); ?>index.php/Tpvics/skipQuestions"><i class="fa fa-bar-chart"></i> <span>Skip Questions</span></a>
+            </li>
+
+            <li <?php if ($this->uri->segment(1) == 'Tpvics' and $this->uri->segment(2) == 'sync_report') { ?> class="active" <?php } ?>>
+                <a href="<?php echo base_url(); ?>index.php/Tpvics/sync_report"><i class="fa fa-bar-chart"></i> <span>Sync Report</span></a>
             </li>
             <li <?php if ($this->uri->segment(1) == 'Tpvics' and $this->uri->segment(2) == 'dashboard') { ?> class="active" <?php } ?>>
                 <a href="<?php echo base_url(); ?>index.php/Tpvics/upload_excel_data"><i class="fa fa-bar-chart"></i> <span>Upload Data</span></a>
