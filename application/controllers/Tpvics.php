@@ -1482,11 +1482,11 @@ FROM
 	sq.username,
 	sq.total,
 	(
-		IM01 + IM02 + IM06 + IM08 + IM10 + IM14 + IM16 + IM18 + IM21 + IM23
+		IM01 + IM02 +  IM08 + IM10 + IM14 + IM16 + IM18 + IM21 + IM23
 	) / 10 AS average,
 	sq.IM01,
 	sq.IM02,
-	sq.IM06,
+	 
 	sq.IM08,
 	sq.IM10,
 	sq.IM14,
