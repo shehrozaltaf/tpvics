@@ -116,7 +116,7 @@
 
                                                         ?>
                                                         <li>
-                                                            <a href="<?php echo base_url() . 'scans/dashboard/rc_d' . $row4->dist_id; ?>"><strong><?php echo $district2; ?></strong><span
+                                                            <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d' . $row4->dist_id; ?>"><strong><?php echo $district2; ?></strong><span
                                                                         class="pull-right badge bg-orange"><?php echo $row4->randomized_c; ?></span></a>
                                                         </li>
                                                     <?php } ?>
@@ -144,39 +144,39 @@
                                             <div class="box-footer no-padding">
                                                 <ul class="nav nav-stacked">
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/cc_d1'; ?>"><strong>KHYBER
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d1'; ?>"><strong>KHYBER
                                                                 PAKHTUNKHWA</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $cc_d1; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/cc_d2'; ?>"><strong>Punjab</strong><span
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d2'; ?>"><strong>Punjab</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $cc_d2; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/cc_d3'; ?>"><strong>SINDH</strong><span
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d3'; ?>"><strong>SINDH</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $cc_d3; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/cc_d4'; ?>"><strong>BALOCHISTAN</strong><span
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d4'; ?>"><strong>BALOCHISTAN</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $cc_d4; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/cc_d7'; ?>"><strong>GILGIT
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d7'; ?>"><strong>GILGIT
                                                                 BALTISTAN</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $cc_d7; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/cc_d9'; ?>"><strong>ADJACENT
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d9'; ?>"><strong>ADJACENT
                                                                 AREAS-FR</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $cc_d9; ?></span></a>
                                                     </li>
                                                     <!--
                                                     <li>
-                                                        <a href="<?php /*echo base_url() . 'scans/dashboard/cc_d2'; */ ?>"><strong>Punjab</strong><span
+                                                        <a href="<?php /*echo base_url() . 'index.php/tpvics/dashboard/cc_d2'; */ ?>"><strong>Punjab</strong><span
                                                                     class="pull-right badge bg-green"><?php /*echo $cc_d2; */ ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php /*echo base_url() . 'scans/dashboard/cc_d3'; */ ?>"><strong>Sindh</strong><span
+                                                        <a href="<?php /*echo base_url() . 'index.php/tpvics/dashboard/cc_d3'; */ ?>"><strong>Sindh</strong><span
                                                                     class="pull-right badge bg-green"><?php /*echo $cc_d3; */ ?></span></a>
                                                     </li>-->
                                                 </ul>
@@ -202,38 +202,38 @@
                                             <div class="box-footer no-padding">
                                                 <ul class="nav nav-stacked">
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/rc_d1'; ?>"><strong>KHYBER
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d1'; ?>"><strong>KHYBER
                                                                 PAKHTUNKHWA</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $rc_d1; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/rc_d2'; ?>"><strong>Punjab</strong><span
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d2'; ?>"><strong>Punjab</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $rc_d2; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/rc_d3'; ?>"><strong>SINDH</strong><span
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d3'; ?>"><strong>SINDH</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $rc_d3; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/rc_d4'; ?>"><strong>BALOCHISTAN</strong><span
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d4'; ?>"><strong>BALOCHISTAN</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $rc_d4; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/rc_d7'; ?>"><strong>GILGIT
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d7'; ?>"><strong>GILGIT
                                                                 BALTISTAN</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $rc_d7; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'scans/dashboard/rc_d9'; ?>"><strong>ADJACENT
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d9'; ?>"><strong>ADJACENT
                                                                 AREAS-FR</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $rc_d9; ?></span></a>
                                                     </li>
                                                     <!--<li>
-                                                        <a href="<?php /*echo base_url() . 'scans/dashboard/rc_d2'; */ ?>"><strong>Punjab</strong><span
+                                                        <a href="<?php /*echo base_url() . 'index.php/tpvics/dashboard/rc_d2'; */ ?>"><strong>Punjab</strong><span
                                                                     class="pull-right badge bg-red"><?php /*echo $rc_d2; */ ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php /*echo base_url() . 'scans/dashboard/rc_d3'; */ ?>"><strong>Sindh</strong><span
+                                                        <a href="<?php /*echo base_url() . 'index.php/tpvics/dashboard/rc_d3'; */ ?>"><strong>Sindh</strong><span
                                                                     class="pull-right badge bg-red"><?php /*echo $rc_d3; */ ?></span></a>
                                                     </li>-->
                                                 </ul>
@@ -333,7 +333,7 @@
                                         <td><?php echo $row5->eligible_households; ?></td>
                                         <td><?php echo $row5->randomized_households; ?></a></strong></td>
                                         <td>
-                                            <strong><a href="<?php echo base_url() . 'scans/cluster_progress/' . $row5->hh02; ?>"
+                                            <strong><a href="<?php echo base_url() . 'index.php/tpvics/cluster_progress/' . $row5->hh02; ?>"
                                                        class="name"
                                                        target="_blank"><?php echo $row5->collected_households; ?></a></strong>
                                         </td>

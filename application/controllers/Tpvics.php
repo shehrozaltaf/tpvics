@@ -212,8 +212,8 @@ class Tpvics extends MX_Controller
 				(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 				(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
 				from clusters c
-				left join listings l on l.hh02 = c.cluster_no
-				where 1=2 and  l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+				inner join listings l on l.hh02 = c.cluster_no
+				
 				group by l.enumcode, l.hh02
 				order by l.enumcode,l.hh02");
                 /* $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
@@ -769,12 +769,13 @@ class Tpvics extends MX_Controller
             }
             $this->data['clusters_by_district'] = $clusters_by_district;
 
+            /*where l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')*/
             $cip_clusters = $this->scans->query("select l.enumcode, l.hh02,  SUBSTRING (c.dist_id, 1, 1) AS provinceId,
 			(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 			(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
 			from clusters c
-			left join listings l on l.hh02 = c.cluster_no
-			where l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+			inner join listings l on l.hh02 = c.cluster_no
+			
 			group by l.enumcode, l.hh02,c.dist_id
 			order by l.enumcode,l.hh02");
             /* echo '<pre>';
@@ -902,6 +903,7 @@ class Tpvics extends MX_Controller
                 $cluster_type = substr($district_cluster_type, 3, 1);
 
                 if ($cluster_type == 'c') {
+                    /*and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')*/
                     $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,
@@ -911,8 +913,8 @@ class Tpvics extends MX_Controller
 					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
 					from clusters c
-					left join listings l on l.hh02 = c.cluster_no
-					where SUBSTRING (c.dist_id, 1, 1) = '$district' and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+					inner join listings l on l.hh02 = c.cluster_no
+					where SUBSTRING (c.dist_id, 1, 1) = '$district' 
 					and (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) = (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs)
 					group by l.enumcode, l.hh02
 					order by l.enumcode,l.hh02");
@@ -934,17 +936,19 @@ class Tpvics extends MX_Controller
 					order by l.enumcode,l.hh02");
                 }
             } else {
+                /* where   1=2 and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')*/
                 $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
-				(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
+				(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2','3','4','7','9') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
 				(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,
 				sum(case when hh04 = '1' and hh15 != '1' then 1 else 0 end) as households,
 				sum(case when hh04 = '1' and hh15 != '1' and hh10 = '1' then 1 else 0 end) as eligible_households,
 				(select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,
 				(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-				(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
+				(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings 
+				where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
 				from clusters c
-				left join listings l on l.hh02 = c.cluster_no
-				where   1=2 and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+				inner join listings l on l.hh02 = c.cluster_no
+				
 				group by l.enumcode, l.hh02
 				order by l.enumcode,l.hh02");
             }
@@ -1064,20 +1068,20 @@ class Tpvics extends MX_Controller
             $this->session->set_flashdata('message', $value);
 
             if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                redirect('scans/index/' . $this->uri->segment(4));
+                redirect('index.php/tpvics/index/' . $this->uri->segment(4));
             } else {
-                redirect('scans/index');
+                redirect('index.php/tpvics/index');
             }
         }
 
+        /*where username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+    and hh04 = '1' and hh10 = '1' and hh15 != '1' and hh02 = '$cluster'*/
+
         $dataset = $this->scans->query("select " . $columns . " from " . $source . "
-		where username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
-		and hh04 = '1' and hh10 = '1' and hh15 != '1' and hh02 = '$cluster' order by tabNo, deviceid, cast(hh03 as int), cast(hh07 as int)");
+		where  hh04 = '1' and hh10 = '1' and hh15 != '1' and hh02 = '$cluster' order by tabNo, deviceid, cast(hh03 as int), cast(hh07 as int)");
 
         if ($dataset->num_rows() > 0) {
-
             $residential_structures = $this->scans->query("select distinct hh03, tabNo from listings where hh02 = '$cluster' and hh04 = '1'")->num_rows();
-
             $this->scans->query("update clusters set randomized = '1' where cluster_no = '$cluster'");
 
             if ($dataset->num_rows() > $sample) {
@@ -1121,9 +1125,9 @@ class Tpvics extends MX_Controller
                 $this->session->set_flashdata('message', $value);
 
                 if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                    redirect('scans/index/' . $this->uri->segment(4));
+                    redirect('index.php/tpvics/index/' . $this->uri->segment(4));
                 } else {
-                    redirect('scans/index');
+                    redirect('index.php/tpvics/index');
                 }
 
             } else {
@@ -1159,9 +1163,9 @@ class Tpvics extends MX_Controller
                 $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
                 $this->session->set_flashdata('message', $value);
                 if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                    redirect('scans/index/' . $this->uri->segment(4));
+                    redirect('index.php/tpvics/index/' . $this->uri->segment(4));
                 } else {
-                    redirect('scans/index');
+                    redirect('index.php/tpvics/index');
                 }
             }
 
@@ -1171,9 +1175,9 @@ class Tpvics extends MX_Controller
             $value = '<div class="callout callout-danger"><p>' . $flash_msg . '</p></div>';
             $this->session->set_flashdata('message', $value);
             if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                redirect('scans/index/' . $this->uri->segment(4));
+                redirect('index.php/tpvics/index/' . $this->uri->segment(4));
             } else {
-                redirect('scans/index');
+                redirect('index.php/tpvics/index');
             }
         }
     }
