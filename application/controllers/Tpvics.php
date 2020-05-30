@@ -179,7 +179,6 @@ class Tpvics extends MX_Controller
 					order by l.enumcode,l.hh02");
 
                 } else if ($type == 'ic') {
-
                     $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
 					(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,
@@ -197,9 +196,7 @@ class Tpvics extends MX_Controller
 					and (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) > (select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 3) = l.enumcode and cluster_code = l.hh02 and istatus > 0 and istatus < 96 and istatus is not null and istatus != '' and istatus != 'null')
 					group by l.enumcode, l.hh02
 					order by l.enumcode,l.hh02");
-
                 }
-
             } else {
                 $this->data['get_list'] = $this->scans->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02,
 				(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,
