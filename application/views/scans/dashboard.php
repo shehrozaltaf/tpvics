@@ -5,15 +5,11 @@
         text-decoration: none;
     }
 </style>
-
 <body class="hold-transition skin-blue sidebar-mini fixed">
 <div class="wrapper">
-
     <?php echo $this->load->view('includes/header'); ?>
     <!-- Left side column. contains the logo and sidebar -->
     <?php echo $this->load->view('includes/sidebar'); ?>
-
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -28,13 +24,9 @@
                     <?php } ?>
                 </small>
             </h1>
-
         </section>
-
         <!-- Main content -->
         <section class="content">
-
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="box box-primary">
@@ -44,8 +36,6 @@
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="row">
-
-
                                 <div class="col-md-3">
                                     <!-- Widget: user widget style 1 -->
                                     <div class="box box-widget widget-user-2">
@@ -60,7 +50,6 @@
                                             <h2><?php echo $target_clusters; ?></h2>
                                             <h4>Target Clusters</h4>
                                         </div>
-
                                         <?php if ($this->users->in_group('admin') || $this->users->in_group('management')) { ?>
                                             <div class="box-footer no-padding">
                                                 <ul class="nav nav-stacked">
@@ -79,8 +68,6 @@
                                     <!-- /.widget-user -->
                                 </div>
                                 <!-- /.col -->
-
-
                                 <div class="col-md-3">
                                     <!-- Widget: user widget style 1 -->
                                     <div class="box box-widget widget-user-2">
@@ -93,13 +80,10 @@
                                             <h2><?php echo $randomized_c; ?></h2>
                                             <h4>Randomized Clusters</h4>
                                         </div>
-
                                         <?php if ($this->users->in_group('admin') || $this->users->in_group('management')) { ?>
                                             <div class="box-footer no-padding">
                                                 <ul class="nav nav-stacked">
-
                                                     <?php foreach ($randomized_clusters->result() as $row4) {
-
                                                         if ($row4->dist_id == 1) {
                                                             $district2 = 'KHYBER PAKHTUNKHWA';
                                                         } elseif ($row4->dist_id == 2) {
@@ -113,14 +97,12 @@
                                                         } else if ($row4->dist_id == 9) {
                                                             $district2 = 'ADJACENT AREAS-FR';
                                                         }
-
                                                         ?>
                                                         <li>
                                                             <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d' . $row4->dist_id; ?>"><strong><?php echo $district2; ?></strong><span
                                                                         class="pull-right badge bg-orange"><?php echo $row4->randomized_c; ?></span></a>
                                                         </li>
                                                     <?php } ?>
-
                                                 </ul>
                                             </div>
                                         <?php } ?>
@@ -129,8 +111,6 @@
                                     <!-- /.widget-user -->
                                 </div>
                                 <!-- /.col -->
-
-
                                 <div class="col-md-3">
                                     <!-- Widget: user widget style 1 -->
                                     <div class="box box-widget widget-user-2">
@@ -139,7 +119,6 @@
                                             <h2><?php echo $cc_total; ?></h2>
                                             <h4>Completed Clusters</h4>
                                         </div>
-
                                         <?php if ($this->users->in_group('admin') || $this->users->in_group('management')) { ?>
                                             <div class="box-footer no-padding">
                                                 <ul class="nav nav-stacked">

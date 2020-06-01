@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
+    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="Randomization Schedular">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/scans/dashboard.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,19 +20,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="274" column="74" selection-start-line="274" selection-start-column="68" selection-end-line="274" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="178" column="49" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="49" />
+            <state relative-caret-position="3105">
+              <caret line="188" column="92" selection-start-line="188" selection-start-column="92" selection-end-line="188" selection-end-column="92" />
               <folding>
                 <element signature="n#dashboard_#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#dashboard2#0;n#Tpvics#0;n#!!top" />
@@ -51,10 +42,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/database.php">
+        <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="77" column="2" lean-forward="true" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="5" />
+            <state relative-caret-position="263">
+              <caret line="285" column="63" selection-start-line="285" selection-start-column="58" selection-end-line="285" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/scans/dashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1292">
+              <caret line="74" column="82" lean-forward="true" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -88,11 +88,11 @@
       <find>sess_save_path</find>
       <find>sess_driver</find>
       <find>header</find>
-      <find>scans/</find>
       <find>tpvics/</find>
-      <find>scans</find>
       <find>sys</find>
+      <find>scans/</find>
       <find>$anchor</find>
+      <find>scans</find>
     </findStrings>
     <replaceStrings>
       <replace>provinceId</replace>
@@ -167,9 +167,9 @@
         <option value="C:/shehroz/sites/habitt/Classes/insert_order.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/database.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/sidebar.php" />
-        <option value="$PROJECT_DIR$/application/views/scans/dashboard.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
+        <option value="$PROJECT_DIR$/application/views/scans/dashboard.php" />
       </list>
     </option>
   </component>
@@ -198,12 +198,6 @@
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
@@ -302,7 +296,8 @@
       <workItem from="1590651235850" duration="316000" />
       <workItem from="1590651573309" duration="11881000" />
       <workItem from="1590731863370" duration="10149000" />
-      <workItem from="1590833796119" duration="4330000" />
+      <workItem from="1590833796119" duration="4362000" />
+      <workItem from="1590991665729" duration="2537000" />
     </task>
     <task id="LOCAL-00001" summary="Collection">
       <created>1587970994484</created>
@@ -444,17 +439,24 @@
       <option name="project" value="LOCAL" />
       <updated>1590840134371</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Randomization Schedular">
+      <created>1590840735776</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1590840735776</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78105000" />
+    <option name="totallyTimeSpent" value="80674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22799511" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23105134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -945,27 +947,8 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/sidebar.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Tpvics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-273">
-          <caret line="1506" column="43" selection-start-line="1506" selection-start-column="43" selection-end-line="1506" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/skipQuestions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="118" column="51" selection-start-line="118" selection-start-column="51" selection-end-line="118" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="232" column="65" selection-start-line="232" selection-start-column="65" selection-end-line="232" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Tpvics.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/skipQuestions.php" />
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -973,17 +956,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="274" column="74" selection-start-line="274" selection-start-column="68" selection-end-line="274" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="178" column="49" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="49" />
+        <state relative-caret-position="3105">
+          <caret line="188" column="92" selection-start-line="188" selection-start-column="92" selection-end-line="188" selection-end-column="92" />
           <folding>
             <element signature="n#dashboard_#0;n#Tpvics#0;n#!!top" />
             <element signature="n#dashboard2#0;n#Tpvics#0;n#!!top" />
@@ -997,6 +973,20 @@
             <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
             <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="285" column="63" selection-start-line="285" selection-start-column="58" selection-end-line="285" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scans/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1292">
+          <caret line="74" column="82" lean-forward="true" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="82" />
         </state>
       </provider>
     </entry>
