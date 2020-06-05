@@ -75,14 +75,14 @@ $query_builder = TRUE;
 
 $db['default'] = array(
     'dsn' => '',
-   /* 'hostname' => 'vcoe1',
+    'hostname' => 'vcoe1',
     'username' => 'app',
     'password' => 'abcd1234',
-    'database' => 'tpvics',*/
-    'hostname' => 'f38158',
-    'username' => 'sa',
-    'password' => 'sa',
     'database' => 'tpvics',
+//    'hostname' => 'f38158',
+//    'username' => 'sa',
+//    'password' => 'sa',
+//    'database' => 'tpvics',
 
     'dbdriver' => 'sqlsrv',
     'dbprefix' => '',

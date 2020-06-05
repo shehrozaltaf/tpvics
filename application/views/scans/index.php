@@ -85,7 +85,8 @@
                                             <div class="box-footer no-padding">
                                                 <ul class="nav nav-stacked">
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d1_c'; ?>"><strong>AZAD JAMMU & KASHMIR</strong><span
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d1_c'; ?>"><strong>KHYBER
+                                                                PAKHTUNKHWA</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $d1_c; ?></span></a>
                                                     </li>
                                                     <li>
@@ -101,11 +102,13 @@
                                                                     class="pull-right badge bg-green"><?php echo $d4_c; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d7_c'; ?>"><strong>GILGIT BALTISTAN</strong><span
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d7_c'; ?>"><strong>GILGIT
+                                                                BALTISTAN</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $d7_c; ?></span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d9_c'; ?>"><strong>ADJACENT AREAS-FR</strong><span
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d9_c'; ?>"><strong>ADJACENT
+                                                                AREAS-FR</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $d9_c; ?></span></a>
                                                     </li>
                                                 </ul>
@@ -129,13 +132,13 @@
                                         <?php if ($this->users->in_group('admin') || $this->users->in_group('management')) { ?>
                                             <div class="box-footer no-padding">
                                                 <ul class="nav nav-stacked">
-                                                   <!-- <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>AZAD JAMMU & KASHMIR</strong><span class="pull-right badge bg-orange">0</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>BALOCHISTAN</strong><span class="pull-right badge bg-orange">0</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>GILGIT-BALTISTAN</strong><span class="pull-right badge bg-orange">0</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>KHYBER PAKHTUNKHWA</strong><span class="pull-right badge bg-orange">0</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>PUNJAB</strong><span class="pull-right badge bg-orange">0</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>ISLAMABAD</strong><span class="pull-right badge bg-orange">0</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>SINDH</strong><span class="pull-right badge bg-orange">0</span></a></li>-->
+                                                    <!-- <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>AZAD JAMMU & KASHMIR</strong><span class="pull-right badge bg-orange">0</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>BALOCHISTAN</strong><span class="pull-right badge bg-orange">0</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>GILGIT-BALTISTAN</strong><span class="pull-right badge bg-orange">0</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>KHYBER PAKHTUNKHWA</strong><span class="pull-right badge bg-orange">0</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>PUNJAB</strong><span class="pull-right badge bg-orange">0</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>ISLAMABAD</strong><span class="pull-right badge bg-orange">0</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>SINDH</strong><span class="pull-right badge bg-orange">0</span></a></li>-->
                                                     <li>
                                                         <a href="<?php echo base_url() . 'index.php/tpvics/index/d1_ip'; ?>"><strong>KHYBER
                                                                 PAKHTUNKHWA</strong><span
@@ -185,13 +188,13 @@
                                         <?php if ($this->users->in_group('admin') || $this->users->in_group('management')) { ?>
                                             <div class="box-footer no-padding">
                                                 <ul class="nav nav-stacked">
-                                                   <!-- <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>AZAD JAMMU & KASHMIR</strong><span class="pull-right badge bg-red">580</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>BALOCHISTAN</strong><span class="pull-right badge bg-red">2112</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>GILGIT-BALTISTAN</strong><span class="pull-right badge bg-red">433</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>KHYBER PAKHTUNKHWA</strong><span class="pull-right badge bg-red">1853</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>PUNJAB</strong><span class="pull-right badge bg-red">1839</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>ISLAMABAD</strong><span class="pull-right badge bg-red">113</span></a></li>
-                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/?>"><strong>SINDH</strong><span class="pull-right badge bg-red">1856</span></a></li>-->
+                                                    <!-- <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>AZAD JAMMU & KASHMIR</strong><span class="pull-right badge bg-red">580</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>BALOCHISTAN</strong><span class="pull-right badge bg-red">2112</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>GILGIT-BALTISTAN</strong><span class="pull-right badge bg-red">433</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>KHYBER PAKHTUNKHWA</strong><span class="pull-right badge bg-red">1853</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>PUNJAB</strong><span class="pull-right badge bg-red">1839</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>ISLAMABAD</strong><span class="pull-right badge bg-red">113</span></a></li>
+                                                    <li><a href="<?php /*echo base_url().'scans/dashboard'*/ ?>"><strong>SINDH</strong><span class="pull-right badge bg-red">1856</span></a></li>-->
                                                     <li><a href="#"><strong>KHYBER PAKHTUNKHWA</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $d1_r; ?></span></a>
                                                     </li>
@@ -250,11 +253,11 @@
                                     <th>Cluster Number</th>
                                     <th>Total Structures</th>
                                     <th>Residential Structures</th>
-                                    <th>HHs</th>
-                                    <th>Eligible HHs</th>
-                                    <th>Eligible WRAs</th>
+                                    <th>HH Targeted Children</th>
+                                    <th>Children 6-23 Months</th>
                                     <th>Collecting Tabs</th>
                                     <th>Completed Tabs</th>
+                                    <th>Status</th>
 
                                     <?php if ((!empty($this->uri->segment(3)) and substr($this->uri->segment(3), 3, 1) == 'c') || $this->users->get_user()->district != 0) { ?>
                                         <th width="15%">Randomize</th>
@@ -275,17 +278,26 @@
                                         $anchor = anchor("index.php/tpvics/systematic_randomizer/" . $row2->hh02, '<i class="fa fa-edit"></i> Randomize', 'class="btn-sm btn-primary"');
                                     }
 
-                                    if ($row2->enumcode == 2) {
-                                        $province = 'Punjab';
-                                    } else if ($row2->enumcode == 3) {
-                                        $province = 'Sindh';
-                                    } else {
-                                        $province = 'Test';
-                                    }
 
                                     $get_geoarea = $this->scans->query("select geoarea from clusters where cluster_no = '$row2->hh02'")->row()->geoarea;
                                     $explode = explode("|", $get_geoarea);
                                     $division = ltrim(rtrim($explode[1]));
+
+                                    if ($row2->enumcode == 1) {
+                                        $province = 'Khyber Paktunkhwa';
+                                    } elseif ($row2->enumcode == 2) {
+                                        $province = 'Punjab';
+                                    } elseif ($row2->enumcode == 3) {
+                                        $province = 'Sindh';
+                                    } elseif ($row2->enumcode == 4) {
+                                        $province = 'Balochistan';
+                                    } elseif ($row2->enumcode == 7) {
+                                        $province = 'Gilgit Baltistan';
+                                    } elseif ($row2->enumcode == 9) {
+                                        $province = 'Adjacent Areas-FR';
+                                    } else {
+                                        $province = ltrim(rtrim($explode[0]));
+                                    }
                                     ?>
                                     <tr>
                                         <td><?php echo $province; ?></td>
@@ -293,11 +305,19 @@
                                         <td><?php echo $row2->hh02; ?></td>
                                         <td><?php echo $row2->structures; ?></td>
                                         <td><?php echo $row2->residential_structures; ?></td>
-                                        <td><?php echo $row2->households; ?></td>
-                                        <td><?php echo $row2->eligible_households; ?></td>
-                                        <td><?php echo $row2->no_of_eligible_wras; ?></td>
+                                        <td><?php echo $row2->target_children; ?></td>
+                                        <td><?php if (isset($row2->no_of_children) && $row2->no_of_children != '') {
+                                                echo $row2->no_of_children;
+                                            } else {
+                                                echo '0';
+                                            } ?></td>
                                         <td><?php echo $row2->collecting_tabs; ?></td>
                                         <td><?php echo $row2->completed_tabs; ?></td>
+                                        <td><?php if ($row2->status == 9) {
+                                                echo 'Ready for Randomization';
+                                            } else {
+                                                echo 'Listing in Progress';
+                                            }; ?></td>
 
                                         <?php if ((!empty($this->uri->segment(3)) and substr($this->uri->segment(3), 3, 1) == 'c') || $this->users->get_user()->district != 0) {
 
@@ -358,7 +378,6 @@
             dom: '<"top"Bfrt<"clear">>rt<"bottom"ilp>',
             buttons: ['excel', 'csv'],
             "scrollX": true,
-            "ordering": false,
         });
 
     });
