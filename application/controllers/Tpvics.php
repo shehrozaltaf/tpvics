@@ -565,6 +565,8 @@ sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
                               where   l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
                                 group by l.enumcode, l.hh02
                             order by l.enumcode,l.hh02");
+
+
             }
         } else {
             /*else*/
@@ -659,6 +661,27 @@ sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
 			order by l.enumcode,l.hh02");
         }
 
+        $myStatusArr = array();
+
+        $randomized = $this->scans->query("SELECT a.hh02, a.hh04 FROM listings a   WHERE a.hh04 = 9 and 
+EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 )  group by a.hh02, a.hh04;");
+        foreach ($randomized->result() as $row) {
+            $myStatusArr[$row->hh02] = 'Randomized';
+        }
+        $ready_to_randomized = $this->scans->query("SELECT a.hh02, a.hh04 FROM listings a   WHERE a.hh04 = 9 and 
+not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by a.hh02, a.hh04;");
+        foreach ($ready_to_randomized->result() as $row) {
+            if (!isset($myStatusArr[$row->hh02]) || $row->hh02 == '') {
+                $myStatusArr[$row->hh02] = 'Ready to Randomize';
+            }
+        }
+        $progress = $this->scans->query("SELECT a.hh02 FROM listings a   WHERE a.hh04 != 9  group by a.hh02 ;");
+        foreach ($progress->result() as $row) {
+            if (!isset($myStatusArr[$row->hh02]) || $row->hh02 == '') {
+                $myStatusArr[$row->hh02] = 'In Progress';
+            }
+        }
+        $this->data['status'] = $myStatusArr;
 
         $this->data['message'] = $this->session->flashdata('message');
         $this->data['main_content'] = 'scans/index';
@@ -738,13 +761,10 @@ sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
                 }
 
             } else {
-
                 $result = $dataset->result_array();
                 $quotient = $dataset->num_rows() / count($result);
                 $random_start = rand(1, $quotient);
-
                 for ($i = 0; $i < count($result); $i++) {
-
                     $data = array(
                         'randDT' => date('Y-m-d h:i:s'),
                         'uid' => $result[$i]['uid'],

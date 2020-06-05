@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics_.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics_.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/scans/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/scans/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-209">
-              <caret line="255" column="42" selection-start-line="255" selection-start-column="42" selection-end-line="255" selection-end-column="42" />
+            <state relative-caret-position="534">
+              <caret line="328" column="78" selection-start-line="328" selection-start-column="68" selection-end-line="328" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -34,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="733" column="36" selection-start-line="733" selection-start-column="36" selection-end-line="733" selection-end-column="36" />
+            <state relative-caret-position="485">
+              <caret line="684" column="27" selection-start-line="684" selection-start-column="21" selection-end-line="684" selection-end-column="27" />
               <folding>
                 <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
                 <element signature="e#487#578#0#PHP" />
@@ -72,47 +70,12 @@
                 <element signature="e#5700#7238#0#PHP" />
                 <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#74012#74854#0#PHP" />
                 <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#75211#76118#0#PHP" />
                 <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#78836#82785#0#PHP" />
-                <element signature="e#78898#78992#0#PHP" />
-                <element signature="e#79086#82785#0#PHP" />
-                <element signature="e#79105#79331#0#PHP" />
-                <element signature="e#79240#79331#0#PHP" />
-                <element signature="e#79346#82774#0#PHP" />
-                <element signature="e#79660#82662#0#PHP" />
-                <element signature="e#79917#80492#0#PHP" />
-                <element signature="e#80261#80470#0#PHP" />
-                <element signature="e#80370#80470#0#PHP" />
-                <element signature="e#80581#80843#0#PHP" />
-                <element signature="e#80677#80782#0#PHP" />
-                <element signature="e#81181#82172#0#PHP" />
-                <element signature="e#81249#82150#0#PHP" />
-                <element signature="e#82193#82531#0#PHP" />
-                <element signature="e#82550#82662#0#PHP" />
-                <element signature="e#82677#82774#0#PHP" />
                 <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#83064#85632#0#PHP" />
-                <element signature="e#83126#83220#0#PHP" />
-                <element signature="e#83314#85632#0#PHP" />
-                <element signature="e#83333#83559#0#PHP" />
-                <element signature="e#83468#83559#0#PHP" />
-                <element signature="e#83574#85621#0#PHP" />
-                <element signature="e#83888#85509#0#PHP" />
-                <element signature="e#84145#84720#0#PHP" />
-                <element signature="e#84489#84698#0#PHP" />
-                <element signature="e#84598#84698#0#PHP" />
-                <element signature="e#84780#85042#0#PHP" />
-                <element signature="e#84876#84981#0#PHP" />
-                <element signature="e#85138#85378#0#PHP" />
-                <element signature="e#85268#85378#0#PHP" />
-                <element signature="e#85397#85509#0#PHP" />
-                <element signature="e#85524#85621#0#PHP" />
                 <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
               </folding>
             </state>
@@ -151,8 +114,8 @@
       <find>(select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,</find>
       <find>systa</find>
       <find>$formdate</find>
-      <find>no_of_eligible_wras</find>
       <find>bl_ra</find>
+      <find>no_of_eligible_wras</find>
     </findStrings>
     <replaceStrings>
       <replace>provinceId</replace>
@@ -233,9 +196,9 @@
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/sidebar.php" />
         <option value="$PROJECT_DIR$/application/views/scans/dashboard.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
-        <option value="$PROJECT_DIR$/application/views/scans/index.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/sync.php" />
         <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
+        <option value="$PROJECT_DIR$/application/views/scans/index.php" />
       </list>
     </option>
   </component>
@@ -268,12 +231,6 @@
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -281,6 +238,13 @@
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
@@ -372,7 +336,7 @@
       <workItem from="1590991665729" duration="4871000" />
       <workItem from="1591177962068" duration="753000" />
       <workItem from="1591268815158" duration="3239000" />
-      <workItem from="1591343383926" duration="7973000" />
+      <workItem from="1591343383926" duration="10088000" />
     </task>
     <task id="LOCAL-00001" summary="Collection">
       <created>1587970994484</created>
@@ -528,11 +492,25 @@
       <option name="project" value="LOCAL" />
       <updated>1590995799719</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Line listing &amp; Randomization">
+      <created>1591364042564</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1591364042564</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Line listing &amp; Randomization">
+      <created>1591364227337</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1591364227337</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94973000" />
+    <option name="totallyTimeSpent" value="97088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -574,7 +552,8 @@
     <MESSAGE value="Sync Report Households" />
     <MESSAGE value="User role" />
     <MESSAGE value="Randomization Schedular" />
-    <option name="LAST_COMMIT_MESSAGE" value="Randomization Schedular" />
+    <MESSAGE value="Line listing &amp; Randomization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Line listing &amp; Randomization" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1062,8 +1041,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="733" column="36" selection-start-line="733" selection-start-column="36" selection-end-line="733" selection-end-column="36" />
+        <state relative-caret-position="485">
+          <caret line="684" column="27" selection-start-line="684" selection-start-column="21" selection-end-line="684" selection-end-column="27" />
           <folding>
             <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
             <element signature="e#487#578#0#PHP" />
@@ -1100,47 +1079,12 @@
             <element signature="e#5700#7238#0#PHP" />
             <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
             <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#74012#74854#0#PHP" />
             <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#75211#76118#0#PHP" />
             <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
             <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
             <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
             <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#78836#82785#0#PHP" />
-            <element signature="e#78898#78992#0#PHP" />
-            <element signature="e#79086#82785#0#PHP" />
-            <element signature="e#79105#79331#0#PHP" />
-            <element signature="e#79240#79331#0#PHP" />
-            <element signature="e#79346#82774#0#PHP" />
-            <element signature="e#79660#82662#0#PHP" />
-            <element signature="e#79917#80492#0#PHP" />
-            <element signature="e#80261#80470#0#PHP" />
-            <element signature="e#80370#80470#0#PHP" />
-            <element signature="e#80581#80843#0#PHP" />
-            <element signature="e#80677#80782#0#PHP" />
-            <element signature="e#81181#82172#0#PHP" />
-            <element signature="e#81249#82150#0#PHP" />
-            <element signature="e#82193#82531#0#PHP" />
-            <element signature="e#82550#82662#0#PHP" />
-            <element signature="e#82677#82774#0#PHP" />
             <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#83064#85632#0#PHP" />
-            <element signature="e#83126#83220#0#PHP" />
-            <element signature="e#83314#85632#0#PHP" />
-            <element signature="e#83333#83559#0#PHP" />
-            <element signature="e#83468#83559#0#PHP" />
-            <element signature="e#83574#85621#0#PHP" />
-            <element signature="e#83888#85509#0#PHP" />
-            <element signature="e#84145#84720#0#PHP" />
-            <element signature="e#84489#84698#0#PHP" />
-            <element signature="e#84598#84698#0#PHP" />
-            <element signature="e#84780#85042#0#PHP" />
-            <element signature="e#84876#84981#0#PHP" />
-            <element signature="e#85138#85378#0#PHP" />
-            <element signature="e#85268#85378#0#PHP" />
-            <element signature="e#85397#85509#0#PHP" />
-            <element signature="e#85524#85621#0#PHP" />
             <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
           </folding>
         </state>
@@ -1148,8 +1092,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="255" column="42" selection-start-line="255" selection-start-column="42" selection-end-line="255" selection-end-column="42" />
+        <state relative-caret-position="534">
+          <caret line="328" column="78" selection-start-line="328" selection-start-column="68" selection-end-line="328" selection-end-column="78" />
         </state>
       </provider>
     </entry>

@@ -271,14 +271,6 @@
                                 <?php
 
                                 foreach ($get_list->result() as $row2) {
-
-                                    if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                                        $anchor = anchor("index.php/tpvics/systematic_randomizer/" . $row2->hh02 . "/" . $this->uri->segment(3), '<i class="fa fa-edit"></i> Randomize', 'class="btn-sm btn-primary"');
-                                    } else {
-                                        $anchor = anchor("index.php/tpvics/systematic_randomizer/" . $row2->hh02, '<i class="fa fa-edit"></i> Randomize', 'class="btn-sm btn-primary"');
-                                    }
-
-
                                     $get_geoarea = $this->scans->query("select geoarea from clusters where cluster_no = '$row2->hh02'")->row()->geoarea;
                                     $explode = explode("|", $get_geoarea);
                                     $division = ltrim(rtrim($explode[1]));
@@ -313,17 +305,28 @@
                                             } ?></td>
                                         <td><?php echo $row2->collecting_tabs; ?></td>
                                         <td><?php echo $row2->completed_tabs; ?></td>
-                                        <td><?php if ($row2->status == 9) {
-                                                echo 'Ready for Randomization';
-                                            } else {
-                                                echo 'Listing in Progress';
-                                            }; ?></td>
+                                        <td><?php
+                                            $rand_show = '';
+                                            foreach ($status as $s_key => $stat) {
+                                                if ($s_key == $row2->hh02) {
+                                                    echo $stat;
+                                                    if ($rand_show != 'Randomized') {
+                                                        $rand_show = 'true';
+                                                    }
+
+                                                }
+
+                                            } ?></td>
 
                                         <?php if ((!empty($this->uri->segment(3)) and substr($this->uri->segment(3), 3, 1) == 'c') || $this->users->get_user()->district != 0) {
-
                                             $cluster = $this->scans->query("select randomized from clusters where cluster_no = '$row2->hh02'")->row();
+                                            if ($this->users->in_group('admin') || $this->users->in_group('management')) {
+                                                $anchor = anchor("index.php/Tpvics/systematic_randomizer/" . $row2->hh02 . "/" . $this->uri->segment(3), '<i class="fa fa-edit"></i> Randomize', 'class="btn-sm btn-primary"');
+                                            } else {
+                                                $anchor = anchor("index.php/Tpvics/systematic_randomizer/" . $row2->hh02, '<i class="fa fa-edit"></i> Randomize', 'class="btn-sm btn-primary"');
+                                            }
                                             ?>
-                                            <td><?php if ($cluster->randomized == 0) {
+                                            <td><?php if ($cluster->randomized == 0 && $rand_show == 'true') {
                                                     echo $anchor;
                                                 } else {
                                                     echo anchor("index.php/tpvics/make_pdf/" . $row2->hh02, '<i class="fa fa-print"></i> Print', ['target' => '_blank', 'class' => 'btn-sm btn-success']);
