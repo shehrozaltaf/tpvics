@@ -693,9 +693,8 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
     function systematic_randomizer()
     {
         $source = 'listings';
-        $destination = 'destination';
-        $sample = 20;
-        $columns = 'col_id, hh02, tabNo, hh03, hh07, hh08, hh09, enumcode, uid';
+        $sample = 30;
+        $columns = 'col_id, hh02, tabNo, hh03,  hh07, hh08, hh09, enumcode, uid';
 
         $cluster = $this->uri->segment(3);
         $randomization_status = $this->scans->query("select randomized from clusters where cluster_no = '$cluster'")->row()->randomized;
@@ -729,7 +728,6 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                         'sno' => $i,
                         'hh02' => $result[$index - 1]['hh02'],
                         'hh03' => $result[$index - 1]['hh03'],
-                        'hh05' => $result[$index - 1]['hh05'],
                         'hh07' => $result[$index - 1]['hh07'],
                         'hh08' => $result[$index - 1]['hh08'],
                         'hh09' => $result[$index - 1]['hh09'],
@@ -765,7 +763,6 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                         'sno' => $i + 1,
                         'hh02' => $result[$i]['hh02'],
                         'hh03' => $result[$i]['hh03'],
-                        'hh05' => $result[$i]['hh05'],
                         'hh07' => $result[$i]['hh07'],
                         'hh08' => $result[$i]['hh08'],
                         'hh09' => $result[$i]['hh09'],
@@ -777,7 +774,6 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                         'compid' => $result[$i]['hh02'] . "-" . str_pad($result[$i]['hh03'], 4, "0", STR_PAD_LEFT) . "-" . str_pad($result[$i]['hh07'], 3, "0", STR_PAD_LEFT),
                         'tabNo' => $result[$i]['tabNo'],
                     );
-
                     $this->scans->insert('bl_randomised', $data);
                 }
                 $flash_msg = "Cluster No " . $cluster . " Randomized successfully";
@@ -840,7 +836,7 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
         $geoarea = explode('|', $this->data['cluster_data']->row()->geoarea);
 
         $pdf->SetHeaderData('', PDF_HEADER_LOGO_WIDTH, 'TPVICS', 'Cluster No: ' . $cluster . "\n" . 'Province: ' . $geoarea[0]
-            . "\n" . 'District: ' . $geoarea[1] . "\n" . 'Tehsil: ' . $geoarea[2] . "\n" . 'Taluka: ' . $geoarea[3]);
+            . "\n" . 'District: ' . $geoarea[1] . "\n" . 'Tehsil: ' . $geoarea[2] . "\n" . 'Area: ' . $geoarea[3]);
         $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
         $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
@@ -859,10 +855,10 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
         $pdf->SetFont('helvetica', '', 9);
         $tbl = '<table border="1" cellpadding="2" cellspacing="2" nobr="true">
                  <tr>
-                  <th><b>Serial No</b></th> 
-                  <th><b>Household No</b></th>
-                  <th><b>Head of Household</b></th>
-                  <th><b>Remarks</b></th>
+                  <th width="10%" style="text-align:center"><b>Serial No</b></th> 
+                  <th width="20%" style="text-align:center"><b>Household No</b></th>
+                  <th width="20%" style="text-align:center"><b>Head of Household</b></th>
+                  <th width="50%" style="text-align:center"><b>Remarks</b></th>
                  </tr>';
 
 
