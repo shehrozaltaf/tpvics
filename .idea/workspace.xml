@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
+    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="Line listing &amp; Randomization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/scans/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/scans/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,24 +18,16 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="328" column="78" selection-start-line="328" selection-start-column="68" selection-end-line="328" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="684" column="27" selection-start-line="684" selection-start-column="21" selection-end-line="684" selection-end-column="27" />
+            <state relative-caret-position="161">
+              <caret line="645" column="18" lean-forward="true" selection-start-line="645" selection-start-column="18" selection-end-line="645" selection-end-column="18" />
               <folding>
                 <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
                 <element signature="e#487#578#0#PHP" />
+                <element signature="n#dashboard#0;n#Tpvics#0;n#!!top" />
                 <element signature="e#920#1876#0#PHP" />
                 <element signature="e#1119#1805#0#PHP" />
                 <element signature="e#1236#1344#0#PHP" />
@@ -68,6 +59,7 @@
                 <element signature="e#5455#14285#0#PHP" />
                 <element signature="e#5632#11137#0#PHP" />
                 <element signature="e#5700#7238#0#PHP" />
+                <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
@@ -82,12 +74,19 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics_.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="1058" column="44" selection-start-line="1058" selection-start-column="39" selection-end-line="1058" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>forms</find>
-      <find>$key</find>
       <find>d81j0f</find>
       <find>hh15</find>
       <find>rndid</find>
@@ -106,7 +105,6 @@
       <find>tpvics/</find>
       <find>sys</find>
       <find>scans/</find>
-      <find>$anchor</find>
       <find>scans</find>
       <find>(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,</find>
       <find>(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,</find>
@@ -116,9 +114,11 @@
       <find>$formdate</find>
       <find>bl_ra</find>
       <find>no_of_eligible_wras</find>
+      <find>$anchor</find>
+      <find>spc</find>
+      <find>Tpvics/index</find>
     </findStrings>
     <replaceStrings>
-      <replace>provinceId</replace>
       <replace>4</replace>
       <replace>5</replace>
       <replace>6</replace>
@@ -146,6 +146,9 @@
       <replace>sum(case when hh12 = '1'  then 1 else 0 end) as target_children,</replace>
       <replace>(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,</replace>
       <replace>no_of_children</replace>
+      <replace>scans</replace>
+      <replace>index.php/Tpvics/index</replace>
+      <replace>hh10</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -197,8 +200,8 @@
         <option value="$PROJECT_DIR$/application/views/scans/dashboard.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/sync.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
         <option value="$PROJECT_DIR$/application/views/scans/index.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
       </list>
     </option>
   </component>
@@ -232,26 +235,6 @@
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="scans" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -336,7 +319,8 @@
       <workItem from="1590991665729" duration="4871000" />
       <workItem from="1591177962068" duration="753000" />
       <workItem from="1591268815158" duration="3239000" />
-      <workItem from="1591343383926" duration="10088000" />
+      <workItem from="1591343383926" duration="10337000" />
+      <workItem from="1591426530193" duration="1416000" />
     </task>
     <task id="LOCAL-00001" summary="Collection">
       <created>1587970994484</created>
@@ -506,17 +490,24 @@
       <option name="project" value="LOCAL" />
       <updated>1591364227337</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Line listing &amp; Randomization">
+      <created>1591366111658</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1591366111658</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97088000" />
+    <option name="totallyTimeSpent" value="98753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24022005" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24327628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -674,13 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="824">
           <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics_.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1938">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1039,13 +1023,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="306" column="85" lean-forward="true" selection-start-line="306" selection-start-column="85" selection-end-line="306" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics_.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="1058" column="44" selection-start-line="1058" selection-start-column="39" selection-end-line="1058" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="684" column="27" selection-start-line="684" selection-start-column="21" selection-end-line="684" selection-end-column="27" />
+        <state relative-caret-position="161">
+          <caret line="645" column="18" lean-forward="true" selection-start-line="645" selection-start-column="18" selection-end-line="645" selection-end-column="18" />
           <folding>
             <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
             <element signature="e#487#578#0#PHP" />
+            <element signature="n#dashboard#0;n#Tpvics#0;n#!!top" />
             <element signature="e#920#1876#0#PHP" />
             <element signature="e#1119#1805#0#PHP" />
             <element signature="e#1236#1344#0#PHP" />
@@ -1077,6 +1076,7 @@
             <element signature="e#5455#14285#0#PHP" />
             <element signature="e#5632#11137#0#PHP" />
             <element signature="e#5700#7238#0#PHP" />
+            <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
             <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
             <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
             <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
@@ -1087,13 +1087,6 @@
             <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
             <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="328" column="78" selection-start-line="328" selection-start-column="68" selection-end-line="328" selection-end-column="78" />
         </state>
       </provider>
     </entry>

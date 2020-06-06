@@ -143,11 +143,11 @@ class Tpvics extends MX_Controller
                     $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 					(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 					(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-					sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+					sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 					
 					(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 					(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-					(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+					(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
 					from clusters c
@@ -163,11 +163,11 @@ class Tpvics extends MX_Controller
                     $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 					(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 					(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-					sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+					sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 					
 					(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 					(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-					(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+					(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
 					from clusters c
@@ -183,11 +183,11 @@ class Tpvics extends MX_Controller
                     $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 					(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 					(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-					sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+					sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 					
 					(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 					(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-					(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+					(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
 					from clusters c
@@ -204,11 +204,11 @@ class Tpvics extends MX_Controller
                 $this->data['get_list'] = $this->scans->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02,
 				(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 				(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-				sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+				sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 				
 				(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 				
-				(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+				(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 				(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 				(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
 				from clusters c
@@ -219,11 +219,11 @@ class Tpvics extends MX_Controller
                 /* $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
                  (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
                  (select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-                 sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+                 sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
                  
                  (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
                  (select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-                 (select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+                 (select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
                  (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
                  (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
                  from clusters c
@@ -298,11 +298,11 @@ class Tpvics extends MX_Controller
             $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
 			(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 			(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-			sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+			sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 			
 			(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 			(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-			(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+			(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 			(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 			(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
 			from clusters c
@@ -519,8 +519,8 @@ class Tpvics extends MX_Controller
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 (select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
-(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
+(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs,
 (select hh04   from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9  group by hh02,hh04 ) as status 
@@ -537,8 +537,8 @@ sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 (select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
-(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
+(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs,
 (select hh04   from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9  group by hh02,hh04 ) as status 
@@ -555,8 +555,8 @@ from clusters c
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 (select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
-(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
+(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs,
 (select hh04   from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9  group by hh02,hh04 ) as status 
@@ -648,8 +648,8 @@ sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 (select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
-(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
+(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs,
 (select hh04   from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9  group by hh02,hh04 ) as status 
@@ -695,36 +695,34 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $source = 'listings';
         $destination = 'destination';
         $sample = 20;
-        $columns = 'col_id, hh02, tabNo, hh03, hh07, hh08, hh09, hhdt, enumcode, uid';
-        $cluster = $this->uri->segment(3);
-        $randomization_status = $this->spc->query("select randomized from clusters where cluster_no = '$cluster'")->row()->randomized;
-        if ($randomization_status == 1) {
+        $columns = 'col_id, hh02, tabNo, hh03, hh07, hh08, hh09, enumcode, uid';
 
+        $cluster = $this->uri->segment(3);
+        $randomization_status = $this->scans->query("select randomized from clusters where cluster_no = '$cluster'")->row()->randomized;
+
+        if ($randomization_status == 1) {
             $flash_msg = "Cluster No " . $cluster . " is Already Randomized";
             $value = '<div class="callout callout-warning"><p>' . $flash_msg . '</p></div>';
             $this->session->set_flashdata('message', $value);
-
             if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                redirect('spc/index/' . $this->uri->segment(4));
+                redirect('index.php/Tpvics/index/' . $this->uri->segment(4));
             } else {
-                redirect('spc/index');
+                redirect('index.php/Tpvics/index');
             }
         }
-        $dataset = $this->spc->query("select " . $columns . " from " . $source . "
+        $dataset = $this->scans->query("select " . $columns . " from " . $source . "
 		where username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
-		and hh08a1 = '1' and hh12 = '1'  and hh02 = '$cluster' order by tabNo, deviceid, cast(hh03 as int), cast(hh07 as int)");
+		and hh08a1 = '1' and hh10 = '1'  and hh02 = '$cluster' order by tabNo, deviceid, cast(hh03 as int), cast(hh07 as int)");
         if ($dataset->num_rows() > 0) {
-            $residential_structures = $this->spc->query("select distinct hh03, tabNo from listings where hh02 = '$cluster' and hh04 = '1'")->num_rows();
-            $this->spc->query("update clusters set randomized = '1' where cluster_no = '$cluster'");
+            $residential_structures = $this->scans->query("select distinct hh03, tabNo from listings where hh02 = '$cluster' and hh08a1 = '1'")->num_rows();
+            $this->scans->query("update clusters set randomized = '1' where cluster_no = '$cluster'");
             if ($dataset->num_rows() > $sample) {
                 $quotient = $dataset->num_rows() / $sample;
                 $random_start = rand(1, $quotient);
                 $random_point = $random_start;
                 $index = floor($random_start);
                 $result = $dataset->result_array();
-                //echo '<p><strong>Dataset = '.$dataset->num_rows().' | Sample = '.$sample.' | Random Start = '.$random_start.' | Quotient = '.$quotient.'</strong></p>';
                 for ($i = 1; $i <= 20; $i++) {
-
                     $data = array(
                         'randDT' => date('Y-m-d h:i:s'),
                         'uid' => $result[$index - 1]['uid'],
@@ -743,9 +741,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                         'compid' => $result[$index - 1]['hh02'] . "-" . str_pad($result[$index - 1]['hh03'], 4, "0", STR_PAD_LEFT) . "-" . str_pad($result[$index - 1]['hh07'], 3, "0", STR_PAD_LEFT),
                         'tabNo' => $result[$index - 1]['tabNo'],
                     );
-
-                    $this->spc->insert('bl_randomised', $data);
-
+                    $this->scans->insert('bl_randomised', $data);
                     $random_point = $random_point + $quotient;
                     $index = floor($random_point);
                 }
@@ -753,13 +749,11 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                 $flash_msg = "Cluster No " . $cluster . " Randomized successfully";
                 $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
                 $this->session->set_flashdata('message', $value);
-
                 if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                    redirect('Tpvics/index/' . $this->uri->segment(4));
+                    redirect('index.php/Tpvics/index/' . $this->uri->segment(4));
                 } else {
-                    redirect('Tpvics/index');
+                    redirect('index.php/Tpvics/index');
                 }
-
             } else {
                 $result = $dataset->result_array();
                 $quotient = $dataset->num_rows() / count($result);
@@ -784,26 +778,25 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                         'tabNo' => $result[$i]['tabNo'],
                     );
 
-                    $this->spc->insert('bl_randomised', $data);
+                    $this->scans->insert('bl_randomised', $data);
                 }
                 $flash_msg = "Cluster No " . $cluster . " Randomized successfully";
                 $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
                 $this->session->set_flashdata('message', $value);
                 if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                    redirect('Tpvics/index/' . $this->uri->segment(4));
+                    redirect('index.php/Tpvics/index/' . $this->uri->segment(4));
                 } else {
-                    redirect('Tpvics/index');
+                    redirect('index.php/Tpvics/index');
                 }
             }
         } else {
-
             $flash_msg = "Cluster No " . $cluster . " Has Zero Households";
             $value = '<div class="callout callout-danger"><p>' . $flash_msg . '</p></div>';
             $this->session->set_flashdata('message', $value);
             if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                redirect('Tpvics/index/' . $this->uri->segment(4));
+                redirect('index.php/Tpvics/index/' . $this->uri->segment(4));
             } else {
-                redirect('Tpvics/index');
+                redirect('index.php/Tpvics/index');
             }
         }
     }
@@ -815,8 +808,8 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $this->load->library('tcpdf');
         $cluster = $this->uri->segment(3);
         $this->data['cluster'] = $this->uri->segment(3);
-        $this->data['cluster_data'] = $this->spc->query("select * from ml_randomised where hh02 = '$cluster'");
-        $rd = $this->spc->query("select top 1 randDT from ml_randomised where hh02 = '$cluster'")->row()->randDT;
+        $this->data['cluster_data'] = $this->scans->query("select * from ml_randomised where hh02 = '$cluster'");
+        $rd = $this->scans->query("select top 1 randDT from ml_randomised where hh02 = '$cluster'")->row()->randDT;
         $this->data['randomization_date'] = substr($rd, 0, 10);
 
 
@@ -860,7 +853,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $pdf->Output('example_007.pdf', 'I');
         ob_end_flush();
         ob_end_clean();
-//        $this->data['main_content'] = 'spc/make_pdf';
+//        $this->data['main_content'] = 'scans/make_pdf';
 //        $this->load->view('includes/template', $this->data);
     }
 
@@ -922,13 +915,13 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
     {
 
         $cluster = $this->uri->segment(3);
-        $this->data['get_list'] = $this->spc->query("select hh02, sno, concat(tabNO, '-', substring(compid, 8, 8)) as hhno from ml_randomised where hh02 = '$cluster' order by cast(sno as int)");
+        $this->data['get_list'] = $this->scans->query("select hh02, sno, concat(tabNO, '-', substring(compid, 8, 8)) as hhno from ml_randomised where hh02 = '$cluster' order by cast(sno as int)");
 
         //var_dump($this->data['get_list']->result());die();
 
         $this->data['heading'] = "Randomized Households for Cluster No: " . $cluster;
 
-        $this->data['main_content'] = 'spc/randomized_households';
+        $this->data['main_content'] = 'scans/randomized_households';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -936,13 +929,13 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
     {
 
         $cluster = $this->uri->segment(3);
-        $this->data['get_list'] = $this->spc->query("select distinct cluster_code, hhno from forms where cluster_code = '$cluster' and istatus in('1', '2', '3', '4', '5', '6', '7', '96')");
+        $this->data['get_list'] = $this->scans->query("select distinct cluster_code, hhno from forms where cluster_code = '$cluster' and istatus in('1', '2', '3', '4', '5', '6', '7', '96')");
 
         //var_dump($this->data['get_list']->result());die();
 
         $this->data['heading'] = "Collected Households for Cluster No: " . $cluster;
 
-        $this->data['main_content'] = 'spc/collected_households';
+        $this->data['main_content'] = 'scans/collected_households';
         $this->load->view('includes/template', $this->data);
     }
 
