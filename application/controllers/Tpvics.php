@@ -829,18 +829,18 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
         $this->data['randomization_date'] = substr($rd, 0, 10);
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
         $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('Nicola Asuni');
-        $pdf->SetTitle('TCPDF Example 048');
-        $pdf->SetSubject('TCPDF Tutorial');
-        $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
+        $pdf->SetAuthor('TPVICS');
+        $pdf->SetTitle('Cluster No: ' . $cluster);
+        $pdf->SetSubject('TPVICS');
+        $pdf->SetKeywords('TPVICS');
         $geoarea = explode('|', $this->data['cluster_data']->row()->geoarea);
 
-        $pdf->SetHeaderData('', PDF_HEADER_LOGO_WIDTH, 'TPVICS', 'Cluster No: ' . $cluster . "\n" . 'Province: ' . $geoarea[0]
-            . "\n" . 'District: ' . $geoarea[1] . "\n" . 'Tehsil: ' . $geoarea[2] . "\n" . 'Area: ' . $geoarea[3]);
+        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'TPVICS - Cluster No: ' . $cluster, 'Province: ' . $geoarea[0]
+            . "\n" . 'District: ' . $geoarea[1] . "\n" . 'Tehsil: ' . $geoarea[2] . "\n" . 'Area: ' . $geoarea[3], PDF_HEADER_STRING);
         $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
         $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
-        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP + 15, PDF_MARGIN_RIGHT);
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP + 5, PDF_MARGIN_RIGHT);
         $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
         $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
         $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
@@ -853,20 +853,20 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
         $pdf->AddPage();
         $pdf->Write(0, 'Randomization Date: ' . $this->data['randomization_date'], '', 0, 'R', true, 0, false, false, 0);
         $pdf->SetFont('helvetica', '', 9);
-        $tbl = '<table border="1" cellpadding="2" cellspacing="2" nobr="true">
+        $tbl = '<table border="1" cellpadding="0" cellspacing="0" >
                  <tr>
                   <th width="10%" style="text-align:center"><b>Serial No</b></th> 
                   <th width="20%" style="text-align:center"><b>Household No</b></th>
                   <th width="20%" style="text-align:center"><b>Head of Household</b></th>
-                  <th width="50%" style="text-align:center"><b>Remarks</b></th>
+                  <th width="50%" style="text-align:center; "><b>Remarks</b></th>
                  </tr>';
 
 
         foreach ($this->data['cluster_data']->result('array') as $row) {
-            $tbl .= '<tr><td>' . $row['sno'] . '</td> 
-<td>' . $row['tabNo '] . '-' . substr($row['compid'], 8, 8) . '</td>
-<td>' . ucfirst($row['hh08']) . '</td>
-<td></td>
+            $tbl .= '<tr  border="0"><td  border="0" style="text-align:center">' . $row['sno'] . '</td> 
+<td style="text-align:center">' . $row['tabNo '] . '-' . substr($row['compid'], 8, 8) . '</td>
+<td style="text-align:center">' . ucfirst($row['hh08']) . '</td>
+<td style="text-align:center; height: 27px"  border="0"> </td>
 </tr>';
         }
         $tbl .= '</table>';
