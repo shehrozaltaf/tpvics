@@ -4,6 +4,23 @@
     <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics_.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics_.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/a.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/a.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/libraries/tcpdf/include/barcodes/datamatrix.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/libraries/tcpdf/include/barcodes/datamatrix.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/third_party/MX/Modules.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/third_party/MX/Modules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/includes/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/includes/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/add_five.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/add_five.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/cluster_progress.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/cluster_progress.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/dashboard_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/dashboard_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/dashboard_static2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/dashboard_static2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/get_excel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/get_excel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/index2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/make_pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/make_pdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/skipQuestions.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/skipQuestions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/sync_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/sync_report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/scans/upload_excel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/upload_excel.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,25 +39,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="837" column="103" selection-start-line="837" selection-start-column="103" selection-end-line="837" selection-end-column="103" />
+            <state relative-caret-position="475">
+              <caret line="1061" column="27" selection-start-line="1061" selection-start-column="14" selection-end-line="1061" selection-end-column="27" />
               <folding>
                 <element signature="n#dashboard#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#get_excel#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
@@ -49,11 +51,19 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/includes/sidebar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'error'</find>
       <find>db_debug</find>
       <find>clusters_by_district</find>
       <find>randomized_clusters</find>
@@ -63,8 +73,6 @@
       <find>header</find>
       <find>tpvics/</find>
       <find>sys</find>
-      <find>scans/</find>
-      <find>scans</find>
       <find>(select count(*) from(select distinct hh03, tabNo from listings where hh04 in('1','2') and enumcode = l.enumcode and hh02 = l.hh02) as structures) as structures,</find>
       <find>(select count(*) from(select distinct hh03, tabNo from listings where hh04 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as structures) as residential_structures,</find>
       <find>households</find>
@@ -83,10 +91,11 @@
       <find>20</find>
       <find>um</find>
       <find>Umeed-e-Nau</find>
+      <find>scans/</find>
+      <find>scans</find>
+      <find>skiq</find>
     </findStrings>
     <replaceStrings>
-      <replace>5</replace>
-      <replace>6</replace>
       <replace>7</replace>
       <replace>8</replace>
       <replace>9</replace>
@@ -104,7 +113,6 @@
       <replace>ss22</replace>
       <replace>ss24</replace>
       <replace>'Error'</replace>
-      <replace>tpvics/</replace>
       <replace>index.php/tpvics/</replace>
       <replace>$row2-&gt;enumcode</replace>
       <replace>(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures,</replace>
@@ -115,6 +123,9 @@
       <replace>index.php/Tpvics/index</replace>
       <replace>hh10</replace>
       <replace>bl_randomised</replace>
+      <replace>tpvics/</replace>
+      <replace>tpvics-&gt;</replace>
+      <replace>tpvics</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -155,7 +166,6 @@
         <option value="$PROJECT_DIR$/application/views/includes/head.php" />
         <option value="$PROJECT_DIR$/application/views/scans/upload_excel.php" />
         <option value="$PROJECT_DIR$/application/controllers/a.php" />
-        <option value="$PROJECT_DIR$/application/views/includes/sidebar.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/scans/skipQuestions.php" />
         <option value="$PROJECT_DIR$/application/views/scans/sync_report.php" />
@@ -170,6 +180,10 @@
         <option value="$PROJECT_DIR$/application/modules/master/models/master_model.php" />
         <option value="$PROJECT_DIR$/application/views/scans/get_excel.php" />
         <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
+        <option value="$PROJECT_DIR$/application/views/tpvics/index.php" />
+        <option value="$PROJECT_DIR$/application/views/tpvics/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/views/tpvics/index2.php" />
+        <option value="$PROJECT_DIR$/application/views/includes/sidebar.php" />
       </list>
     </option>
   </component>
@@ -215,7 +229,7 @@
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="scans" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,7 +315,7 @@
       <workItem from="1591177962068" duration="753000" />
       <workItem from="1591268815158" duration="3239000" />
       <workItem from="1591343383926" duration="10337000" />
-      <workItem from="1591426530193" duration="8917000" />
+      <workItem from="1591426530193" duration="9622000" />
     </task>
     <task id="LOCAL-00001" summary="Collection">
       <created>1587970994484</created>
@@ -506,11 +520,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591436577062</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Make PDF">
+      <created>1591438384525</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1591438384525</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106254000" />
+    <option name="totallyTimeSpent" value="106959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -554,9 +575,9 @@
     <MESSAGE value="Randomization Schedular" />
     <MESSAGE value="Line listing &amp; Randomization" />
     <MESSAGE value="sysmatic randomize" />
-    <MESSAGE value="Make PDF" />
     <MESSAGE value="Make Excel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make Excel" />
+    <MESSAGE value="Make PDF" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make PDF" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -587,89 +608,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/sir_portal/uen/myactivity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2345">
-          <caret line="2714" column="22" lean-forward="true" selection-start-line="2714" selection-start-column="22" selection-end-line="2714" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/shehroz/themes/dashboards/AdminLTE-2.3.0/pages/forms/general.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="496" column="50" lean-forward="true" selection-start-line="496" selection-start-column="50" selection-end-line="496" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../dictionary_portal/assets/js/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/foot.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/main_content.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/template.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/top_navigation.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/search.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/scripts2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/index2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="233" column="57" lean-forward="true" selection-start-line="207" selection-start-column="51" selection-end-line="233" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/dashboard_static.php">
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard_static.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="824">
           <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
@@ -856,7 +795,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/dashboard_static2.php">
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard_static2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="73" column="102" lean-forward="true" selection-start-line="73" selection-start-column="102" selection-end-line="73" selection-end-column="102" />
@@ -884,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/includes/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../dictionary_portal/application/views/crf.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5499">
@@ -902,13 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="177" column="17" lean-forward="true" selection-start-line="169" selection-start-column="16" selection-end-line="177" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/skipQuestions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="82" column="48" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -943,17 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/sync_report.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="93" column="52" lean-forward="true" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
-          <folding>
-            <element signature="e#3271#3278#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/database.php" />
     <entry file="file://$PROJECT_DIR$/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -973,13 +887,6 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/sidebar.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Tpvics.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/skipQuestions.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/scans/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="308" column="70" selection-start-line="308" selection-start-column="70" selection-end-line="308" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/sync.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
@@ -987,23 +894,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/upload_excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="42" column="66" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../uen/application/controllers/UEN.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5870" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="306" column="85" lean-forward="true" selection-start-line="306" selection-start-column="85" selection-end-line="306" selection-end-column="85" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics_.php">
@@ -1069,34 +962,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scans/get_excel.php">
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="49" column="54" lean-forward="true" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
+        <state relative-caret-position="960">
+          <caret line="288" column="52" lean-forward="true" selection-start-line="288" selection-start-column="52" selection-end-line="288" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/get_excel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="269" lean-forward="true" selection-start-line="269" selection-end-line="269" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/index2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="325" column="68" selection-start-line="325" selection-start-column="68" selection-end-line="325" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/make_pdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/sync_report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="87" column="14" lean-forward="true" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/upload_excel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/cluster_progress.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/add_five.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/skipQuestions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="70" column="44" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/foot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/head2.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/main_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/scripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/scripts2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/template.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/top_navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/includes/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="837" column="103" selection-start-line="837" selection-start-column="103" selection-end-line="837" selection-end-column="103" />
+        <state relative-caret-position="475">
+          <caret line="1061" column="27" selection-start-line="1061" selection-start-column="14" selection-end-line="1061" selection-end-column="27" />
           <folding>
             <element signature="n#dashboard#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#get_excel#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
             <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
             <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
             <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />

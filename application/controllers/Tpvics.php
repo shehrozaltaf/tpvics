@@ -7,7 +7,7 @@ class Tpvics extends MX_Controller
     function __construct()
     {
         parent::__construct();
-        $this->scans = $this->load->database('default', TRUE);
+        $this->tpvics = $this->load->database('default', TRUE);
         $this->data = null;
         //$this->form_validation->CI =& $this;
         $this->load->vars('current_url', $this->uri->uri_to_assoc(1));
@@ -49,12 +49,12 @@ class Tpvics extends MX_Controller
             }
             $this->data['clusters_by_district'] = $clusters_by_district;
 
-            $this->data['randomized_clusters'] = $this->scans->query("select SUBSTRING (clusters.dist_id, 1, 1) as dist_id,
+            $this->data['randomized_clusters'] = $this->tpvics->query("select SUBSTRING (clusters.dist_id, 1, 1) as dist_id,
 			sum(case when randomized = '1' or randomized = '2' then 1 else 0 end) randomized_c
 			from clusters  
 			group by SUBSTRING (clusters.dist_id, 1, 1) order by dist_id");
 
-            $c_r_clusters = $this->scans->query("select SUBSTRING (c.dist_id, 1, 1) as dist_id, c.cluster_no,
+            $c_r_clusters = $this->tpvics->query("select SUBSTRING (c.dist_id, 1, 1) as dist_id, c.cluster_no,
 			(select count(*) from bl_randomised where dist_id = c.dist_id and hh02 = c.cluster_no) as hh_randomized,
 			(select count(distinct hhno) from forms where dist_id = c.dist_id and cluster_code = c.cluster_no and cast(istatus as int) > 0 and cast(istatus as int) < 96 and istatus is not null and istatus != '' and istatus != 'null') as hh_collected
 			from clusters c   order by c.dist_id");
@@ -140,7 +140,7 @@ class Tpvics extends MX_Controller
 
                 if ($type == 'rc') {
 
-                    $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
+                    $this->data['get_list'] = $this->tpvics->query("select l.enumcode, l.hh02,
 					(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 					(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
 					sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
@@ -160,7 +160,7 @@ class Tpvics extends MX_Controller
 
                 } else if ($type == 'cc') {
 
-                    $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
+                    $this->data['get_list'] = $this->tpvics->query("select l.enumcode, l.hh02,
 					(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 					(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
 					sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
@@ -180,7 +180,7 @@ class Tpvics extends MX_Controller
 
                 } else if ($type == 'ic') {
 
-                    $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
+                    $this->data['get_list'] = $this->tpvics->query("select l.enumcode, l.hh02,
 					(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 					(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
 					sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
@@ -201,7 +201,7 @@ class Tpvics extends MX_Controller
                 }
 
             } else {
-                $this->data['get_list'] = $this->scans->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02,
+                $this->data['get_list'] = $this->tpvics->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02,
 				(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 				(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
 				sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
@@ -216,7 +216,7 @@ class Tpvics extends MX_Controller
 				where   l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 				group by l.enumcode, l.hh02
 				order by l.enumcode,l.hh02");
-                /* $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
+                /* $this->data['get_list'] = $this->tpvics->query("select l.enumcode, l.hh02,
                  (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
                  (select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
                  sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
@@ -240,18 +240,18 @@ class Tpvics extends MX_Controller
             $id = $this->users->get_user()->id;
             $district = $this->users->get_district($id);
 
-            $this->data['clusters_by_district'] = $this->scans->query("select dist_id, 
+            $this->data['clusters_by_district'] = $this->tpvics->query("select dist_id, 
 			count(*) clusters_by_district from clusters where dist_id = '$district'
 			group by dist_id order by dist_id");
 
 
-            $this->data['randomized_clusters'] = $this->scans->query("select dist_id,
+            $this->data['randomized_clusters'] = $this->tpvics->query("select dist_id,
 			sum(case when randomized = '1' or randomized = '2' then 1 else 0 end) randomized_c
 			from clusters where dist_id = '$district' 
 			group by dist_id order by dist_id");
 
 
-            $c_r_clusters = $this->scans->query("select c.dist_id, c.cluster_no,
+            $c_r_clusters = $this->tpvics->query("select c.dist_id, c.cluster_no,
 			(select count(*) from bl_randomised where dist_id = c.dist_id and hh02 = c.cluster_no) as hh_randomized,
 			(select count(distinct hhno) from forms where dist_id = c.dist_id and cluster_code = c.cluster_no and cast(istatus as int) > 0 and cast(istatus as int) < 96 and istatus is not null and istatus != '' and istatus != 'null') as hh_collected
 			from clusters c
@@ -295,7 +295,7 @@ class Tpvics extends MX_Controller
             $this->data['rc_total'] = $rc_d2 + $rc_d3;
 
 
-            $this->data['get_list'] = $this->scans->query("select l.enumcode, l.hh02,
+            $this->data['get_list'] = $this->tpvics->query("select l.enumcode, l.hh02,
 			(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 			(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
 			sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
@@ -315,7 +315,7 @@ class Tpvics extends MX_Controller
         }
 
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/dashboard';
+        $this->data['main_content'] = 'tpvics/dashboard';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -327,7 +327,7 @@ class Tpvics extends MX_Controller
         } else {
             $dist_where = '';
         }
-        /*return $this->scans->query("select (case
+        /*return $this->tpvics->query("select (case
 			when dist_id like '1%' then 'KHYBER PAKHTUNKHWA'
 			when dist_id like '2%' then 'PUNJAB'
 			when dist_id like '3%' then 'SINDH'
@@ -342,11 +342,11 @@ class Tpvics extends MX_Controller
 			from clusters  
 			$dist_where
 			group by dist_id order by dist_id");*/
-        return $this->scans->query("SELECT
+        return $this->tpvics->query("SELECT
                                 SUBSTRING (dist_id, 1, 1) AS provinceId,
                                 COUNT (*) clusters_by_district
                             FROM
-                                clusters
+                                clusters $dist_where
                             GROUP BY
                                 SUBSTRING (dist_id, 1, 1)");
     }
@@ -381,7 +381,7 @@ class Tpvics extends MX_Controller
             }
             $this->data['clusters_by_district'] = $clusters_by_district;
 
-            $cip_clusters = $this->scans->query("select l.enumcode, l.hh02,  SUBSTRING (c.dist_id, 1, 1) AS provinceId,
+            $cip_clusters = $this->tpvics->query("select l.enumcode, l.hh02,  SUBSTRING (c.dist_id, 1, 1) AS provinceId,
 			(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 			(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
 			from clusters c
@@ -481,7 +481,7 @@ class Tpvics extends MX_Controller
             $this->data['d7_ip'] = $d7_ip;
             $this->data['d9_ip'] = $d9_ip;
 
-//            $all_clusters = $this->scans->query("select dist_id, count(*) clusters_by_district from clusters group by dist_id order by dist_id");
+//            $all_clusters = $this->tpvics->query("select dist_id, count(*) clusters_by_district from clusters group by dist_id order by dist_id");
             $all_clusters = $total_clusters_by_district;
             $this->data['d1_r'] = 0;
             $this->data['d2_r'] = 0;
@@ -514,7 +514,7 @@ class Tpvics extends MX_Controller
                 $cluster_type = substr($district_cluster_type, 3, 1);
 
                 if ($cluster_type == 'c') {
-                    $this->data['get_list'] = $this->scans->query("SELECT
+                    $this->data['get_list'] = $this->tpvics->query("SELECT
 	l.enumcode,
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
@@ -532,7 +532,7 @@ sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 					order by l.enumcode,l.hh02");
                 } else {
 
-                    $this->data['get_list'] = $this->scans->query("SELECT
+                    $this->data['get_list'] = $this->tpvics->query("SELECT
 	l.enumcode,
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
@@ -550,7 +550,7 @@ from clusters c
 					order by l.enumcode,l.hh02");
                 }
             } else {
-                $this->data['get_list'] = $this->scans->query("SELECT
+                $this->data['get_list'] = $this->tpvics->query("SELECT
 	l.enumcode,
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
@@ -572,12 +572,12 @@ sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
             /*else*/
             $id = $this->users->get_user()->id;
             $district = $this->users->get_district($id);
-            $this->data['clusters_by_district'] = $this->scans->query("select (case
+            $this->data['clusters_by_district'] = $this->tpvics->query("select (case
 			when dist_id = '2' then 'Punjab'
 			else 'Sindh' end) as district, 
 			count(*) clusters_by_district from clusters where dist_id = '$district'
 			group by dist_id order by dist_id");
-            $cip_clusters = $this->scans->query("select l.enumcode, l.hh02,
+            $cip_clusters = $this->tpvics->query("select l.enumcode, l.hh02,
 			(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 			(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
 			from clusters c
@@ -624,7 +624,7 @@ sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
             $this->data['d2_ip'] = $d2_ip;
             $this->data['d3_ip'] = $d3_ip;
 
-            $all_clusters = $this->scans->query("select dist_id, count(*) clusters_by_district from clusters where dist_id = '$district' group by dist_id order by dist_id");
+            $all_clusters = $this->tpvics->query("select dist_id, count(*) clusters_by_district from clusters where dist_id = '$district' group by dist_id order by dist_id");
 
             $this->data['d2_r'] = 0;
             $this->data['d3_r'] = 0;
@@ -642,7 +642,7 @@ sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
             $this->data['gt_ip'] = $d2_ip + $d3_ip;
             $this->data['gt_r'] = $this->data['d2_r'] + $this->data['d3_r'];
 
-            $this->data['get_list'] = $this->scans->query("
+            $this->data['get_list'] = $this->tpvics->query("
             SELECT
 	l.enumcode,
 	l.hh02, 
@@ -663,19 +663,19 @@ sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 
         $myStatusArr = array();
 
-        $randomized = $this->scans->query("SELECT a.hh02, a.hh04 FROM listings a   WHERE a.hh04 = 9 and 
+        $randomized = $this->tpvics->query("SELECT a.hh02, a.hh04 FROM listings a   WHERE a.hh04 = 9 and 
 EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 )  group by a.hh02, a.hh04;");
         foreach ($randomized->result() as $row) {
             $myStatusArr[$row->hh02] = 'Randomized';
         }
-        $ready_to_randomized = $this->scans->query("SELECT a.hh02, a.hh04 FROM listings a   WHERE a.hh04 = 9 and 
+        $ready_to_randomized = $this->tpvics->query("SELECT a.hh02, a.hh04 FROM listings a   WHERE a.hh04 = 9 and 
 not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by a.hh02, a.hh04;");
         foreach ($ready_to_randomized->result() as $row) {
             if (!isset($myStatusArr[$row->hh02]) || $row->hh02 == '') {
                 $myStatusArr[$row->hh02] = 'Ready to Randomize';
             }
         }
-        $progress = $this->scans->query("SELECT a.hh02 FROM listings a   WHERE a.hh04 != 9  group by a.hh02 ;");
+        $progress = $this->tpvics->query("SELECT a.hh02 FROM listings a   WHERE a.hh04 != 9  group by a.hh02 ;");
         foreach ($progress->result() as $row) {
             if (!isset($myStatusArr[$row->hh02]) || $row->hh02 == '') {
                 $myStatusArr[$row->hh02] = 'In Progress';
@@ -684,7 +684,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $this->data['status'] = $myStatusArr;
 
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/index';
+        $this->data['main_content'] = 'tpvics/index';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -695,9 +695,8 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $source = 'listings';
         $sample = 30;
         $columns = 'col_id, hh02, tabNo, hh03,  hh07, hh08, hh09, enumcode, uid';
-
         $cluster = $this->uri->segment(3);
-        $randomization_status = $this->scans->query("select randomized from clusters where cluster_no = '$cluster'")->row()->randomized;
+        $randomization_status = $this->tpvics->query("select randomized from clusters where cluster_no = '$cluster'")->row()->randomized;
 
         if ($randomization_status == 1) {
             $flash_msg = "Cluster No " . $cluster . " is Already Randomized";
@@ -709,12 +708,12 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                 redirect('index.php/Tpvics/index');
             }
         }
-        $dataset = $this->scans->query("select " . $columns . " from " . $source . "
+        $dataset = $this->tpvics->query("select " . $columns . " from " . $source . "
 		where username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 		and hh08a1 = '1' and hh10 = '1'  and hh02 = '$cluster' order by tabNo, deviceid, cast(hh03 as int), cast(hh07 as int)");
         if ($dataset->num_rows() > 0) {
-            $residential_structures = $this->scans->query("select distinct hh03, tabNo from listings where hh02 = '$cluster' and hh08a1 = '1'")->num_rows();
-            $this->scans->query("update clusters set randomized = '1' where cluster_no = '$cluster'");
+            $residential_structures = $this->tpvics->query("select distinct hh03, tabNo from listings where hh02 = '$cluster' and hh08a1 = '1'")->num_rows();
+            $this->tpvics->query("update clusters set randomized = '1' where cluster_no = '$cluster'");
             if ($dataset->num_rows() > $sample) {
                 $quotient = $dataset->num_rows() / $sample;
                 $random_start = rand(1, $quotient);
@@ -739,7 +738,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                         'compid' => $result[$index - 1]['hh02'] . "-" . str_pad($result[$index - 1]['hh03'], 4, "0", STR_PAD_LEFT) . "-" . str_pad($result[$index - 1]['hh07'], 3, "0", STR_PAD_LEFT),
                         'tabNo' => $result[$index - 1]['tabNo'],
                     );
-                    $this->scans->insert('bl_randomised', $data);
+                    $this->tpvics->insert('bl_randomised', $data);
                     $random_point = $random_point + $quotient;
                     $index = floor($random_point);
                 }
@@ -774,7 +773,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                         'compid' => $result[$i]['hh02'] . "-" . str_pad($result[$i]['hh03'], 4, "0", STR_PAD_LEFT) . "-" . str_pad($result[$i]['hh07'], 3, "0", STR_PAD_LEFT),
                         'tabNo' => $result[$i]['tabNo'],
                     );
-                    $this->scans->insert('bl_randomised', $data);
+                    $this->tpvics->insert('bl_randomised', $data);
                 }
                 $flash_msg = "Cluster No " . $cluster . " Randomized successfully";
                 $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
@@ -804,7 +803,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $this->load->library('tcpdf');
         $cluster = $this->uri->segment(3);
         $this->data['cluster'] = $this->uri->segment(3);
-        $this->data['cluster_data'] = $this->scans->query("select bl_randomised.randDT,
+        $this->data['cluster_data'] = $this->tpvics->query("select bl_randomised.randDT,
 	bl_randomised.sno,
 	bl_randomised.hh02,
 	bl_randomised.hh03,
@@ -825,7 +824,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
 FROM
 	bl_randomised
 LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomised.hh02 = '$cluster'");
-        $rd = $this->scans->query("select top 1 randDT from bl_randomised where hh02 = '$cluster'")->row()->randDT;
+        $rd = $this->tpvics->query("select top 1 randDT from bl_randomised where hh02 = '$cluster'")->row()->randDT;
         $this->data['randomization_date'] = substr($rd, 0, 10);
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
         $pdf->SetCreator(PDF_CREATOR);
@@ -881,15 +880,15 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
     function get_excel()
     {
         $cluster = $this->uri->segment(3);
-        $this->data['cluster_data'] = $this->scans->query("select sno, tabNo, substring(compid, 9, 8) household, hh08 from bl_randomised where hh02 = '$cluster'");
-        $rd = $this->scans->query("select top 1 randDT from bl_randomised where hh02 = '$cluster'")->row()->randDT;
+        $this->data['cluster_data'] = $this->tpvics->query("select sno, tabNo, substring(compid, 9, 8) household, hh08 from bl_randomised where hh02 = '$cluster'");
+        $rd = $this->tpvics->query("select top 1 randDT from bl_randomised where hh02 = '$cluster'")->row()->randDT;
         $this->data['randomization_date'] = substr($rd, 0, 10);
-        $get_geoarea = $this->scans->query("select geoarea from clusters where cluster_no = '$cluster'")->row()->geoarea;
+        $get_geoarea = $this->tpvics->query("select geoarea from clusters where cluster_no = '$cluster'")->row()->geoarea;
         $division = explode("|", $get_geoarea);
         $this->data['division'] = ltrim(rtrim($division[1]));
         $this->data['cluster'] = $this->uri->segment(3);
         $this->data['heading'] = "Get Excel";
-        $this->data['main_content'] = 'scans/get_excel';
+        $this->data['main_content'] = 'tpvics/get_excel';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -898,7 +897,7 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
     {
 
         $cluster = $this->uri->segment(3);
-        $this->data['get_list'] = $this->scans->query("select distinct hhno,
+        $this->data['get_list'] = $this->tpvics->query("select distinct hhno,
 		(select count(*) from forms  where cluster_code = f.cluster_code and hhno = f.hhno and username = f.username and istatus = '1') as forms,
 		(select count(*) from hb	 where cluster_no   = f.cluster_code and hhno = f.hhno and username = f.username) as hb,
 		(select count(*) from vision where cluster_no   = f.cluster_code and hhno = f.hhno and username = f.username) as vision,
@@ -913,7 +912,7 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
 
         $this->data['heading'] = "Collection Progress for Cluster No: " . $cluster;
 
-        $this->data['main_content'] = 'scans/cluster_progress';
+        $this->data['main_content'] = 'tpvics/cluster_progress';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -927,13 +926,13 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
     {
 
         $cluster = $this->uri->segment(3);
-        $this->data['get_list'] = $this->scans->query("select hh02, sno, concat(tabNO, '-', substring(compid, 8, 8)) as hhno from bl_randomised where hh02 = '$cluster' order by cast(sno as int)");
+        $this->data['get_list'] = $this->tpvics->query("select hh02, sno, concat(tabNO, '-', substring(compid, 8, 8)) as hhno from bl_randomised where hh02 = '$cluster' order by cast(sno as int)");
 
         //var_dump($this->data['get_list']->result());die();
 
         $this->data['heading'] = "Randomized Households for Cluster No: " . $cluster;
 
-        $this->data['main_content'] = 'scans/randomized_households';
+        $this->data['main_content'] = 'tpvics/randomized_households';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -941,13 +940,13 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
     {
 
         $cluster = $this->uri->segment(3);
-        $this->data['get_list'] = $this->scans->query("select distinct cluster_code, hhno from forms where cluster_code = '$cluster' and istatus in('1', '2', '3', '4', '5', '6', '7', '96')");
+        $this->data['get_list'] = $this->tpvics->query("select distinct cluster_code, hhno from forms where cluster_code = '$cluster' and istatus in('1', '2', '3', '4', '5', '6', '7', '96')");
 
         //var_dump($this->data['get_list']->result());die();
 
         $this->data['heading'] = "Collected Households for Cluster No: " . $cluster;
 
-        $this->data['main_content'] = 'scans/collected_households';
+        $this->data['main_content'] = 'tpvics/collected_households';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -986,9 +985,9 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
 
         $this->data['heading'] = $survey;
 
-        $this->data['progress_by_district'] = $this->scans->query("select * from tbl02_progress where survey = $survey");
+        $this->data['progress_by_district'] = $this->tpvics->query("select * from tbl02_progress where survey = $survey");
 
-        $this->data['main_content'] = 'scans/index';
+        $this->data['main_content'] = 'tpvics/index';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -1010,10 +1009,10 @@ GROUP BY
 	LEFT (formdate, 8) 
 ORDER BY
 	formdate DESC";
-        $getData = $this->scans->query($query);
+        $getData = $this->tpvics->query($query);
         $this->data['get_list'] = $getData->result();
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/sync_report';
+        $this->data['main_content'] = 'tpvics/sync_report';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -1028,7 +1027,7 @@ FROM
 WHERE
 	cluster_code = '" . $cluster . "'
 AND formdate LIKE  '" . $formDate . "%' ";
-        $getData = $this->scans->query($query);
+        $getData = $this->tpvics->query($query);
         echo json_encode($getData->result());
     }
 
@@ -1053,7 +1052,7 @@ AND formdate LIKE  '" . $formDate . "%' ";
 	sq.ss24
 FROM
 	forms_sq sq";
-        $getForms = $this->scans->query($forms_sq_query);
+        $getForms = $this->tpvics->query($forms_sq_query);
 
         $child_sq_query = "SELECT
 	sq.username,
@@ -1073,12 +1072,12 @@ FROM
 	sq.IM23
 FROM
 	child_table_sq sq";
-        $getChilds = $this->scans->query($child_sq_query);
+        $getChilds = $this->tpvics->query($child_sq_query);
 
         $this->data['get_list'] = $getForms->result();
         $this->data['get_list_childs'] = $getChilds->result();
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/skipQuestions';
+        $this->data['main_content'] = 'tpvics/skipQuestions';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -1090,7 +1089,7 @@ FROM
 
         $this->data['get_table'] = array('bl_randomised', 'clusters', 'devices', 'users', 'users_dash');
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/upload_excel';
+        $this->data['main_content'] = 'tpvics/upload_excel';
         $this->load->view('includes/template', $this->data);
     }
 

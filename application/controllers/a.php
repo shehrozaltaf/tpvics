@@ -246,7 +246,7 @@ class Tpvics extends MX_Controller
         }
 
         $this->data['message']  	= $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/dashboard';
+        $this->data['main_content'] = 'tpvics/dashboard';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -375,7 +375,7 @@ class Tpvics extends MX_Controller
 				order by l.enumcode,l.hh02");
 
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/dashboard';
+        $this->data['main_content'] = 'tpvics/dashboard';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -385,7 +385,7 @@ class Tpvics extends MX_Controller
         $this->data['heading'] = "Coverage Evaluation Survey, Pakistan, 2020";
 
         if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-            /* $this->data['clusters_by_district'] = $this->scans->query("select dist_id,
+            /* $this->data['clusters_by_district'] = $this->tpvics->query("select dist_id,
              count(*) clusters_by_district from clusters where dist_id in('2', '3')
              group by dist_id order by dist_id");*/
 
@@ -635,7 +635,7 @@ class Tpvics extends MX_Controller
         }
 
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/dashboard';
+        $this->data['main_content'] = 'tpvics/dashboard';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -646,7 +646,7 @@ class Tpvics extends MX_Controller
         } else {
             $dist_where = '';
         }
-        /*return $this->scans->query("select (case
+        /*return $this->tpvics->query("select (case
 			when dist_id like '1%' then 'KHYBER PAKHTUNKHWA'
 			when dist_id like '2%' then 'PUNJAB'
 			when dist_id like '3%' then 'SINDH'
@@ -796,7 +796,7 @@ class Tpvics extends MX_Controller
             $this->data['d7_ip'] = $d7_ip;
             $this->data['d9_ip'] = $d9_ip;
 
-//            $all_clusters = $this->scans->query("select dist_id, count(*) clusters_by_district from clusters group by dist_id order by dist_id");
+//            $all_clusters = $this->tpvics->query("select dist_id, count(*) clusters_by_district from clusters group by dist_id order by dist_id");
             $all_clusters = $total_clusters_by_district;
             $this->data['d1_r'] = 0;
             $this->data['d2_r'] = 0;
@@ -967,7 +967,7 @@ class Tpvics extends MX_Controller
 
 
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/index';
+        $this->data['main_content'] = 'tpvics/index';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -991,9 +991,9 @@ class Tpvics extends MX_Controller
             $this->session->set_flashdata('message', $value);
 
             if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                redirect('scans/index/' . $this->uri->segment(4));
+                redirect('tpvics/index/' . $this->uri->segment(4));
             } else {
-                redirect('scans/index');
+                redirect('tpvics/index');
             }
         }
 
@@ -1048,9 +1048,9 @@ class Tpvics extends MX_Controller
                 $this->session->set_flashdata('message', $value);
 
                 if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                    redirect('scans/index/' . $this->uri->segment(4));
+                    redirect('tpvics/index/' . $this->uri->segment(4));
                 } else {
-                    redirect('scans/index');
+                    redirect('tpvics/index');
                 }
 
             } else {
@@ -1086,9 +1086,9 @@ class Tpvics extends MX_Controller
                 $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
                 $this->session->set_flashdata('message', $value);
                 if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                    redirect('scans/index/' . $this->uri->segment(4));
+                    redirect('tpvics/index/' . $this->uri->segment(4));
                 } else {
-                    redirect('scans/index');
+                    redirect('tpvics/index');
                 }
             }
 
@@ -1098,9 +1098,9 @@ class Tpvics extends MX_Controller
             $value = '<div class="callout callout-danger"><p>' . $flash_msg . '</p></div>';
             $this->session->set_flashdata('message', $value);
             if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                redirect('scans/index/' . $this->uri->segment(4));
+                redirect('tpvics/index/' . $this->uri->segment(4));
             } else {
-                redirect('scans/index');
+                redirect('tpvics/index');
             }
         }
     }
@@ -1114,7 +1114,7 @@ class Tpvics extends MX_Controller
         $this->data['heading'] = "Add more five cases";
 
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/add_five';
+        $this->data['main_content'] = 'tpvics/add_five';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -1138,9 +1138,9 @@ class Tpvics extends MX_Controller
             $this->session->set_flashdata('message', $value);
 
             if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                redirect('scans/index/' . $this->uri->segment(4));
+                redirect('tpvics/index/' . $this->uri->segment(4));
             } else {
-                redirect('scans/index');
+                redirect('tpvics/index');
             }
         }
 
@@ -1196,7 +1196,7 @@ class Tpvics extends MX_Controller
                 $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
                 $this->session->set_flashdata('message', $value);
 
-                redirect('scans/add_five');
+                redirect('tpvics/add_five');
 
             } else {
 
@@ -1231,7 +1231,7 @@ class Tpvics extends MX_Controller
                 $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
                 $this->session->set_flashdata('message', $value);
 
-                redirect('scans/add_five');
+                redirect('tpvics/add_five');
             }
 
         } else {
@@ -1240,7 +1240,7 @@ class Tpvics extends MX_Controller
             $value = '<div class="callout callout-danger"><p>' . $flash_msg . '</p></div>';
             $this->session->set_flashdata('message', $value);
 
-            redirect('scans/add_five');
+            redirect('tpvics/add_five');
         }
     }
 
@@ -1264,7 +1264,7 @@ class Tpvics extends MX_Controller
         $this->load->library('Pdf');
 
 
-        $this->data['main_content'] = 'scans/make_pdf';
+        $this->data['main_content'] = 'tpvics/make_pdf';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -1289,7 +1289,7 @@ class Tpvics extends MX_Controller
         $this->data['cluster'] = $this->uri->segment(3);
         $this->data['heading'] = "Get Excel";
 
-        $this->data['main_content'] = 'scans/get_excel';
+        $this->data['main_content'] = 'tpvics/get_excel';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -1313,7 +1313,7 @@ class Tpvics extends MX_Controller
 
         $this->data['heading'] = "Collection Progress for Cluster No: " . $cluster;
 
-        $this->data['main_content'] = 'scans/cluster_progress';
+        $this->data['main_content'] = 'tpvics/cluster_progress';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -1358,9 +1358,9 @@ class Tpvics extends MX_Controller
 
         $this->data['heading'] = $survey;
 
-        $this->data['progress_by_district'] = $this->scans->query("select * from tbl02_progress where survey = $survey");
+        $this->data['progress_by_district'] = $this->tpvics->query("select * from tbl02_progress where survey = $survey");
 
-        $this->data['main_content'] = 'scans/index';
+        $this->data['main_content'] = 'tpvics/index';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -1411,7 +1411,7 @@ FROM
         $this->data['get_list'] = $getForms->result();
         $this->data['get_list_childs'] = $getChilds->result();
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/skipQuestions';
+        $this->data['main_content'] = 'tpvics/skipQuestions';
         $this->load->view('includes/template', $this->data);
     }
 
@@ -1423,7 +1423,7 @@ FROM
 
         $this->data['get_table'] = array('bl_randomised', 'clusters', 'devices', 'users');
         $this->data['message'] = $this->session->flashdata('message');
-        $this->data['main_content'] = 'scans/upload_excel';
+        $this->data['main_content'] = 'tpvics/upload_excel';
         $this->load->view('includes/template', $this->data);
     }
 

@@ -513,7 +513,7 @@ class Datamatrix {
 	}
 
 	/**
-	 * The look-ahead test scans the data to be encoded to find the best mode (Annex P - steps from J to S).
+     * The look-ahead test tpvics the data to be encoded to find the best mode (Annex P - steps from J to S).
 	 * @param $data (string) data to encode
 	 * @param $pos (int) current position
 	 * @param $mode (int) current encoding mode
