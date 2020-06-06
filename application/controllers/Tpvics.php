@@ -14,7 +14,7 @@ class Tpvics extends MX_Controller
         $this->load->module("master");
         $this->load->module("users");
         if (!$this->users->logged_in()) {
-            redirect('users/login', 'refresh');
+            redirect('index.php/users/login', 'refresh');
         }
 
 
@@ -721,7 +721,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                 $random_point = $random_start;
                 $index = floor($random_start);
                 $result = $dataset->result_array();
-                for ($i = 1; $i <= 20; $i++) {
+                for ($i = 1; $i <= 30; $i++) {
                     $data = array(
                         'randDT' => date('Y-m-d h:i:s'),
                         'uid' => $result[$index - 1]['uid'],
@@ -881,7 +881,7 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
     function get_excel()
     {
         $cluster = $this->uri->segment(3);
-        $this->data['cluster_data'] = $this->scans->query("select sno, ssno, substring(compid, 6, 8) household, hh08 from bl_randomised where hh02 = '$cluster'");
+        $this->data['cluster_data'] = $this->scans->query("select sno, tabNo, substring(compid, 9, 8) household, hh08 from bl_randomised where hh02 = '$cluster'");
         $rd = $this->scans->query("select top 1 randDT from bl_randomised where hh02 = '$cluster'")->row()->randDT;
         $this->data['randomization_date'] = substr($rd, 0, 10);
         $get_geoarea = $this->scans->query("select geoarea from clusters where cluster_no = '$cluster'")->row()->geoarea;
