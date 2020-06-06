@@ -253,14 +253,10 @@
                                     <th>Province</th>
                                     <th>Division</th>
                                     <th>Cluster Number</th>
-                                    <th>Total Structures</th>
-                                    <th>Residential Structures</th>
-                                    <th>Total Households</th>
-                                    <th>Eligible Households</th>
                                     <th>Randomized Forms</th>
                                     <th>Collected Forms</th>
+                                    <th>Completed Forms</th>
                                     <th>Status</th>
-
                                 </tr>
                                 </thead>
 
@@ -270,10 +266,23 @@
 
                                 foreach ($get_list->result() as $row5) {
 
-                                    if ($row5->enumcode == 2) {
+                                    $get_geoarea = $this->tpvics->query("select geoarea from clusters where cluster_no = '$row5->hh02'")->row()->geoarea;
+                                    $explode = explode("|", $get_geoarea);
+                                    $division = ltrim(rtrim($explode[1]));
+                                    if ($row5->enumcode == 1) {
+                                        $province = 'Khyber Paktunkhwa';
+                                    } elseif ($row5->enumcode == 2) {
                                         $province = 'Punjab';
-                                    } else if ($row5->enumcode == 3) {
+                                    } elseif ($row5->enumcode == 3) {
                                         $province = 'Sindh';
+                                    } elseif ($row5->enumcode == 4) {
+                                        $province = 'Balochistan';
+                                    } elseif ($row5->enumcode == 7) {
+                                        $province = 'Gilgit Baltistan';
+                                    } elseif ($row5->enumcode == 9) {
+                                        $province = 'Adjacent Areas-FR';
+                                    } else {
+                                        $province = ltrim(rtrim($explode[0]));
                                     }
 
                                     if (($row5->eligible_households > 25 and $row5->randomized_households < 25 and $row5->randomized_households != 0) || $row5->randomized_households > 25) {
@@ -283,10 +292,9 @@
                                     }
 
                                     if ($row5->randomized_households > 0) {
-
                                         if ($row5->collected_households == 0) {
                                             $status = '<span class="label label-info">Not Attempted</span>';
-                                        } else if ($row5->collected_households > 0 and $row5->collected_households < 20) {
+                                        } else if ($row5->collected_households > 0 and $row5->collected_households < 30) {
                                             $status = '<span class="label label-danger">Pending</span>';
                                         } else {
                                             $status = '<span class="label label-success">Completed</span>';
@@ -296,26 +304,20 @@
                                         $status = '<span class="label label-warning">Not Randomized</span>';
                                     }
 
-                                    $get_geoarea = $this->tpvics->query("select geoarea from clusters where cluster_no = '$row5->hh02'")->row()->geoarea;
-                                    $explode = explode("|", $get_geoarea);
-                                    $division = ltrim(rtrim($explode[1]));
-
                                     ?>
 
                                     <tr>
                                         <td><?php echo $province; ?></td>
                                         <td><?php echo $division; ?></td>
                                         <td><?php echo $row5->hh02; ?></td>
-                                        <td><?php echo $row5->structures; ?></td>
-                                        <td><?php echo $row5->residential_structures; ?></td>
-                                        <td><?php echo $row5->households; ?></td>
-                                        <td><?php echo $row5->eligible_households; ?></td>
+
                                         <td><?php echo $row5->randomized_households; ?></a></strong></td>
                                         <td>
                                             <strong><a href="<?php echo base_url() . 'index.php/tpvics/cluster_progress/' . $row5->hh02; ?>"
                                                        class="name"
-                                                       target="_blank"><?php echo $row5->collected_households; ?></a></strong>
+                                                       target="_blank"><?php echo $row5->collecting_tabs; ?></a></strong>
                                         </td>
+                                        <td><?php echo $row5->completed_tabs; ?></td>
                                         <td><?php echo $status; ?></td>
 
                                     </tr>
