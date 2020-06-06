@@ -66,9 +66,21 @@
                         <label>Provice:</label>
                           <select class="form-control select2" name="district" id="district" style="width: 100%;">
                             <option value="">Select Province</option>
-                            <option value="0" 	<?php if($user->district == 0){ ?>selected<?php } ?>>Karachi (Core Team)</option>
-                            <option value="2" <?php if($user->district == 2){ ?>selected<?php } ?>>Punjab</option>
-                            <option value="3" <?php if($user->district == 3){ ?>selected<?php } ?>>Sindh</option>
+                              <option value="0" <?php if ($user->district == 0){ ?>selected<?php } ?>>Karachi (Core
+                                  Team)
+                              </option>
+                              <option value="1" <?php if ($user->district == 1){ ?>selected<?php } ?>>KHYBER
+                                  PAKHTUNKHWA
+                              </option>
+                              <option value="2" <?php if ($user->district == 2){ ?>selected<?php } ?>>PUNJAB</option>
+                              <option value="3" <?php if ($user->district == 3){ ?>selected<?php } ?>>SINDH</option>
+                              <option value="4" <?php if ($user->district == 4){ ?>selected<?php } ?>>BALOCHISTAN
+                              </option>
+                              <option value="7" <?php if ($user->district == 5){ ?>selected<?php } ?>>GILGIT BALTISTAN
+                              </option>
+                              <option value="9" <?php if ($user->district == 0){ ?>selected<?php } ?>>ADJACENT
+                                  AREAS-FR
+                              </option>
                           </select>
                         </div>
                         

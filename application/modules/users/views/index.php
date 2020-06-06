@@ -116,7 +116,7 @@ $(function () {
 	  dom: '<"top"Bfrt<"clear">>rt<"bottom"ilp>',
 	  buttons: ['excel', 'csv'],
 	  "scrollX": true,
-	  "ordering": false,
+        "ordering": true,
 	  //responsive: true,
 	});
 	

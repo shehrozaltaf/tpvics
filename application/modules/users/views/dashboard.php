@@ -36,7 +36,7 @@
             
             
             	<?php $attributes = array('id' => 'filter_by_date', 'name' => 'filter_by_date'); ?>
-                <?php echo form_open('index.php/ce/dashboard', $attributes);?>
+                <?php echo form_open('index.php/tpvics/dashboard', $attributes); ?>
                 
                 
                 <div class="col-md-5">

@@ -3,7 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Tpvics extends MX_Controller
 {
-
     function __construct()
     {
         parent::__construct();
@@ -19,7 +18,6 @@ class Tpvics extends MX_Controller
 
 
     }
-
 
     function dashboard()
     {
@@ -319,7 +317,6 @@ class Tpvics extends MX_Controller
         $this->load->view('includes/template', $this->data);
     }
 
-
     function clusters_by_district($district)
     {
         if (isset($district) && $district != '') {
@@ -351,12 +348,17 @@ class Tpvics extends MX_Controller
                                 SUBSTRING (dist_id, 1, 1)");
     }
 
+    /*function showDir(){
+        $dir    = 'C:\xampp\htdocs\tpvics\application\controllers';
+        $files1 = scandir($dir);
+        print_r($files1);
+    }*/
+
     function index()
     {
         if (!$this->users->in_group('admin')) {
             redirect('index.php/Tpvics/sync_report');
         }
-
         $this->data['heading'] = "Coverage Evaluation Survey, Pakistan, 2020";
         if ($this->users->in_group('admin') || $this->users->in_group('management')) {
             $total_clusters_by_district = $this->clusters_by_district('');
@@ -660,9 +662,7 @@ sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 			group by l.enumcode, l.hh02
 			order by l.enumcode,l.hh02");
         }
-
         $myStatusArr = array();
-
         $randomized = $this->tpvics->query("SELECT a.hh02, a.hh04 FROM listings a   WHERE a.hh04 = 9 and 
 EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 )  group by a.hh02, a.hh04;");
         foreach ($randomized->result() as $row) {
@@ -682,13 +682,10 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
             }
         }
         $this->data['status'] = $myStatusArr;
-
         $this->data['message'] = $this->session->flashdata('message');
         $this->data['main_content'] = 'tpvics/index';
         $this->load->view('includes/template', $this->data);
     }
-
-
 
     function systematic_randomizer()
     {
@@ -796,7 +793,6 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         }
     }
 
-
     function make_pdf()
     {
 
@@ -833,7 +829,6 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
         $pdf->SetSubject('TPVICS');
         $pdf->SetKeywords('TPVICS');
         $geoarea = explode('|', $this->data['cluster_data']->row()->geoarea);
-
         $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'TPVICS - Cluster No: ' . $cluster, 'Province: ' . $geoarea[0]
             . "\n" . 'District: ' . $geoarea[1] . "\n" . 'Tehsil: ' . $geoarea[2] . "\n" . 'Area: ' . $geoarea[3], PDF_HEADER_STRING);
         $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -859,8 +854,6 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
                   <th width="20%" style="text-align:center"><b>Head of Household</b></th>
                   <th width="50%" style="text-align:center; "><b>Remarks</b></th>
                  </tr>';
-
-
         foreach ($this->data['cluster_data']->result('array') as $row) {
             $tbl .= '<tr  border="0"><td  border="0" style="text-align:center">' . $row['sno'] . '</td> 
 <td style="text-align:center">' . $row['tabNo '] . '-' . substr($row['compid'], 8, 8) . '</td>
@@ -892,7 +885,6 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
         $this->load->view('includes/template', $this->data);
     }
 
-
     function cluster_progress()
     {
 
@@ -918,7 +910,6 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
 
     function test_data()
     {
-
         echo dirname(__FILE__);
     }
 
@@ -949,49 +940,6 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
         $this->data['main_content'] = 'tpvics/collected_households';
         $this->load->view('includes/template', $this->data);
     }
-
-    /*
-
-    function systematic_randomizer(){
-
-        $random_no = floor(1000/20);
-
-        $random_point = rand(1, $random_no);
-
-        //echo $random_point; die();
-
-        for($i = 1; $i <= 20; $i++){
-
-            echo $i.":".$random_point.'<br>';
-
-            $random_point = floor($random_point + $random_no);
-        }
-    }
-
-
-    function insert_data(){
-
-        for($i = 1; $i <= 1000; $i++){
-
-            $form = 'form_'.$i;
-
-            $this->db->query("INSERT INTO source(form_no, cluster) VALUES ('$form', 113001)");
-        }
-    }
-
-    function progress(){
-
-        $survey = $this->uri->segment(3);
-
-        $this->data['heading'] = $survey;
-
-        $this->data['progress_by_district'] = $this->tpvics->query("select * from tbl02_progress where survey = $survey");
-
-        $this->data['main_content'] = 'tpvics/index';
-        $this->load->view('includes/template', $this->data);
-    }
-
-    */
 
     function sync_report()
     {
@@ -1030,7 +978,6 @@ AND formdate LIKE  '" . $formDate . "%' ";
         $getData = $this->tpvics->query($query);
         echo json_encode($getData->result());
     }
-
 
     function skipQuestions()
     {
@@ -1079,7 +1026,6 @@ FROM
         $this->load->view('includes/template', $this->data);
     }
 
-
     /*==============Upload Excels===============*/
     function upload_excel_data()
     {
@@ -1090,7 +1036,6 @@ FROM
         $this->data['main_content'] = 'tpvics/upload_excel';
         $this->load->view('includes/template', $this->data);
     }
-
 
     public function addExcelData2()
     {
@@ -1108,8 +1053,6 @@ FROM
             } else {
                 $data = array('upload_data' => $this->upload->data());
             }
-
-
             if (isset($_POST['idTable']) && $_POST['idTable'] != '' && $_POST['idTable'] != '0') {
                 $table = $_POST['idTable'];
                 $data = array('document_file' => $this->upload->data());
@@ -1195,8 +1138,6 @@ FROM
             } else {
                 $data = array('upload_data' => $this->upload->data());
             }
-
-
             if (isset($_POST['idTable']) && $_POST['idTable'] != '' && $_POST['idTable'] != '0') {
                 $table = $_POST['idTable'];
                 $data = array('document_file' => $this->upload->data());
@@ -1215,7 +1156,6 @@ FROM
                             $arr_data[$row][$column] = $data_value;
                         }
                     }
-
                     $myarr = array();
                     foreach ($arr_data as $k => $l) {
                         $c = array();
@@ -1241,11 +1181,9 @@ FROM
         echo json_encode($data);
     }
 
-
     ////// close db connection //////
     public function __destruct()
     {
-
         $this->db->close();
     }
 }

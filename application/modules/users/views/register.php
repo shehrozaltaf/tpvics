@@ -1,10 +1,8 @@
 <body class="hold-transition skin-blue sidebar-mini fixed">
 <div class="wrapper">
-
   <?php echo $this->load->view('includes/header');?>
   <!-- Left side column. contains the logo and sidebar -->
   <?php echo $this->load->view('includes/sidebar');?>
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -13,14 +11,11 @@
         <?php echo $heading;?>
         <small></small>
       </h1>
-      
     </section>
-
     <!-- Main content -->
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
-
           <div class="box box-primary">
             <!--<div class="box-header">
               <h3 class="box-title">Data Table With Full Features</h3>
@@ -29,11 +24,8 @@
             <div class="box-body">
             	<div class="col-sm-3"></div>
                 <div class="col-md-6">
-                
                 <?= validation_errors("<p style='color:red;'>", "</p>") ?>
                 <?php if(validation_errors()){ ?><hr style="border: none; height: 5px;color: #333;background-color:red;"><?php } ?>
-                
-                
                   <!-- general form elements -->
                     <!--<div class="box-header with-border"><h3 class="box-title">Quick Example</h3></div>-->
                     <!-- /.box-header -->
@@ -67,8 +59,15 @@
                           <select class="form-control select2" name="district" id="district" style="width: 100%;">
                             <option value="">Select Province</option>
                             <option value="0" 	<?php echo set_select('district', 0, false);?>>Karachi (Core Team)</option>
-                            <option value="2" <?php echo set_select('district', 2, false);?>>Punjab</option>
-                            <option value="3" <?php echo set_select('district', 3, false);?>>Sindh</option>
+                              <option value="1" <?php echo set_select('district', 1, false); ?>>KHYBER PAKHTUNKHWA
+                              </option>
+                              <option value="2" <?php echo set_select('district', 2, false); ?>>PUNJAB</option>
+                              <option value="3" <?php echo set_select('district', 3, false); ?>>SINDH</option>
+                              <option value="4" <?php echo set_select('district', 4, false); ?>>BALOCHISTAN</option>
+                              <option value="7" <?php echo set_select('district', 7, false); ?>>GILGIT BALTISTAN
+                              </option>
+                              <option value="9" <?php echo set_select('district', 9, false); ?>>ADJACENT AREAS-FR
+                              </option>
                           </select>
                         </div>
                         
@@ -163,8 +162,6 @@
 <!-- page script -->
 <script>
   $(function () {
-    
-	
 	$(".reveal").on('click',function() {
 		var $pwd = $("#password");
 		if ($pwd.attr('type') === 'password') {
@@ -173,7 +170,6 @@
 			$pwd.attr('type', 'password');
 		}
 	});
-	
 	$(".reveal2").on('click',function() {
 		var $pwd2 = $("#passwordagain");
 		if ($pwd2.attr('type') === 'password') {
@@ -182,12 +178,8 @@
 			$pwd2.attr('type', 'password');
 		}
 	});
-	
-	
 	$('#example1').DataTable();
 	$('.select2').select2();
-	
-	
 	$("#type").change(function () {
 		var type = $("#type").val();
 		if(type == 2 || type == 3){
@@ -198,7 +190,6 @@
 			$('#user_app').select2().select2('val','0');
 		}
 	});
-	
   });
   
   /*function callme(){
