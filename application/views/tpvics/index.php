@@ -259,7 +259,7 @@
                                     <th>Completed Tabs</th>
                                     <th>Status</th>
 
-                                    <?php if ((!empty($this->uri->segment(3)) and substr($this->uri->segment(3), 3, 1) == 'c') || $this->users->get_user()->district != 0) { ?>
+                                    <?php if ((!empty($this->uri->segment(3)) and substr($this->uri->segment(3), 3, 1) == 'c')) { ?>
                                         <th width="15%">Randomize</th>
                                     <?php } ?>
 
@@ -318,7 +318,7 @@
 
                                             } ?></td>
 
-                                        <?php if ((!empty($this->uri->segment(3)) and substr($this->uri->segment(3), 3, 1) == 'c') || $this->users->get_user()->district != 0) {
+                                        <?php if ((!empty($this->uri->segment(3)) and substr($this->uri->segment(3), 3, 1) == 'c')) {
                                             $cluster = $this->tpvics->query("select randomized from clusters where cluster_no = '$row2->hh02'")->row();
                                             if ($this->users->in_group('admin') || $this->users->in_group('management')) {
                                                 $anchor = anchor("index.php/Tpvics/systematic_randomizer/" . $row2->hh02 . "/" . $this->uri->segment(3), '<i class="fa fa-edit"></i> Randomize', 'class="btn-sm btn-primary"');

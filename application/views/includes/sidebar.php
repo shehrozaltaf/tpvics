@@ -28,15 +28,20 @@
             </li>
 
 
-            <li <?php if ($this->uri->segment(1) == 'Tpvics' and $this->uri->segment(2) == 'dashboard') { ?> class="active" <?php } ?>>
-                <a href="<?php echo base_url(); ?>index.php/Tpvics/upload_excel_data"><i class="fa fa-bar-chart"></i> <span>Upload Data</span></a>
-            </li>
+
 
             <!--   <li <?php /*if ($this->uri->segment(1) == 'tpvics' and $this->uri->segment(2) == 'add_five') { */ ?> class="active" <?php /*} */ ?>>
                 <a href="<?php /*echo base_url(); */ ?>index.php/tpvics/add_five"><i class="fa fa-bar-chart"></i>
                     <span>Add 5 Cases</span></a></li>-->
 
             <?php if ($this->users->in_group('admin')) { ?>
+
+                <li <?php if ($this->uri->segment(1) == 'Tpvics' and $this->uri->segment(2) == 'upload_excel_data') { ?> class="active" <?php } ?>>
+                    <a href="<?php echo base_url(); ?>index.php/Tpvics/upload_excel_data"><i
+                                class="fa fa-bar-chart"></i> <span>Upload Data</span></a>
+                </li>
+
+
                 <li <?php if ($this->uri->segment(1) == 'users'){ ?>class="treeview active"
                     <?php } else { ?>class="treeview" <?php } ?>>
 

@@ -348,17 +348,18 @@ class Tpvics extends MX_Controller
                                 SUBSTRING (dist_id, 1, 1)");
     }
 
-    /*function showDir(){
-        $dir    = 'C:\xampp\htdocs\tpvics\application\controllers';
-        $files1 = scandir($dir);
-        print_r($files1);
-    }*/
+    function showDir()
+    {
+        for ($i = 135; $i <= 164; $i++) {
+            echo '<br>INSERT INTO users_groups (user_id, group_id) VALUES ("' . $i . '", 3);';
+        }
+        /* $dir    = 'C:\xampp\htdocs\tpvics\application\controllers';
+         $files1 = scandir($dir);
+         print_r($files1);*/
+    }
 
     function index()
     {
-        if (!$this->users->in_group('admin')) {
-            redirect('index.php/Tpvics/sync_report');
-        }
         $this->data['heading'] = "Coverage Evaluation Survey, Pakistan, 2020";
         if ($this->users->in_group('admin') || $this->users->in_group('management')) {
             $total_clusters_by_district = $this->clusters_by_district('');
@@ -382,7 +383,6 @@ class Tpvics extends MX_Controller
                 $clusters_by_district[] = $myTotalArray;
             }
             $this->data['clusters_by_district'] = $clusters_by_district;
-
             $cip_clusters = $this->tpvics->query("select l.enumcode, l.hh02,  SUBSTRING (c.dist_id, 1, 1) AS provinceId,
 			(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 			(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
@@ -391,10 +391,6 @@ class Tpvics extends MX_Controller
 			where l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 			group by l.enumcode, l.hh02,c.dist_id
 			order by l.enumcode,l.hh02");
-            /* echo '<pre>';
-             print_r($cip_clusters->result());
-             echo '</pre>';
-             exit();*/
             $d1_t = 0;
             $d2_t = 0;
             $d3_t = 0;
@@ -483,7 +479,6 @@ class Tpvics extends MX_Controller
             $this->data['d7_ip'] = $d7_ip;
             $this->data['d9_ip'] = $d9_ip;
 
-//            $all_clusters = $this->tpvics->query("select dist_id, count(*) clusters_by_district from clusters group by dist_id order by dist_id");
             $all_clusters = $total_clusters_by_district;
             $this->data['d1_r'] = 0;
             $this->data['d2_r'] = 0;
@@ -524,8 +519,7 @@ class Tpvics extends MX_Controller
 sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 (select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs,
-(select hh04   from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9  group by hh02,hh04 ) as status 
+(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
 					from clusters c
 					left join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (c.dist_id, 1, 1) = '$district' and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
@@ -542,8 +536,7 @@ sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 (select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs,
-(select hh04   from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9  group by hh02,hh04 ) as status 
+(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs 
 from clusters c
 					left join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (c.dist_id, 1, 1) = '$district' and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
@@ -560,8 +553,7 @@ from clusters c
 sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 (select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs,
-(select hh04   from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9  group by hh02,hh04 ) as status 
+(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
                               from clusters c
                             left join listings l on l.hh02 = c.cluster_no
                               where   l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
@@ -1029,8 +1021,10 @@ FROM
     /*==============Upload Excels===============*/
     function upload_excel_data()
     {
+        if (!$this->users->in_group('admin')) {
+            redirect('index.php/Tpvics/sync_report');
+        }
         $this->data['heading'] = "Upload Excel Data";
-
         $this->data['get_table'] = array('bl_randomised', 'clusters', 'devices', 'users', 'users_dash');
         $this->data['message'] = $this->session->flashdata('message');
         $this->data['main_content'] = 'tpvics/upload_excel';
