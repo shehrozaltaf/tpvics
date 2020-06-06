@@ -808,22 +808,43 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $this->load->library('tcpdf');
         $cluster = $this->uri->segment(3);
         $this->data['cluster'] = $this->uri->segment(3);
-        $this->data['cluster_data'] = $this->scans->query("select * from ml_randomised where hh02 = '$cluster'");
-        $rd = $this->scans->query("select top 1 randDT from ml_randomised where hh02 = '$cluster'")->row()->randDT;
+        $this->data['cluster_data'] = $this->scans->query("select bl_randomised.randDT,
+	bl_randomised.sno,
+	bl_randomised.hh02,
+	bl_randomised.hh03,
+	bl_randomised.hh05,
+	bl_randomised.hh07,
+	bl_randomised.hh08,
+	bl_randomised.hh09,
+	bl_randomised.hhss,
+	bl_randomised.compid,
+	bl_randomised.total,
+	bl_randomised.randno,
+	bl_randomised.quot,
+	bl_randomised.ssno,
+	bl_randomised.hhdt,
+	bl_randomised.dist_id,
+	bl_randomised.[tabNo ],
+	clusters.geoarea
+FROM
+	bl_randomised
+LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomised.hh02 = '$cluster'");
+        $rd = $this->scans->query("select top 1 randDT from bl_randomised where hh02 = '$cluster'")->row()->randDT;
         $this->data['randomization_date'] = substr($rd, 0, 10);
-
-
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
         $pdf->SetCreator(PDF_CREATOR);
         $pdf->SetAuthor('Nicola Asuni');
         $pdf->SetTitle('TCPDF Example 048');
         $pdf->SetSubject('TCPDF Tutorial');
         $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
-        $pdf->SetHeaderData('', PDF_HEADER_LOGO_WIDTH, 'Umeed-e-Nau', 'Cluster No:' . $cluster);
+        $geoarea = explode('|', $this->data['cluster_data']->row()->geoarea);
+
+        $pdf->SetHeaderData('', PDF_HEADER_LOGO_WIDTH, 'TPVICS', 'Cluster No: ' . $cluster . "\n" . 'Province: ' . $geoarea[0]
+            . "\n" . 'District: ' . $geoarea[1] . "\n" . 'Tehsil: ' . $geoarea[2] . "\n" . 'Taluka: ' . $geoarea[3]);
         $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
         $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
-        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP + 15, PDF_MARGIN_RIGHT);
         $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
         $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
         $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
@@ -838,13 +859,19 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $pdf->SetFont('helvetica', '', 9);
         $tbl = '<table border="1" cellpadding="2" cellspacing="2" nobr="true">
                  <tr>
-                  <th><b>Serial No</b></th>
-                  <th><b>Username</b></th>
+                  <th><b>Serial No</b></th> 
                   <th><b>Household No</b></th>
                   <th><b>Head of Household</b></th>
+                  <th><b>Remarks</b></th>
                  </tr>';
-        foreach ($this->data['cluster_data']->result() as $row) {
-            $tbl .= '<tr><td>' . $row->sno . '</td><td>' . $this->master_model->get_user($row->hh02, $row->hh03, $row->hh07, $row->tabNo) . '</td><td>' . $row->tabNo . '-' . substr($row->compid, 7, 8) . '</td><td>' . $row->hh08 . '</td></tr>';
+
+
+        foreach ($this->data['cluster_data']->result('array') as $row) {
+            $tbl .= '<tr><td>' . $row['sno'] . '</td> 
+<td>' . $row['tabNo '] . '-' . substr($row['compid'], 8, 8) . '</td>
+<td>' . ucfirst($row['hh08']) . '</td>
+<td></td>
+</tr>';
         }
         $tbl .= '</table>';
         $pdf->writeHTML($tbl, true, false, true, false, '');
@@ -853,30 +880,19 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $pdf->Output('example_007.pdf', 'I');
         ob_end_flush();
         ob_end_clean();
-//        $this->data['main_content'] = 'scans/make_pdf';
-//        $this->load->view('includes/template', $this->data);
     }
 
     function get_excel()
     {
-
         $cluster = $this->uri->segment(3);
-
         $this->data['cluster_data'] = $this->scans->query("select sno, ssno, substring(compid, 6, 8) household, hh08 from bl_randomised where hh02 = '$cluster'");
-
         $rd = $this->scans->query("select top 1 randDT from bl_randomised where hh02 = '$cluster'")->row()->randDT;
         $this->data['randomization_date'] = substr($rd, 0, 10);
-
         $get_geoarea = $this->scans->query("select geoarea from clusters where cluster_no = '$cluster'")->row()->geoarea;
         $division = explode("|", $get_geoarea);
         $this->data['division'] = ltrim(rtrim($division[1]));
-
-        //var_dump($this->data['division']);die();
-
-
         $this->data['cluster'] = $this->uri->segment(3);
         $this->data['heading'] = "Get Excel";
-
         $this->data['main_content'] = 'scans/get_excel';
         $this->load->view('includes/template', $this->data);
     }
@@ -915,7 +931,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
     {
 
         $cluster = $this->uri->segment(3);
-        $this->data['get_list'] = $this->scans->query("select hh02, sno, concat(tabNO, '-', substring(compid, 8, 8)) as hhno from ml_randomised where hh02 = '$cluster' order by cast(sno as int)");
+        $this->data['get_list'] = $this->scans->query("select hh02, sno, concat(tabNO, '-', substring(compid, 8, 8)) as hhno from bl_randomised where hh02 = '$cluster' order by cast(sno as int)");
 
         //var_dump($this->data['get_list']->result());die();
 

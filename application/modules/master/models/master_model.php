@@ -110,6 +110,72 @@ class Master_model extends CI_Model
 
 		return $data->result_array();
 	}
+
+    public function get_user($hh02, $hh03, $hh07, $tabNo)
+    {
+        $bl = $this->load->database('default', TRUE);
+        $data = $bl->query("select username from listings where hh02 = '$hh02' and hh03 = '$hh03' and hh07 = '$hh07' and tabNo = '$tabNo'")->row();
+        if (isset($data->username) && $data->username != '') {
+            $username = $data->username;
+        } else {
+            $username = '';
+        }
+        return $username;
+    }
+
+    public function get_status_shehroz($cluster, $hhno)
+    {
+
+        /*http://localhost/uen/spc/randomized_households/252060*/
+        $uen_ml = $this->load->database('uen_ml', TRUE);
+        $sql = "SELECT
+	istatus,
+	hhno,cluster_code
+FROM
+	forms
+WHERE
+	cluster_code = '$cluster' 
+AND hhno = '$hhno' 
+AND istatus IN (
+	'1',
+	'2',
+	'3',
+	'4',
+	'5',
+	'6',
+	'7',
+	'96'
+)
+AND username NOT IN (
+	'afg12345',
+	'user0001',
+	'user0113',
+	'user0123',
+	'user0211',
+	'user0234',
+	'user0252',
+	'user0414',
+	'user0432',
+	'user0434'
+)
+ORDER BY
+	col_id ASC";
+        $data = $uen_ml->query($sql);
+        $result = 0;
+        if ($data->num_rows() == 0) {
+            $result = 0;
+        } else {
+            foreach ($data->result_array as $k => $v) {
+                if ($v['istatus'] == 1) {
+                    $result = 1;
+                    break;
+                } else {
+                    $result = $v['istatus'];
+                }
+            }
+        }
+        return $result;
+    }
 	
 	function __destruct() {
 		
