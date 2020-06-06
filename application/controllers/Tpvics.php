@@ -1053,7 +1053,6 @@ AND formdate LIKE  '" . $formDate . "%' ";
 FROM
 	forms_sq sq";
         $getForms = $this->tpvics->query($forms_sq_query);
-
         $child_sq_query = "SELECT
 	sq.username,
 	sq.total,
@@ -1073,7 +1072,6 @@ FROM
 FROM
 	child_table_sq sq";
         $getChilds = $this->tpvics->query($child_sq_query);
-
         $this->data['get_list'] = $getForms->result();
         $this->data['get_list_childs'] = $getChilds->result();
         $this->data['message'] = $this->session->flashdata('message');
