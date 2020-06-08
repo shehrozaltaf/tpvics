@@ -2,86 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dashboard/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/.idea/jsLinters/jshint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/.idea/tpvics.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/frame_1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/frame_3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/frame_5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/frame_7.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_0/mask_21_0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_0/mask_29_0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_0/mask_37_0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_0/mask_45_0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_1/mask_21_1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_1/mask_29_1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_1/mask_37_1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_1/mask_45_1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_2/mask_21_2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_2/mask_29_2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_2/mask_37_2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_2/mask_45_2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_3/mask_21_3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_3/mask_29_3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_3/mask_37_3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_3/mask_45_3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_4/mask_21_4.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_4/mask_29_4.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_4/mask_37_4.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_4/mask_45_4.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_5/mask_21_5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_5/mask_29_5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_5/mask_37_5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_5/mask_45_5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_6/mask_21_6.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_6/mask_29_6.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_6/mask_37_6.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_6/mask_45_6.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_7/mask_21_7.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_7/mask_29_7.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_7/mask_37_7.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/cache/mask_7/mask_45_7.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/Rural Urban Distribution of required Blocks by PBS for TPVICS.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/controllers/Tpvics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/controllers/Tpvics_.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/controllers/a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/master/models/master_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/master/models/master_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/users/views/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/users/views/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/users/views/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/users/views/edit_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/users/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/users/views/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/users/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/users/views/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/includes/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/views/includes/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/add_five.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/cluster_progress.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/dashboard.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/dashboard_static.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/dashboard_static2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/get_excel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/index2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/make_pdf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/skipQuestions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/upload_excel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/clusters.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/contributing.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/documents/Random_clusters_for_test.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/groups.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/readme.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/users_dash.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/web.config" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -341,7 +262,7 @@
       <workItem from="1591343383926" duration="10337000" />
       <workItem from="1591426530193" duration="18780000" />
       <workItem from="1591451847973" duration="698000" />
-      <workItem from="1591601928198" duration="1184000" />
+      <workItem from="1591601928198" duration="1440000" />
     </task>
     <task id="LOCAL-00001" summary="Collection">
       <created>1587970994484</created>
@@ -588,11 +509,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591448067160</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Form status">
+      <created>1591608312358</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1591608312358</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117999000" />
+    <option name="totallyTimeSpent" value="118255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
