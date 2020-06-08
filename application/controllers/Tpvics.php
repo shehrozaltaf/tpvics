@@ -665,7 +665,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         $dataset = $this->tpvics->query("select " . $columns . " from " . $source . "
 		where username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 		and hh08a1 = '1' and hh10 = '1'  and hh02 = '$cluster' order by tabNo, deviceid, cast(hh03 as int), cast(hh07 as int)");
-        if ($dataset->num_rows() > 0) {
+        if ($dataset->num_rows() > 0) { 
             $residential_structures = $this->tpvics->query("select distinct hh03, tabNo from listings where hh02 = '$cluster' and hh08a1 = '1'")->num_rows();
             $this->tpvics->query("update clusters set randomized = '1' where cluster_no = '$cluster'");
             if ($dataset->num_rows() > $sample) {
@@ -815,7 +815,7 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
                  </tr>';
         foreach ($this->data['cluster_data']->result('array') as $row) {
             $tbl .= '<tr  border="0"><td  border="0" style="text-align:center">' . $row['sno'] . '</td> 
-<td style="text-align:center">' . $row['tabNo '] . '-' . substr($row['compid'], 8, 8) . '</td>
+<td style="text-align:center">' . $row['tabNo '] . '-' . substr($row['compid'], 10, 8) . '</td>
 <td style="text-align:center">' . ucfirst($row['hh08']) . '</td>
 <td style="text-align:center; height: 27px"  border="0"> </td>
 </tr>';
