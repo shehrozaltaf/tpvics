@@ -85,9 +85,10 @@ $db['default'] = array(
 //    'database' => 'tpvics',
 
     'dbdriver' => 'sqlsrv',
+
     'dbprefix' => '',
     'pconnect' => FALSE,
-    'db_debug' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
     'cache_on' => FALSE,
     'cachedir' => '',
     'char_set' => 'utf8',

@@ -35,36 +35,31 @@
                     <span>Add 5 Cases</span></a></li>-->
 
             <?php if ($this->users->in_group('admin')) { ?>
-
                 <li <?php if ($this->uri->segment(1) == 'Tpvics' and $this->uri->segment(2) == 'upload_excel_data') { ?> class="active" <?php } ?>>
                     <a href="<?php echo base_url(); ?>index.php/Tpvics/upload_excel_data"><i
                                 class="fa fa-bar-chart"></i> <span>Upload Data</span></a>
                 </li>
-
-
                 <li <?php if ($this->uri->segment(1) == 'users'){ ?>class="treeview active"
                     <?php } else { ?>class="treeview" <?php } ?>>
 
-                    <a href="#"><i class="fa fa-group"></i> User Management
+                    <a href="#"><i class="fa fa-group"></i>App User Management
                         <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
                     </a>
                     <ul class="treeview-menu">
-
                         <li <?php if ($this->uri->segment(2) == 'index') { ?> class="active" <?php } ?>><a
-                                    href="<?php echo base_url(); ?>index.php/users/index"><i class="fa fa-user"></i>
+                                    href="<?php echo base_url(); ?>index.php/Users/index"><i class="fa fa-user"></i>
                                 <span>View Users</span></a>
                         </li>
                         <li <?php if ($this->uri->segment(2) == 'register') { ?> class="active" <?php } ?>><a
-                                    href="<?php echo base_url(); ?>index.php/users/register"><i class="fa fa-user"></i>
+                                    href="<?php echo base_url(); ?>index.php/Users/register"><i class="fa fa-user"></i>
                                 <span>Create User</span></a>
                         </li>
-
-                        <li <?php if ($this->uri->segment(2) == 'create_group') { ?> class="active" <?php } ?>><a
-                                    href="<?php echo base_url(); ?>index.php/users/create_group"><i
+                        <!--  <li <?php /*if ($this->uri->segment(2) == 'create_group') { */ ?> class="active" <?php /*} */ ?>><a
+                                    href="<?php /*echo base_url(); */ ?>index.php/users/create_group"><i
                                         class="fa fa-user"></i> <span>Create Group</span></a>
-                        </li>
+                        </li>-->
 
 
                     </ul>

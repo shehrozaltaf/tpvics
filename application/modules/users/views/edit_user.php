@@ -20,23 +20,31 @@
                                 <?= validation_errors("<p style='color:red;'>", "</p>") ?>
                                 <?php if (validation_errors()) { ?>
                                     <hr style="border: none; height: 5px;color: #333;background-color:red;"><?php } ?>
-                                <?php echo form_open(current_url()); ?>
+                                <?php echo form_open_multipart("index.php/Users/edit_user"); ?>
+                                <!--                                --><?php //echo form_open(current_url()); ?>
                                 <div class="box-body">
+
+                                    <div class="form-group">
+                                        <label class="control-label">idUser</label>
+                                        <input type="text" name="idUser" id="idUser" class="form-control"
+                                               placeholder="idUser" value="<?php echo $user->id; ?>">
+                                    </div>
+
                                     <div class="form-group">
                                         <label class="control-label">Username</label>
-                                        <input type="text" name="username" id="username" class="form-control"
+                                        <input type="text" name="username" id="username" class="form-control" required
                                                placeholder="Username" value="<?php echo $user->username; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="control-label">Full Name</label>
-                                        <input type="text" name="full_name" id="full_name" class="form-control"
+                                        <input type="text" name="full_name" id="full_name" class="form-control" required
                                                placeholder="Full Name" value="<?php echo $user->full_name; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="control-label">District Id</label>
-                                        <input type="text" name="dist_id" id="dist_id" class="form-control"
+                                        <input type="text" name="dist_id" id="dist_id" class="form-control" required
                                                placeholder="District Id" value="<?php echo $user->dist_id; ?>">
                                     </div>
                                     <div class="form-group">
@@ -46,7 +54,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Password</label>
-                                        <input type="text" name="password" id="password" class="form-control"
+                                        <input type="text" name="password" id="password" class="form-control" required
                                                placeholder="Password" value="<?php echo $user->password; ?>">
                                     </div>
                                 </div>

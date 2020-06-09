@@ -27,19 +27,19 @@
                                 <?= validation_errors("<p style='color:red;'>", "</p>") ?>
                                 <?php if (validation_errors()) { ?>
                                     <hr style="border: none; height: 5px;color: #333;background-color:red;"><?php } ?>
-                                <?php echo form_open_multipart("index.php/users/register"); ?>
+                                <?php echo form_open_multipart("index.php/Users/register"); ?>
                                 <div class="box-body">
-                                    <div class="form-group">
-                                        <label class="control-label">Username</label>
-                                        <input type="text" name="username" id="username" class="form-control" required
-                                               placeholder="Username"
-                                               value="<?php echo set_value('username', $this->session->userdata('username')); ?>">
-                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Full Name</label>
                                         <input type="text" name="full_name" id="full_name" class="form-control" required
                                                placeholder="Full Name"
                                                value="<?php echo set_value('full_name', $this->session->userdata('full_name')); ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Username</label>
+                                        <input type="text" name="username" id="username" class="form-control" required
+                                               placeholder="Username"
+                                               value="<?php echo set_value('username', $this->session->userdata('username')); ?>">
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">District Id</label>

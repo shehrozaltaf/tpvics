@@ -6,10 +6,10 @@ class Users extends MX_Controller
     function __construct()
     {
         parent::__construct();
+        $this->db = $this->load->database('default', TRUE);
         $this->form_validation->CI =& $this;
         $this->data = null;
         $this->load->module("master");
-        $this->db = $this->load->database('default', TRUE);
         $this->load->vars('current_url', $this->uri->uri_to_assoc(1));
     }
 
@@ -39,7 +39,6 @@ class Users extends MX_Controller
         $this->form_validation->set_rules('username', 'Username', 'required|trim|xss_clean|callback_check_status|callback_can_login');
         $this->form_validation->set_rules('password', 'Password', 'required|trim|xss_clean');
         if ($this->form_validation->run() == TRUE) {
-
             $login_data = array(
                 'user' => $this->input->post('username'),
                 'logged_in' => 1
@@ -70,7 +69,7 @@ class Users extends MX_Controller
                 'designation' => $this->input->post('designation'),
                 'password' => $this->input->post('password'),
                 'auth_level' => 0,
-                'enable' => 1
+                'enabled' => 1
             );
             $this->master->_insert('users', $data);
             $flash_msg = "User registered successfully";
@@ -86,6 +85,7 @@ class Users extends MX_Controller
 
     public function edit_user($id)
     {
+
         if (!$this->logged_in()) {
             redirect('index.php/users/login');
         }
@@ -93,16 +93,18 @@ class Users extends MX_Controller
         if ($user->type === 2) {
             return show_error('An app user cannot use dashboard');
         }
+
         if ($id != $user->id && !$this->in_group('admin') && (!$this->in_group('district_managers') && $user->district != $this->get_district($id))) {
             return show_error('You must be an authorized user to change these information');
         }
-        $this->form_validation->set_rules('username', 'Username', 'required|trim|xss_clean|is_unique[users.username]');
+
+        $this->form_validation->set_rules('username', 'User Name', 'required|trim|xss_clean');
         $this->form_validation->set_rules('full_name', 'Full Name', 'required|trim|xss_clean');
         $this->form_validation->set_rules('designation', 'Designation', 'required|trim|xss_clean');
         $this->form_validation->set_rules('dist_id', 'District Id', 'required|trim|xss_clean');
         $this->form_validation->set_rules('password', 'Password', 'required|trim|xss_clean');
-        $this->form_validation->set_rules('passwordagain', 'Password Confirmation', 'required|trim|xss_clean|matches[password]');
         if ($this->form_validation->run() == TRUE) {
+            $idUser = $this->input->post('idUser');
             $user_data = array(
                 'username' => $this->input->post('username'),
                 'full_name' => $this->input->post('full_name'),
@@ -110,12 +112,14 @@ class Users extends MX_Controller
                 'designation' => $this->input->post('designation'),
                 'password' => $this->input->post('password')
             );
-            $this->master->_update('users', $id, $user_data);
+
+            $this->master->_update('users', $idUser, $user_data);
             $flash_msg = "User updated successfully";
             $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
             $this->session->set_flashdata('message', $value);
             redirect('index.php/users/index');
         }
+
         $this->data['user'] = $this->master->get_where_custom('users', 'id', $id)->row();
         $this->data['heading'] = "Edit User";
         $this->data['main_content'] = 'edit_user';
