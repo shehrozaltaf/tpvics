@@ -123,28 +123,28 @@ class Users extends MX_Controller
     }
 
 
-    public function create_group()
-    {
-        if (!$this->logged_in()) {
-            redirect('index.php/users/login');
-        }
-        if (!$this->in_group('admin')) {
-            return show_error('You must be an administrator to view this page');
-        }
-        $this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean|is_unique[groups.name]');
-        $this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
-        if ($this->form_validation->run() == TRUE) {
-            $data = array(
-                'name' => $this->input->post('name'),
-                'description' => $this->input->post('description')
-            );
-            $this->master->_insert('groups', $data);
-            redirect('index.php/users/index');
-        }
-        $this->data['heading'] = "Create Group";
-        $this->data['main_content'] = 'create_group';
-        $this->load->view('includes/template', $this->data);
-    }
+    /*   public function create_group()
+       {
+           if (!$this->logged_in()) {
+               redirect('index.php/users/login');
+           }
+           if (!$this->in_group('admin')) {
+               return show_error('You must be an administrator to view this page');
+           }
+           $this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean|is_unique[groups.name]');
+           $this->form_validation->set_rules('description', 'Description', 'required|trim|xss_clean');
+           if ($this->form_validation->run() == TRUE) {
+               $data = array(
+                   'name' => $this->input->post('name'),
+                   'description' => $this->input->post('description')
+               );
+               $this->master->_insert('groups', $data);
+               redirect('index.php/users/index');
+           }
+           $this->data['heading'] = "Create Group";
+           $this->data['main_content'] = 'create_group';
+           $this->load->view('includes/template', $this->data);
+       }*/
 
 ///////////////////////////////////// Supporting Functions ///////////////////////////////////
     function check_status()
