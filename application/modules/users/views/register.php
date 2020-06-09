@@ -85,11 +85,8 @@
                         <div class="form-group" style="display:none" id="app_div">
                           <label>App:</label>
                           <select class="form-control select2" name="app[]" multiple id="user_app" style="width:100%;">
-                            <option value="1">RSD QOC DHMPT</option>
-                            <option value="2">Academic Detailing</option>
-                            <option value="3">LHW Monitoring</option>
-                            <option value="4">CMW Monitoring</option>
-                            <option value="5">Emergency Care</option>
+                              <option value="1">Lisitng</option>
+                              <option value="2">Survey App</option>
                           </select>
                         </div>
                         

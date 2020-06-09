@@ -99,11 +99,8 @@
                           <label>App:</label>
                           <select class="form-control select2" name="app[]" multiple id="user_app" style="width:100%;">
                             <?php $apps = explode(",",$user->app);?>
-                            <option value="1" <?php if(in_array(1, $apps)){ ?>selected<?php }?>>RSD QOC DHMPT</option>
-                            <option value="2" <?php if(in_array(2, $apps)){ ?>selected<?php }?>>Academic Detailing</option>
-                            <option value="3" <?php if(in_array(3, $apps)){ ?>selected<?php }?>>LHW Monitoring</option>
-                            <option value="4" <?php if(in_array(4, $apps)){ ?>selected<?php }?>>CMW Monitoring</option>
-                            <option value="5" <?php if(in_array(5, $apps)){ ?>selected<?php }?>>Emergency Care</option>
+                              <option value="1" <?php if (in_array(1, $apps)){ ?>selected<?php } ?>>Listing</option>
+                              <option value="2" <?php if (in_array(2, $apps)){ ?>selected<?php } ?>>Survey App</option>
                           </select>
                         </div>
                         
