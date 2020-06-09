@@ -113,15 +113,13 @@ class Master_model extends CI_Model
 
     public function get_members($cluster, $hhno)
     {
-
         $data = $this->db->query("select f.cluster_code, f.hhno 
 		from forms f
 		where f.cluster_code = '$cluster' and f.hhno = '$hhno'
 		and f.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
-		and f.istatus in('1', '2', '3', '4', '5', '6', '7', '96')
+		and f.hh21 in ('1' )
 		group by f.cluster_code, f.hhno
 		order by f.hhno");
-
         return $data->result_array();
     }
 

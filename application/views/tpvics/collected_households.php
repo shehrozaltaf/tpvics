@@ -9,9 +9,7 @@
 <div class="wrapper">
     <?php echo $this->load->view('includes/header'); ?>
     <?php echo $this->load->view('includes/sidebar'); ?>
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
                 <?php echo $heading; ?>
@@ -24,7 +22,6 @@
                 </small>
             </h1>
         </section>
-        <!-- Main content -->
         <section class="content">
             <div class="row">
                 <div class="col-md-12">
@@ -38,34 +35,41 @@
                                 <tr>
                                     <th>Serial No</th>
                                     <th>Hosuehold No</th>
-                                    <th>Members</th>
-                                    <th>MWRAs</th>
-                                    <th>Under 5 Children</th>
+                                    <th>Forms</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php $this->load->model('master_model');
+                                <?php
                                 $i = 1;
                                 foreach ($get_list->result() as $row) {
-                                    $get_members = $this->master_model->get_members($row->cluster_code, $row->hhno);
+                                    $get_status = $row->hh21;
+                                    if ($get_status == 0) {
+                                        $status = '<span class="label label-danger">Not Collected Yet</span>';
+                                    } else if ($get_status == 1) {
+                                        $status = '<span class="label label-success">Completed</span>';
+                                    } else if ($get_status == 2) {
+                                        $status = '<span class="label label-danger">Partially Complete</span>';
+                                    } else if ($get_status == 3) {
+                                        $status = '<span class="label label-danger">No HH member at home or no competent respondent at home at time of visit  </span>';
+                                    } else if ($get_status == 4) {
+                                        $status = '<span class="label label-danger">Entire household absent for extended period of time</span>';
+                                    } else if ($get_status == 5) {
+                                        $status = '<span class="label label-primary">Refused</span>';
+                                    } else if ($get_status == 6) {
+                                        $status = '<span class="label label-danger">Dwelling vacant or address not a dwelling </span>';
+                                    } else if ($get_status == 7) {
+                                        $status = '<span class="label label-danger">Dwelling not found</span>';
+                                    } else if ($get_status == 96) {
+                                        $status = '<span class="label label-danger">Other</span>';
+                                    }
                                     ?>
                                     <tr>
                                         <td><?php echo $i; ?></td>
                                         <td><?php echo $row->hhno; ?></td>
                                         <td>
-                                            <strong><a href="<?php echo base_url() . 'spc/members/' . $row->cluster_code . '/' . $row->hhno . '/1'; ?>"
+                                            <strong><a href="<?php echo base_url() . 'index.php/tpvics/members/' . $row->cluster_code . '/' . $row->hhno . '/1'; ?>"
                                                        class="name"
-                                                       target="_blank"><?php echo $get_members[0]['members']; ?></a></strong>
-                                        </td>
-                                        <td>
-                                            <strong><a href="<?php echo base_url() . 'spc/members/' . $row->cluster_code . '/' . $row->hhno . '/2'; ?>"
-                                                       class="name"
-                                                       target="_blank"><?php echo $get_members[0]['mwra']; ?></a></strong>
-                                        </td>
-                                        <td>
-                                            <strong><a href="<?php echo base_url() . 'spc/members/' . $row->cluster_code . '/' . $row->hhno . '/3'; ?>"
-                                                       class="name"
-                                                       target="_blank"><?php echo $get_members[0]['under5_children']; ?></a></strong>
+                                                       target="_blank"><?php echo $status; ?></a></strong>
                                         </td>
                                     </tr>
                                     <?php $i = $i + 1;

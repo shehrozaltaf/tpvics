@@ -317,7 +317,7 @@
                                                        target="_blank"><?php echo $row5->randomized_households; ?></a></strong>
                                         </td>
                                         <td>
-                                            <strong><a href="<?php echo base_url() . 'index.php/Tpvics/randomized_households/' . $row5->hh02; ?>"
+                                            <strong><a href="<?php echo base_url() . 'index.php/Tpvics/collected_households/' . $row5->hh02; ?>"
                                                        class="name"
                                                        target="_blank"><?php echo $row5->collected_forms; ?></a></strong>
                                         </td>

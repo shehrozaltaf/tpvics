@@ -40,7 +40,6 @@
                                     <th>Result of Household Questionnaire</th>
                                     <th>Status</th>
                                 </tr>
-
                                 </thead>
                                 <tbody>
                                 <?php $this->load->model('master_model');

@@ -883,7 +883,7 @@ where hh02 = '$cluster' order by cast(sno as int)");
     function collected_households()
     {
         $cluster = $this->uri->segment(3);
-        $this->data['get_list'] = $this->tpvics->query("select distinct cluster_code, hhno from forms 
+        $this->data['get_list'] = $this->tpvics->query("select distinct cluster_code, hhno,hh21 from forms 
 where cluster_code = '$cluster' and hh21 in (1,2,3,4,5,96) ");
         $this->data['heading'] = "Collected Households for Cluster No: " . $cluster;
         $this->data['main_content'] = 'tpvics/collected_households';
