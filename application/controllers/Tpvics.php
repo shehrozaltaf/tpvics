@@ -133,53 +133,43 @@ class Tpvics extends MX_Controller
                 $type = substr($this->uri->segment(3), 0, 2);
                 $d = substr($this->uri->segment(3), 4, 3);
                 if ($type == 'rc') {
-                    $this->data['get_list'] = $this->tpvics->query("select l.enumcode, l.hh02,
-					(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
-					(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-					sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
-					
-					(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-					(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-					(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
-					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+
+                    $this->data['get_list'] = $this->tpvics->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02, 
+(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
 					from clusters c
 					inner join listings l on l.hh02 = c.cluster_no
-					where l.enumcode = '$d' and (c.randomized = '1' or c.randomized = '2')
+					where SUBSTRING (l.enumcode, 1, 1) = '$d' and c.randomized = '1'
 					and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 					group by l.enumcode, l.hh02
 					order by l.enumcode,l.hh02");
                 } else if ($type == 'cc') {
-                    $this->data['get_list'] = $this->tpvics->query("select l.enumcode, l.hh02,
-					(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
-					(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-					sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
-					(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-					(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-					(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
-					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+                    $this->data['get_list'] = $this->tpvics->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02, 
+(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
 					from clusters c
 					inner join listings l on l.hh02 = c.cluster_no
-					where l.enumcode = '$d' and (c.randomized = '1' or c.randomized = '2')
+					where SUBSTRING (l.enumcode, 1, 1)= '$d' and c.randomized = '1'
 					and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 					and (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) = (select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 3) = l.enumcode and cluster_code = l.hh02 and istatus > 0 and istatus < 96 and istatus is not null and istatus != '' and istatus != 'null')
 					group by l.enumcode, l.hh02
 					order by l.enumcode,l.hh02");
                 } else if ($type == 'ic') {
-                    $this->data['get_list'] = $this->tpvics->query("select l.enumcode, l.hh02,
-					(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
-					(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-					sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
-					
-					(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-					(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-					(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
-					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+                    $this->data['get_list'] = $this->tpvics->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02, 
+(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
 					from clusters c
 					inner join listings l on l.hh02 = c.cluster_no
-					where l.enumcode = '$d' and (c.randomized = '1' or c.randomized = '2')
+					where SUBSTRING (l.enumcode, 1, 1) = '$d' and c.randomized = '1'
 					and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 					and (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) > (select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 3) = l.enumcode and cluster_code = l.hh02 and istatus > 0 and istatus < 96 and istatus is not null and istatus != '' and istatus != 'null')
 					group by l.enumcode, l.hh02
@@ -198,13 +188,13 @@ class Tpvics extends MX_Controller
                  order by l.enumcode,l.hh02");*/
                 $this->data['get_list'] = $this->tpvics->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02, 
 (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-(select count(distinct hhno) from forms where  cluster_code = l.hh02  ) as collected_forms,  
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 not in (1,5)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
 from clusters c
 left join listings l on l.hh02 = c.cluster_no
-where   l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+where  c.randomized = '1' and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 group by l.enumcode, l.hh02
 order by l.enumcode,l.hh02");
             }
@@ -269,16 +259,13 @@ order by l.enumcode,l.hh02");
             $this->data['rc_total'] = $rc_d2 + $rc_d3;
 
 
-            $this->data['get_list'] = $this->tpvics->query("select l.enumcode, l.hh02,
-			(select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
-			(select count(*) from(select distinct hh03, tabNo from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-			sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
-			
-			(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-			(select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-			(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
-			(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-			(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+            $this->data['get_list'] = $this->tpvics->query("
+            select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02, 
+(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
 			from clusters c
 			left join listings l on l.hh02 = c.cluster_no
 			where l.enumcode = '$district' and (c.randomized = '1' or c.randomized = '2')
