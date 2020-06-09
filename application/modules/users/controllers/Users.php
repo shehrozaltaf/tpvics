@@ -56,48 +56,28 @@ class Users extends MX_Controller
         if (!$this->logged_in()) {
             redirect('index.php/users/login');
         }
-        $this->form_validation->set_rules('full_name', 'Full Name', 'required|trim|xss_clean');
-        $this->form_validation->set_rules('email', 'Email', 'required|trim|xss_clean');
-        $this->form_validation->set_rules('designation', 'Designation', 'required|trim|xss_clean');
-        $this->form_validation->set_rules('contact', 'Contact', 'required|trim|xss_clean');
-        $this->form_validation->set_rules('district', 'District', 'required|trim|xss_clean');
-        $this->form_validation->set_rules('type', 'Type', 'required|trim|xss_clean');
         $this->form_validation->set_rules('username', 'Username', 'required|trim|xss_clean|is_unique[users.username]');
+        $this->form_validation->set_rules('full_name', 'Full Name', 'required|trim|xss_clean');
+        $this->form_validation->set_rules('designation', 'Designation', 'required|trim|xss_clean');
+        $this->form_validation->set_rules('dist_id', 'District Id', 'required|trim|xss_clean');
         $this->form_validation->set_rules('password', 'Password', 'required|trim|xss_clean');
         $this->form_validation->set_rules('passwordagain', 'Password Confirmation', 'required|trim|xss_clean|matches[password]');
         if ($this->form_validation->run() == TRUE) {
-            if (!empty($this->input->post('app'))) {
-                $app = implode(",", $this->input->post('app'));
-            } else {
-                $app = 0;
-            }
-            // Insert User
             $data = array(
                 'username' => $this->input->post('username'),
-                'email' => $this->input->post('email'),
-                'password' => $this->input->post('password'),
                 'full_name' => $this->input->post('full_name'),
+                'dist_id' => $this->input->post('dist_id'),
                 'designation' => $this->input->post('designation'),
-                'contact' => $this->input->post('contact'),
-                'district' => $this->input->post('district'),
-                'type' => $this->input->post('type'),
-                'app' => $app,
-                'enable' => 1,
-                'status' => 0,
+                'password' => $this->input->post('password'),
+                'auth_level' => 0,
+                'enable' => 1
             );
-            $this->master->_insert('users_dash', $data);
-            $user_id = $this->master->get_max('users_dash');
-            $group_data = array(
-                'user_id' => $user_id,
-                'group_id' => 2,
-            );
-            $this->master->_insert('users_groups', $group_data);
+            $this->master->_insert('users', $data);
             $flash_msg = "User registered successfully";
             $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
             $this->session->set_flashdata('message', $value);
             redirect('index.php/users/index');
         }
-
         $this->data['heading'] = "Create User";
         $this->data['main_content'] = 'register';
         $this->load->view('includes/template', $this->data);
