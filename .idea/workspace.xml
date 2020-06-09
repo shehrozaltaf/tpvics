@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/users/views/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/users/views/edit_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/users/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/users/views/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/users/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/users/controllers/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/users/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/users/views/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,57 +23,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/users/views/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/users/controllers/Users.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="644" column="5" lean-forward="true" selection-start-line="644" selection-start-column="5" selection-end-line="644" selection-end-column="5" />
+            <state relative-caret-position="510">
+              <caret line="45" column="85" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="85" />
               <folding>
-                <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#get_excel#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#randomized_households#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#collected_households#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/users/views/create_group.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/modules/users/controllers/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" selection-start-line="24" selection-end-line="31" selection-end-column="16" />
+            <state relative-caret-position="442">
+              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/users/views/edit_user.php">
+        <entry file="file://$PROJECT_DIR$/application/modules/users/views/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="102" column="106" selection-start-line="102" selection-start-column="106" selection-end-line="102" selection-end-column="106" />
+            <state relative-caret-position="468">
+              <caret line="44" column="62" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -83,7 +56,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sess_save_path</find>
       <find>sess_driver</find>
       <find>header</find>
       <find>tpvics/</find>
@@ -113,6 +85,7 @@
       <find>comp</find>
       <find>$division</find>
       <find>collected_households</find>
+      <find>index</find>
     </findStrings>
     <replaceStrings>
       <replace>8</replace>
@@ -158,7 +131,6 @@
         <option value="$PROJECT_DIR$/application/views/includes/header.php" />
         <option value="$PROJECT_DIR$/application/views/includes/top_navigation.php" />
         <option value="$PROJECT_DIR$/application/views/includes/template.php" />
-        <option value="$PROJECT_DIR$/application/modules/users/controllers/Users.php" />
         <option value="$PROJECT_DIR$/application/controllers/Scans.php" />
         <option value="$PROJECT_DIR$/application/modules/users/views/create_group.php" />
         <option value="$PROJECT_DIR$/application/views/scans/index2.php" />
@@ -196,14 +168,15 @@
         <option value="$PROJECT_DIR$/application/modules/master/models/master_model.php" />
         <option value="$PROJECT_DIR$/application/views/scans/get_excel.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/index2.php" />
-        <option value="$PROJECT_DIR$/application/modules/users/views/index.php" />
         <option value="$PROJECT_DIR$/application/modules/users/views/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/includes/sidebar.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/index.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/dashboard.php" />
-        <option value="$PROJECT_DIR$/application/modules/users/views/register.php" />
         <option value="$PROJECT_DIR$/application/modules/users/views/edit_user.php" />
         <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
+        <option value="$PROJECT_DIR$/application/modules/users/views/register.php" />
+        <option value="$PROJECT_DIR$/application/modules/users/views/index.php" />
+        <option value="$PROJECT_DIR$/application/modules/users/controllers/Users.php" />
       </list>
     </option>
   </component>
@@ -354,7 +327,7 @@
       <workItem from="1591426530193" duration="18780000" />
       <workItem from="1591451847973" duration="698000" />
       <workItem from="1591601928198" duration="2956000" />
-      <workItem from="1591682275782" duration="684000" />
+      <workItem from="1591682275782" duration="1910000" />
     </task>
     <task id="LOCAL-00001" summary="Collection">
       <created>1587970994484</created>
@@ -615,11 +588,25 @@
       <option name="project" value="LOCAL" />
       <updated>1591608533119</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Residential structure">
+      <created>1591685695942</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1591685695943</updated>
+    </task>
+    <task id="LOCAL-00039" summary="create user">
+      <created>1591686388185</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1591686388185</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120455000" />
+    <option name="totallyTimeSpent" value="121681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -668,7 +655,9 @@
     <MESSAGE value="Go to Live" />
     <MESSAGE value="Users" />
     <MESSAGE value="Form status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form status" />
+    <MESSAGE value="Residential structure" />
+    <MESSAGE value="create user" />
+    <option name="LAST_COMMIT_MESSAGE" value="create user" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -946,13 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/users/views/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/users/views/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -998,13 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/users/views/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/users/views/create_group.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1015,21 +990,14 @@
     <entry file="file://$PROJECT_DIR$/application/modules/users/views/edit_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
-          <caret line="102" column="106" selection-start-line="102" selection-start-column="106" selection-end-line="102" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/users/controllers/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <caret line="102" column="110" selection-start-line="102" selection-start-column="110" selection-end-line="102" selection-end-column="110" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="644" column="5" lean-forward="true" selection-start-line="644" selection-start-column="5" selection-end-line="644" selection-end-column="5" />
+        <state relative-caret-position="458">
+          <caret line="528" column="13" lean-forward="true" selection-start-line="528" selection-start-column="13" selection-end-line="528" selection-end-column="13" />
           <folding>
             <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -1043,6 +1011,32 @@
             <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
             <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/users/views/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="45" column="85" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/users/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="44" column="62" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/users/controllers/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
