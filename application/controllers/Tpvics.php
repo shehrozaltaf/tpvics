@@ -52,7 +52,8 @@ class Tpvics extends MX_Controller
 
             $c_r_clusters = $this->tpvics->query("select SUBSTRING (c.dist_id, 1, 1) as dist_id, c.cluster_no,
 			(select count(*) from bl_randomised where dist_id = c.dist_id and hh02 = c.cluster_no) as hh_randomized,
-			(select count(distinct hhno) from forms where dist_id = c.dist_id and cluster_code = c.cluster_no and cast(istatus as int) > 0 and cast(istatus as int) < 96 and istatus is not null and istatus != '' and istatus != 'null') as hh_collected
+			(select count(distinct hhno) from forms where dist_id = c.dist_id
+			 and cluster_code = c.cluster_no   ) as hh_collected
 			from clusters c   order by c.dist_id");
 
             $cc_d1 = 0;
@@ -70,39 +71,38 @@ class Tpvics extends MX_Controller
             $rc_d9 = 0;
 
             foreach ($c_r_clusters->result() as $r) {
-
                 if ($r->dist_id == '1') {
-                    if ($r->hh_collected == 30) {
+                    if ($r->hh_collected >= 30) {
                         $cc_d1 = $cc_d1 + 1;
                     } else {
                         $rc_d1 = $rc_d1 + 1;
                     }
                 } else if ($r->dist_id == '2') {
-                    if ($r->hh_collected == 30) {
+                    if ($r->hh_collected >= 30) {
                         $cc_d2 = $cc_d2 + 1;
                     } else {
                         $rc_d2 = $rc_d2 + 1;
                     }
-                } else if ($r->dist_id == '3') {
-                    if ($r->hh_collected == 30) {
+                } else if ($r->dist_id >= '3') {
+                    if ($r->hh_collected >= 30) {
                         $cc_d3 = $cc_d3 + 1;
                     } else {
                         $rc_d3 = $rc_d3 + 1;
                     }
                 } else if ($r->dist_id == '4') {
-                    if ($r->hh_collected == 30) {
+                    if ($r->hh_collected >= 30) {
                         $cc_d4 = $cc_d4 + 1;
                     } else {
                         $rc_d4 = $rc_d4 + 1;
                     }
                 } else if ($r->dist_id == '7') {
-                    if ($r->hh_collected == 30) {
+                    if ($r->hh_collected >= 30) {
                         $cc_d7 = $cc_d7 + 1;
                     } else {
                         $rc_d7 = $rc_d7 + 1;
                     }
                 } else if ($r->dist_id == '9') {
-                    if ($r->hh_collected == 30) {
+                    if ($r->hh_collected >= 30) {
                         $cc_d9 = $cc_d9 + 1;
                     } else {
                         $rc_d9 = $rc_d9 + 1;
@@ -186,16 +186,27 @@ class Tpvics extends MX_Controller
 					order by l.enumcode,l.hh02");
                 }
             } else {
+                /* $this->data['get_list'] = $this->tpvics->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02,
+                 (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
+                  (select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
+                 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
+                 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
+                 from clusters c
+                 inner join listings l on l.hh02 = c.cluster_no
+                 where   l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+                 group by l.enumcode, l.hh02
+                 order by l.enumcode,l.hh02");*/
                 $this->data['get_list'] = $this->tpvics->query("select SUBSTRING (l.enumcode, 1, 1) as enumcode, l.hh02, 
-				(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
-				 (select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 1) = l.enumcode and cluster_code = l.hh02 and istatus = '1') as collected_households,
-				(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
-				(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = '9' group by deviceid) AS completed_tabs) completed_tabs
-				from clusters c
-				inner join listings l on l.hh02 = c.cluster_no
-				where   l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
-				group by l.enumcode, l.hh02
-				order by l.enumcode,l.hh02");
+(select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
+(select count(distinct hhno) from forms where  cluster_code = l.hh02  ) as collected_forms,  
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 not in (1,5)) as remaining_forms 
+from clusters c
+left join listings l on l.hh02 = c.cluster_no
+where   l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+group by l.enumcode, l.hh02
+order by l.enumcode,l.hh02");
             }
 
 

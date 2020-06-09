@@ -251,11 +251,13 @@
                                 <thead>
                                 <tr>
                                     <th>Province</th>
-                                    <th>Division</th>
+                                    <th>District</th>
                                     <th>Cluster Number</th>
                                     <th>Randomized Forms</th>
                                     <th>Collected Forms</th>
-                                    <th>Completed Forms</th>
+                                    <th>Completed</th>
+                                    <th>Refused</th>
+                                    <th>Other</th>
                                     <th>Status</th>
                                 </tr>
                                 </thead>
@@ -292,14 +294,13 @@
                                     }
 
                                     if ($row5->randomized_households > 0) {
-                                        if ($row5->collected_households == 0) {
-                                            $status = '<span class="label label-info">Not Attempted</span>';
-                                        } else if ($row5->collected_households > 0 and $row5->collected_households < 30) {
-                                            $status = '<span class="label label-danger">Pending</span>';
+                                        if ($row5->collected_forms == 0) {
+                                            $status = '<span class="label label-info">Pending</span>';
+                                        } else if ($row5->collected_forms > 0 and $row5->collected_forms < 30) {
+                                            $status = '<span class="label label-danger">In Progress</span>';
                                         } else {
                                             $status = '<span class="label label-success">Completed</span>';
                                         }
-
                                     } else {
                                         $status = '<span class="label label-warning">Not Randomized</span>';
                                     }
@@ -310,14 +311,17 @@
                                         <td><?php echo $province; ?></td>
                                         <td><?php echo $division; ?></td>
                                         <td><?php echo $row5->hh02; ?></td>
-
-                                        <td><?php echo $row5->randomized_households; ?></a></strong></td>
-                                        <td>
-                                            <strong><a href="<?php echo base_url() . 'index.php/tpvics/cluster_progress/' . $row5->hh02; ?>"
+                                        <td><?php echo $row5->randomized_households; ?></td>
+                                        <td><?php echo $row5->collected_forms; ?></td>
+                                        <td><?php echo $row5->completed_forms; ?></td>
+                                        <td><?php echo $row5->refused_forms; ?></td>
+                                        <td><?php echo $row5->remaining_forms; ?></td>
+                                        <!-- <td>
+                                            <strong><a href="<?php /*echo base_url() . 'index.php/tpvics/cluster_progress/' . $row5->hh02; */ ?>"
                                                        class="name"
-                                                       target="_blank"><?php echo $row5->collecting_tabs; ?></a></strong>
+                                                       target="_blank"><?php /*echo $row5->collected_households; */ ?></a></strong>
                                         </td>
-                                        <td><?php echo $row5->completed_tabs; ?></td>
+                                        <td><?php /*echo $row5->completed_tabs; */ ?></td>-->
                                         <td><?php echo $status; ?></td>
 
                                     </tr>

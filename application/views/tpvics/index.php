@@ -249,12 +249,12 @@
                                 <thead>
                                 <tr>
                                     <th>Province</th>
-                                    <th>Division</th>
+                                    <th>District</th>
                                     <th>Cluster Number</th>
                                     <th>Total Structures</th>
                                     <th>Residential Structures</th>
                                     <th>HH Targeted Children</th>
-                                    <th>Children 6-23 Months</th>
+                                    <th>Children 12-23 Months</th>
                                     <th>Collecting Tabs</th>
                                     <th>Completed Tabs</th>
                                     <th>Status</th>
