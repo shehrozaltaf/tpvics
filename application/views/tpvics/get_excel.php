@@ -53,12 +53,12 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                foreach ($cluster_data->result() as $row) { ?>
+                                foreach ($cluster_data->result('array') as $row) { ?>
                                     <tr>
-                                        <td><?php echo $row->sno; ?></td>
-                                        <td><?php echo $row->tabNo; ?></td>
-                                        <td><?php echo $row->household; ?></td>
-                                        <td><?php echo $row->hh08; ?></td>
+                                        <td><?php echo $row['sno']; ?></td>
+                                        <td><?php echo $row['tabNo']; ?></td>
+                                        <td><?php echo $row['tabNo'] . '-' . substr($row['compid'], 10, 8); ?></td>
+                                        <td><?php echo $row['hh08']; ?></td>
                                     </tr>
                                 <?php } ?>
                                 </tbody>

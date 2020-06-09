@@ -268,7 +268,7 @@ order by l.enumcode,l.hh02");
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
 			from clusters c
 			left join listings l on l.hh02 = c.cluster_no
-			where l.enumcode = '$district' and (c.randomized = '1' or c.randomized = '2')
+			where l.enumcode = '$district' and c.randomized = '1'
 			and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 			group by l.enumcode, l.hh02
 			order by l.enumcode,l.hh02");
@@ -830,7 +830,7 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
     function get_excel()
     {
         $cluster = $this->uri->segment(3);
-        $this->data['cluster_data'] = $this->tpvics->query("select sno, tabNo, substring(compid, 9, 8) household, hh08 from bl_randomised where hh02 = '$cluster'");
+        $this->data['cluster_data'] = $this->tpvics->query("select sno, tabNo, concat (tabNO, '-', RIGHT(compid, 8))household, hh08 from bl_randomised where hh02 = '$cluster'");
         $rd = $this->tpvics->query("select top 1 randDT from bl_randomised where hh02 = '$cluster'")->row()->randDT;
         $this->data['randomization_date'] = substr($rd, 0, 10);
         $get_geoarea = $this->tpvics->query("select geoarea from clusters where cluster_no = '$cluster'")->row()->geoarea;
@@ -872,28 +872,20 @@ LEFT JOIN clusters ON bl_randomised.hh02 = clusters.cluster_no where bl_randomis
 
     function randomized_households()
     {
-
         $cluster = $this->uri->segment(3);
-        $this->data['get_list'] = $this->tpvics->query("select hh02, sno, concat(tabNO, '-', substring(compid, 8, 8)) as hhno from bl_randomised where hh02 = '$cluster' order by cast(sno as int)");
-
-        //var_dump($this->data['get_list']->result());die();
-
+        $this->data['get_list'] = $this->tpvics->query("select hh02, sno, concat (tabNO, '-', RIGHT(compid, 8)) AS hhno from bl_randomised 
+where hh02 = '$cluster' order by cast(sno as int)");
         $this->data['heading'] = "Randomized Households for Cluster No: " . $cluster;
-
         $this->data['main_content'] = 'tpvics/randomized_households';
         $this->load->view('includes/template', $this->data);
     }
 
     function collected_households()
     {
-
         $cluster = $this->uri->segment(3);
-        $this->data['get_list'] = $this->tpvics->query("select distinct cluster_code, hhno from forms where cluster_code = '$cluster' and istatus in('1', '2', '3', '4', '5', '6', '7', '96')");
-
-        //var_dump($this->data['get_list']->result());die();
-
+        $this->data['get_list'] = $this->tpvics->query("select distinct cluster_code, hhno from forms 
+where cluster_code = '$cluster' and hh21 in (1,2,3,4,5,96) ");
         $this->data['heading'] = "Collected Households for Cluster No: " . $cluster;
-
         $this->data['main_content'] = 'tpvics/collected_households';
         $this->load->view('includes/template', $this->data);
     }

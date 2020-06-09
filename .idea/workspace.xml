@@ -4,7 +4,10 @@
     <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/master/models/master_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/master/models/master_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tpvics/get_excel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/get_excel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tpvics/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,166 +23,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/tpvics/randomized_households.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            <state relative-caret-position="502">
+              <caret line="59" column="69" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/tpvics/get_excel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="93" column="29" lean-forward="true" selection-start-line="91" selection-start-column="11" selection-end-line="93" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/tpvics/collected_households.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="106" column="29" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="270" column="18" selection-start-line="270" selection-start-column="18" selection-end-line="270" selection-end-column="29" />
+            <state relative-caret-position="135">
+              <caret line="832" column="116" selection-start-line="832" selection-start-column="116" selection-end-line="832" selection-end-column="116" />
               <folding>
                 <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
                 <element signature="e#487#588#0#PHP" />
                 <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#16181#16338#0#PHP" />
-                <element signature="e#16292#16338#0#PHP" />
-                <element signature="e#16347#16939#0#PHP" />
-                <element signature="e#16955#17302#0#PHP" />
-                <element signature="e#17315#17627#0#PHP" />
                 <element signature="n#index#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#17954#18910#0#PHP" />
-                <element signature="e#18153#18839#0#PHP" />
-                <element signature="e#18270#18378#0#PHP" />
-                <element signature="e#18379#18486#0#PHP" />
-                <element signature="e#18487#18600#0#PHP" />
-                <element signature="e#18601#18719#0#PHP" />
-                <element signature="e#18720#18839#0#PHP" />
-                <element signature="e#19012#19710#0#PHP" />
-                <element signature="e#20147#22033#0#PHP" />
-                <element signature="e#20207#22019#0#PHP" />
-                <element signature="e#20295#20486#0#PHP" />
-                <element signature="e#20413#20486#0#PHP" />
-                <element signature="e#20510#22019#0#PHP" />
-                <element signature="e#20598#20789#0#PHP" />
-                <element signature="e#20716#20789#0#PHP" />
-                <element signature="e#20813#22019#0#PHP" />
-                <element signature="e#20901#21092#0#PHP" />
-                <element signature="e#21019#21092#0#PHP" />
-                <element signature="e#21116#22019#0#PHP" />
-                <element signature="e#21204#21395#0#PHP" />
-                <element signature="e#21322#21395#0#PHP" />
-                <element signature="e#21419#22019#0#PHP" />
-                <element signature="e#21507#21698#0#PHP" />
-                <element signature="e#21625#21698#0#PHP" />
-                <element signature="e#21722#22019#0#PHP" />
-                <element signature="e#21810#22001#0#PHP" />
-                <element signature="e#21928#22001#0#PHP" />
-                <element signature="e#23079#23940#0#PHP" />
-                <element signature="e#23140#23926#0#PHP" />
-                <element signature="e#23272#23926#0#PHP" />
-                <element signature="e#23404#23926#0#PHP" />
-                <element signature="e#23536#23926#0#PHP" />
-                <element signature="e#23668#23926#0#PHP" />
-                <element signature="e#23800#23926#0#PHP" />
-                <element signature="e#24364#29063#0#PHP" />
-                <element signature="e#24555#27706#0#PHP" />
-                <element signature="e#24629#26123#0#PHP" />
-                <element signature="e#26143#27706#0#PHP" />
-                <element signature="e#26197#27687#0#PHP" />
-                <element signature="e#29074#33684#0#PHP" />
-                <element signature="e#29257#29476#0#PHP" />
-                <element signature="e#29506#30179#0#PHP" />
-                <element signature="e#30333#31009#0#PHP" />
-                <element signature="e#30393#30995#0#PHP" />
-                <element signature="e#30481#30672#0#PHP" />
-                <element signature="e#30599#30672#0#PHP" />
-                <element signature="e#30697#30995#0#PHP" />
-                <element signature="e#30785#30976#0#PHP" />
-                <element signature="e#30903#30976#0#PHP" />
-                <element signature="e#31527#31855#0#PHP" />
-                <element signature="e#31589#31841#0#PHP" />
-                <element signature="e#31718#31841#0#PHP" />
-                <element signature="e#32074#33673#0#PHP" />
-                <element signature="e#33739#33918#0#PHP" />
-                <element signature="e#33928#34032#0#PHP" />
-                <element signature="e#34064#34246#0#PHP" />
-                <element signature="e#34256#34467#0#PHP" />
-                <element signature="e#34319#34457#0#PHP" />
-                <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#35390#35922#0#PHP" />
-                <element signature="e#35669#35912#0#PHP" />
-                <element signature="e#35840#35912#0#PHP" />
-                <element signature="e#35942#36266#0#PHP" />
-                <element signature="e#36276#41299#0#PHP" />
-                <element signature="e#36583#40786#0#PHP" />
-                <element signature="e#36895#38307#0#PHP" />
-                <element signature="e#36954#38107#0#PHP" />
-                <element signature="e#38572#38831#0#PHP" />
-                <element signature="e#38751#38831#0#PHP" />
-                <element signature="e#38846#40786#0#PHP" />
-                <element signature="e#39040#40249#0#PHP" />
-                <element signature="e#39110#40163#0#PHP" />
-                <element signature="e#40513#40772#0#PHP" />
-                <element signature="e#40692#40772#0#PHP" />
-                <element signature="e#40797#41299#0#PHP" />
-                <element signature="e#41046#41289#0#PHP" />
-                <element signature="e#41217#41289#0#PHP" />
-                <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#41515#42053#0#PHP" />
-                <element signature="e#42617#42873#0#PHP" />
-                <element signature="e#43394#43563#0#PHP" />
-                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="e#44261#44672#0#PHP" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#get_excel#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#45901#46744#0#PHP" />
                 <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#randomized_households#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#collected_households#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#upload_excel_data#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#50376#50479#0#PHP" />
                 <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#51078#55025#0#PHP" />
-                <element signature="e#51140#51234#0#PHP" />
-                <element signature="e#51328#55025#0#PHP" />
-                <element signature="e#51347#51573#0#PHP" />
-                <element signature="e#51482#51573#0#PHP" />
-                <element signature="e#51586#55014#0#PHP" />
-                <element signature="e#51900#54902#0#PHP" />
-                <element signature="e#52157#52732#0#PHP" />
-                <element signature="e#52501#52710#0#PHP" />
-                <element signature="e#52610#52710#0#PHP" />
-                <element signature="e#52821#53083#0#PHP" />
-                <element signature="e#52917#53022#0#PHP" />
-                <element signature="e#53421#54412#0#PHP" />
-                <element signature="e#53489#54390#0#PHP" />
-                <element signature="e#54433#54771#0#PHP" />
-                <element signature="e#54790#54902#0#PHP" />
-                <element signature="e#54917#55014#0#PHP" />
                 <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#55304#57869#0#PHP" />
-                <element signature="e#55366#55460#0#PHP" />
-                <element signature="e#55554#57869#0#PHP" />
-                <element signature="e#55573#55799#0#PHP" />
-                <element signature="e#55708#55799#0#PHP" />
-                <element signature="e#55812#57858#0#PHP" />
-                <element signature="e#56126#57746#0#PHP" />
-                <element signature="e#56383#56958#0#PHP" />
-                <element signature="e#56727#56936#0#PHP" />
-                <element signature="e#56836#56936#0#PHP" />
-                <element signature="e#57017#57279#0#PHP" />
-                <element signature="e#57113#57218#0#PHP" />
-                <element signature="e#57375#57615#0#PHP" />
-                <element signature="e#57505#57615#0#PHP" />
-                <element signature="e#57634#57746#0#PHP" />
-                <element signature="e#57761#57858#0#PHP" />
                 <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
               </folding>
             </state>
@@ -187,10 +75,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/tpvics/index.php">
+        <entry file="file://$PROJECT_DIR$/application/modules/master/models/master_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
+            <state relative-caret-position="233">
+              <caret line="148" column="17" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -199,12 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>households</find>
-      <find>(select sum(cast(hh11 as int)) from listings where hh04 = '1' and hh15 != '1' and hh10 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_eligible_wras,</find>
-      <find>systa</find>
-      <find>$formdate</find>
-      <find>bl_ra</find>
-      <find>no_of_eligible_wras</find>
       <find>$anchor</find>
       <find>spc</find>
       <find>Tpvics/index</find>
@@ -220,7 +102,6 @@
       <find>20</find>
       <find>comp</find>
       <find>$division</find>
-      <find>collected_households</find>
       <find>_insert</find>
       <find>get</find>
       <find>logged_in</find>
@@ -229,6 +110,13 @@
       <find>edit_user</find>
       <find>edit</find>
       <find>$cc_d1</find>
+      <find>collected_households</find>
+      <find>ml_</find>
+      <find>ml</find>
+      <find>get_status_shehroz</find>
+      <find>compid</find>
+      <find>get_randomized_status</find>
+      <find>get_randomized _status</find>
     </findStrings>
     <replaceStrings>
       <replace>8</replace>
@@ -269,9 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/includes/template.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Scans.php" />
-        <option value="$PROJECT_DIR$/application/modules/users/views/create_group.php" />
         <option value="$PROJECT_DIR$/application/views/scans/index2.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/header.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Reports.php" />
@@ -310,7 +195,6 @@
         <option value="$PROJECT_DIR$/application/controllers/User.php" />
         <option value="$PROJECT_DIR$/application/views/includes/sidebar.php" />
         <option value="$PROJECT_DIR$/application/modules/users/views/register.php" />
-        <option value="$PROJECT_DIR$/application/modules/master/models/master_model.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/modules/users/views/index.php" />
         <option value="$PROJECT_DIR$/application/modules/users/views/edit_user.php" />
@@ -319,13 +203,16 @@
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/database.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/index.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/views/tpvics/get_excel.php" />
+        <option value="$PROJECT_DIR$/application/modules/master/models/master_model.php" />
+        <option value="$PROJECT_DIR$/application/views/tpvics/collected_households.php" />
         <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
+        <option value="$PROJECT_DIR$/application/views/tpvics/randomized_households.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-7" />
     <option name="width" value="854" />
     <option name="height" value="1017" />
   </component>
@@ -353,6 +240,27 @@
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
@@ -455,7 +363,7 @@
       <workItem from="1591426530193" duration="18780000" />
       <workItem from="1591451847973" duration="698000" />
       <workItem from="1591601928198" duration="2956000" />
-      <workItem from="1591682275782" duration="11857000" />
+      <workItem from="1591682275782" duration="15788000" />
     </task>
     <task id="LOCAL-00001" summary="Collection">
       <created>1587970994484</created>
@@ -758,17 +666,24 @@
       <option name="project" value="LOCAL" />
       <updated>1591698120354</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Randomization">
+      <created>1591699321089</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1591699321089</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131628000" />
+    <option name="totallyTimeSpent" value="135559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25244498" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21515892" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -848,13 +763,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/skipQuestions.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/sync.php" />
-    <entry file="file://$PROJECT_DIR$/../uen/application/controllers/UEN.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5870" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics_.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -881,23 +789,6 @@
           <folding>
             <element signature="n#get_status_shehroz#0;n#Master_model#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../uen/application/controllers/Spc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="1227" column="78" selection-start-line="1227" selection-start-column="66" selection-end-line="1227" selection-end-column="78" />
-          <folding>
-            <element signature="n#systematic_randomizer#0;n#Spc#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tpvics/get_excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1095,16 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/master/models/master_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="61" lean-forward="true" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
-          <folding>
-            <element signature="n#get_status_shehroz#0;n#Master_model#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/users/models/users_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1174,170 +1055,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
+        <state relative-caret-position="185">
+          <caret line="102" column="53" lean-forward="true" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../uen/application/controllers/Spc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="1247" column="3" selection-start-line="1247" selection-start-column="3" selection-end-line="1273" selection-end-column="5" />
+          <folding>
+            <element signature="n#systematic_randomizer#0;n#Spc#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../uen/application/views/spc/ml_dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="308" column="181" selection-start-line="308" selection-start-column="181" selection-end-line="308" selection-end-column="194" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        <state relative-caret-position="459">
+          <caret line="313" column="94" selection-start-line="313" selection-start-column="94" selection-end-line="313" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/get_excel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="93" column="29" lean-forward="true" selection-start-line="91" selection-start-column="11" selection-end-line="93" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/master/models/master_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="148" column="17" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/collected_households.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="106" column="29" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="270" column="18" selection-start-line="270" selection-start-column="18" selection-end-line="270" selection-end-column="29" />
+        <state relative-caret-position="135">
+          <caret line="832" column="116" selection-start-line="832" selection-start-column="116" selection-end-line="832" selection-end-column="116" />
           <folding>
             <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
             <element signature="e#487#588#0#PHP" />
             <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#16181#16338#0#PHP" />
-            <element signature="e#16292#16338#0#PHP" />
-            <element signature="e#16347#16939#0#PHP" />
-            <element signature="e#16955#17302#0#PHP" />
-            <element signature="e#17315#17627#0#PHP" />
             <element signature="n#index#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#17954#18910#0#PHP" />
-            <element signature="e#18153#18839#0#PHP" />
-            <element signature="e#18270#18378#0#PHP" />
-            <element signature="e#18379#18486#0#PHP" />
-            <element signature="e#18487#18600#0#PHP" />
-            <element signature="e#18601#18719#0#PHP" />
-            <element signature="e#18720#18839#0#PHP" />
-            <element signature="e#19012#19710#0#PHP" />
-            <element signature="e#20147#22033#0#PHP" />
-            <element signature="e#20207#22019#0#PHP" />
-            <element signature="e#20295#20486#0#PHP" />
-            <element signature="e#20413#20486#0#PHP" />
-            <element signature="e#20510#22019#0#PHP" />
-            <element signature="e#20598#20789#0#PHP" />
-            <element signature="e#20716#20789#0#PHP" />
-            <element signature="e#20813#22019#0#PHP" />
-            <element signature="e#20901#21092#0#PHP" />
-            <element signature="e#21019#21092#0#PHP" />
-            <element signature="e#21116#22019#0#PHP" />
-            <element signature="e#21204#21395#0#PHP" />
-            <element signature="e#21322#21395#0#PHP" />
-            <element signature="e#21419#22019#0#PHP" />
-            <element signature="e#21507#21698#0#PHP" />
-            <element signature="e#21625#21698#0#PHP" />
-            <element signature="e#21722#22019#0#PHP" />
-            <element signature="e#21810#22001#0#PHP" />
-            <element signature="e#21928#22001#0#PHP" />
-            <element signature="e#23079#23940#0#PHP" />
-            <element signature="e#23140#23926#0#PHP" />
-            <element signature="e#23272#23926#0#PHP" />
-            <element signature="e#23404#23926#0#PHP" />
-            <element signature="e#23536#23926#0#PHP" />
-            <element signature="e#23668#23926#0#PHP" />
-            <element signature="e#23800#23926#0#PHP" />
-            <element signature="e#24364#29063#0#PHP" />
-            <element signature="e#24555#27706#0#PHP" />
-            <element signature="e#24629#26123#0#PHP" />
-            <element signature="e#26143#27706#0#PHP" />
-            <element signature="e#26197#27687#0#PHP" />
-            <element signature="e#29074#33684#0#PHP" />
-            <element signature="e#29257#29476#0#PHP" />
-            <element signature="e#29506#30179#0#PHP" />
-            <element signature="e#30333#31009#0#PHP" />
-            <element signature="e#30393#30995#0#PHP" />
-            <element signature="e#30481#30672#0#PHP" />
-            <element signature="e#30599#30672#0#PHP" />
-            <element signature="e#30697#30995#0#PHP" />
-            <element signature="e#30785#30976#0#PHP" />
-            <element signature="e#30903#30976#0#PHP" />
-            <element signature="e#31527#31855#0#PHP" />
-            <element signature="e#31589#31841#0#PHP" />
-            <element signature="e#31718#31841#0#PHP" />
-            <element signature="e#32074#33673#0#PHP" />
-            <element signature="e#33739#33918#0#PHP" />
-            <element signature="e#33928#34032#0#PHP" />
-            <element signature="e#34064#34246#0#PHP" />
-            <element signature="e#34256#34467#0#PHP" />
-            <element signature="e#34319#34457#0#PHP" />
-            <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#35390#35922#0#PHP" />
-            <element signature="e#35669#35912#0#PHP" />
-            <element signature="e#35840#35912#0#PHP" />
-            <element signature="e#35942#36266#0#PHP" />
-            <element signature="e#36276#41299#0#PHP" />
-            <element signature="e#36583#40786#0#PHP" />
-            <element signature="e#36895#38307#0#PHP" />
-            <element signature="e#36954#38107#0#PHP" />
-            <element signature="e#38572#38831#0#PHP" />
-            <element signature="e#38751#38831#0#PHP" />
-            <element signature="e#38846#40786#0#PHP" />
-            <element signature="e#39040#40249#0#PHP" />
-            <element signature="e#39110#40163#0#PHP" />
-            <element signature="e#40513#40772#0#PHP" />
-            <element signature="e#40692#40772#0#PHP" />
-            <element signature="e#40797#41299#0#PHP" />
-            <element signature="e#41046#41289#0#PHP" />
-            <element signature="e#41217#41289#0#PHP" />
-            <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#41515#42053#0#PHP" />
-            <element signature="e#42617#42873#0#PHP" />
-            <element signature="e#43394#43563#0#PHP" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="e#44261#44672#0#PHP" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#get_excel#0;n#Tpvics#0;n#!!top" />
             <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#45901#46744#0#PHP" />
             <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#randomized_households#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#collected_households#0;n#Tpvics#0;n#!!top" />
             <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
             <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
             <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
             <element signature="n#upload_excel_data#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#50376#50479#0#PHP" />
             <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#51078#55025#0#PHP" />
-            <element signature="e#51140#51234#0#PHP" />
-            <element signature="e#51328#55025#0#PHP" />
-            <element signature="e#51347#51573#0#PHP" />
-            <element signature="e#51482#51573#0#PHP" />
-            <element signature="e#51586#55014#0#PHP" />
-            <element signature="e#51900#54902#0#PHP" />
-            <element signature="e#52157#52732#0#PHP" />
-            <element signature="e#52501#52710#0#PHP" />
-            <element signature="e#52610#52710#0#PHP" />
-            <element signature="e#52821#53083#0#PHP" />
-            <element signature="e#52917#53022#0#PHP" />
-            <element signature="e#53421#54412#0#PHP" />
-            <element signature="e#53489#54390#0#PHP" />
-            <element signature="e#54433#54771#0#PHP" />
-            <element signature="e#54790#54902#0#PHP" />
-            <element signature="e#54917#55014#0#PHP" />
             <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#55304#57869#0#PHP" />
-            <element signature="e#55366#55460#0#PHP" />
-            <element signature="e#55554#57869#0#PHP" />
-            <element signature="e#55573#55799#0#PHP" />
-            <element signature="e#55708#55799#0#PHP" />
-            <element signature="e#55812#57858#0#PHP" />
-            <element signature="e#56126#57746#0#PHP" />
-            <element signature="e#56383#56958#0#PHP" />
-            <element signature="e#56727#56936#0#PHP" />
-            <element signature="e#56836#56936#0#PHP" />
-            <element signature="e#57017#57279#0#PHP" />
-            <element signature="e#57113#57218#0#PHP" />
-            <element signature="e#57375#57615#0#PHP" />
-            <element signature="e#57505#57615#0#PHP" />
-            <element signature="e#57634#57746#0#PHP" />
-            <element signature="e#57761#57858#0#PHP" />
             <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/randomized_households.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="59" column="69" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
         </state>
       </provider>
     </entry>
