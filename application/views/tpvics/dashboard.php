@@ -257,6 +257,7 @@
                                     <th>Collected Forms</th>
                                     <th>Completed</th>
                                     <th>Refused</th>
+                                    <th>Not Elig Child</th>
                                     <th>Other</th>
                                     <th>Status</th>
                                 </tr>
@@ -323,6 +324,7 @@
                                         </td>
                                         <td><?php echo $row5->completed_forms; ?></td>
                                         <td><?php echo $row5->refused_forms; ?></td>
+                                        <td><?php echo $row5->not_elig; ?></td>
                                         <td><?php echo $row5->remaining_forms; ?></td>
                                         <!-- <td>
                                             <strong><a href="<?php /*echo base_url() . 'index.php/tpvics/cluster_progress/' . $row5->hh02; */ ?>"

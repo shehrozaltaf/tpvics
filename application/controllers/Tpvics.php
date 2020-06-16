@@ -138,8 +138,9 @@ class Tpvics extends MX_Controller
 (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=3 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as not_elig, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms 
 					from clusters c
 					inner join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (l.enumcode, 1, 1) = '$d' and c.randomized = '1'
@@ -151,8 +152,9 @@ class Tpvics extends MX_Controller
 (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=3 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as not_elig, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms 
 					from clusters c
 					inner join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (l.enumcode, 1, 1)= '$d' and c.randomized = '1'
@@ -165,8 +167,9 @@ class Tpvics extends MX_Controller
 (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=3 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as not_elig, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms 
 					from clusters c
 					inner join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (l.enumcode, 1, 1) = '$d' and c.randomized = '1'
@@ -190,8 +193,9 @@ class Tpvics extends MX_Controller
 (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=3 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as not_elig, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms 
 from clusters c
 left join listings l on l.hh02 = c.cluster_no
 where  c.randomized = '1' and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
@@ -264,8 +268,9 @@ order by l.enumcode,l.hh02");
 (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) as randomized_households,
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (1,2,3,4,5,96)  ) as collected_forms,  
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as refused_forms, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,3,4,96)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=3 ) as refused_forms, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as not_elig, 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms 
 			from clusters c
 			left join listings l on l.hh02 = c.cluster_no
 			where l.enumcode = '$district' and c.randomized = '1'

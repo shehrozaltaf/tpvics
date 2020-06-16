@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
+    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="Randomization">
       <change afterPath="$PROJECT_DIR$/dashboard" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dashboard.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/add_five.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/cluster_progress.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/dashboard_static.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/dashboard_static2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/get_excel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/index2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/make_pdf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/skipQuestions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/sync_report.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/upload_excel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/assets/uploads/excelsUpload/Book4.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/assets/uploads/excelsUpload/Book41.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/assets/uploads/excelsUpload/Book42.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/application/controllers/a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/application/views/scans/sync_report.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/collected_households.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/randomized_households.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/application/writable/pcfx_session_hv6mcbts0d8druf049fsfv2fb3b2plui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/controllers/Tpvics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/controllers/Tpvics_.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/controllers/Tpvics_.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/libraries/tcpdf/include/barcodes/datamatrix.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/libraries/tcpdf/include/barcodes/datamatrix.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/master/models/master_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/master/models/master_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/users/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/users/controllers/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/users/views/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/users/views/edit_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/users/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/users/views/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/modules/users/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/modules/users/views/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/third_party/MX/Modules.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/third_party/MX/Modules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/views/includes/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/views/includes/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/views/scans/get_excel.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/views/scans/get_excel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/views/tpvics/get_excel.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/get_excel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/application/views/tpvics/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,23 +45,14 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/tpvics/sync_report.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="246">
+              <caret line="271" column="93" selection-start-line="271" selection-start-column="85" selection-end-line="271" selection-end-column="93" />
               <folding>
                 <element signature="e#487#588#0#PHP" />
-                <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#index#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#5502#9590#0#PHP" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="86" column="25" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="25" />
+            <state relative-caret-position="655">
+              <caret line="326" column="30" lean-forward="true" selection-start-line="326" selection-start-column="30" selection-end-line="326" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -79,10 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>spc</find>
-      <find>Tpvics/index</find>
-      <find>hh05</find>
-      <find>get_status</find>
       <find>master_model</find>
       <find>get_user</find>
       <find>um</find>
@@ -109,11 +105,12 @@
       <find>get_randomized_status</find>
       <find>get_randomized _status</find>
       <find>get_members</find>
+      <find>hh21=5</find>
+      <find>(2,3,4,96)</find>
+      <find>refused_forms</find>
+      <find>(2,5,4,96)</find>
     </findStrings>
     <replaceStrings>
-      <replace>8</replace>
-      <replace>9</replace>
-      <replace>scans/dashboard</replace>
       <replace>green</replace>
       <replace>red</replace>
       <replace>AZAD JAMMU &amp; KASHMIR</replace>
@@ -141,6 +138,9 @@
       <replace>tpvics-&gt;</replace>
       <replace>tpvics</replace>
       <replace>30</replace>
+      <replace>hh21=3</replace>
+      <replace>(2,5,4,96)</replace>
+      <replace>(2,4,96)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -195,11 +195,11 @@
         <option value="$PROJECT_DIR$/application/views/tpvics/index.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/get_excel.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/randomized_households.php" />
-        <option value="$PROJECT_DIR$/application/views/tpvics/dashboard.php" />
         <option value="$PROJECT_DIR$/application/modules/master/models/master_model.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/collected_households.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/sync_report.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
+        <option value="$PROJECT_DIR$/application/views/tpvics/dashboard.php" />
       </list>
     </option>
   </component>
@@ -215,7 +215,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,12 +226,6 @@
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
@@ -257,6 +250,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -342,7 +336,9 @@
       <workItem from="1591601928198" duration="2956000" />
       <workItem from="1591682275782" duration="17578000" />
       <workItem from="1591853273435" duration="2257000" />
-      <workItem from="1592031931909" duration="1848000" />
+      <workItem from="1592031931909" duration="2582000" />
+      <workItem from="1592050190725" duration="46000" />
+      <workItem from="1592308143823" duration="1578000" />
     </task>
     <task id="LOCAL-00001" summary="Collection">
       <created>1587970994484</created>
@@ -666,17 +662,24 @@
       <option name="project" value="LOCAL" />
       <updated>1591705813878</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Changes">
+      <created>1592033880551</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1592033880551</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141454000" />
+    <option name="totallyTimeSpent" value="143812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2200489" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22493887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -725,10 +728,12 @@
     <MESSAGE value="edit users" />
     <MESSAGE value="users" />
     <MESSAGE value="Randomization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Randomization" />
+    <MESSAGE value="Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="85" key="FileChooserDialogImpl" timestamp="1575537179712">
@@ -1025,13 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="319" column="112" selection-start-line="319" selection-start-column="112" selection-end-line="319" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../uen/application/modules/master/models/master_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1086,12 +1084,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="246">
+          <caret line="271" column="93" selection-start-line="271" selection-start-column="85" selection-end-line="271" selection-end-column="93" />
           <folding>
             <element signature="e#487#588#0#PHP" />
-            <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#index#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#5502#9590#0#PHP" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
             <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
             <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
@@ -1101,6 +1099,13 @@
             <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
             <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="326" column="30" lean-forward="true" selection-start-line="326" selection-start-column="30" selection-end-line="326" selection-end-column="30" />
         </state>
       </provider>
     </entry>
