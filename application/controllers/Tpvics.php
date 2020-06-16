@@ -484,8 +484,8 @@ order by l.enumcode,l.hh02");
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 (select count(*) from(select distinct hh03, hh07 from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
-(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
 					from clusters c
@@ -501,13 +501,14 @@ sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 (select count(*) from(select distinct hh03, hh07 from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
-(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs 
 from clusters c
 					left join listings l on l.hh02 = c.cluster_no
-					where SUBSTRING (c.dist_id, 1, 1) = '$district' and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+					where SUBSTRING (c.dist_id, 1, 1) = '$district' 
+					and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
 					and (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) != (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs)
 					group by l.enumcode, l.hh02
 					order by l.enumcode,l.hh02");
@@ -518,8 +519,8 @@ from clusters c
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 (select count(*) from(select distinct hh03, hh07 from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
-(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs
                               from clusters c
@@ -610,8 +611,8 @@ sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
 	l.hh02, 
 (select MAX(CAST(hh03 as int))  from listings   where enumcode = l.enumcode and hh02 = l.hh02)   as structures, 
 (select count(*) from(select distinct hh03, hh07 from listings where hh08a1 = '1' and enumcode = l.enumcode and hh02 = l.hh02) as residential_structures) as residential_structures,
-sum(case when hh10 = '1'  then 1 else 0 end) as target_children,
-(select SUM(CAST(hh13 as int)) from listings where hh10='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
+sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
+(select SUM(CAST(hh13 as int)) from listings where hh12='1' and hh13!='null' and enumcode = l.enumcode and hh02 = l.hh02) as no_of_children,
 (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) as collecting_tabs,
 (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs) completed_tabs,
 (select hh04   from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9  group by hh02,hh04 ) as status 
@@ -667,9 +668,9 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
         }
         $dataset = $this->tpvics->query("select " . $columns . " from " . $source . "
 		where username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
-		and hh08a1 = '1' and hh10 = '1'  and hh02 = '$cluster' order by tabNo, deviceid, cast(hh03 as int), cast(hh07 as int)");
-        if ($dataset->num_rows() > 0) { 
-            $residential_structures = $this->tpvics->query("select distinct hh03, tabNo from listings where hh02 = '$cluster' and hh08a1 = '1'")->num_rows();
+		and hh08a1 = '1' and hh12 = '1'  and hh02 = '$cluster' order by tabNo, deviceid, cast(hh03 as int), cast(hh07 as int)");
+        if ($dataset->num_rows() > 0) {
+            $residential_structures = $this->tpvics->query("select distinct hh03, tabNo from listings where hh02 = '$cluster' and hh08a1 = '1' and hh12='1' ")->num_rows();
             $this->tpvics->query("update clusters set randomized = '1' where cluster_no = '$cluster'");
             if ($dataset->num_rows() > $sample) {
                 $quotient = $dataset->num_rows() / $sample;
