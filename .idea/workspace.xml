@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="Randomization">
-      <change afterPath="$PROJECT_DIR$/dashboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard.rar" afterDir="false" />
+    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/dashboard/application/controllers/a.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dashboard/application/views/scans/sync_report.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/collected_households.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/dashboard.php~origin_master" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/index.php~origin_master" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dashboard/application/views/tpvics/randomized_households.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dashboard/application/writable/pcfx_session_hv6mcbts0d8druf049fsfv2fb3b2plui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/application/config/config.php" afterDir="false" />
@@ -45,32 +44,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
+        <entry file="file://$PROJECT_DIR$/dashboard/application/views/tpvics/randomized_households.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="271" column="93" selection-start-line="271" selection-start-column="85" selection-end-line="271" selection-end-column="93" />
-              <folding>
-                <element signature="e#487#588#0#PHP" />
-                <element signature="e#5502#9590#0#PHP" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#upload_excel_data#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#addExcelData#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="57" column="66" lean-forward="true" selection-end-line="99" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/randomized_households.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="326" column="30" lean-forward="true" selection-start-line="326" selection-start-column="30" selection-end-line="326" selection-end-column="30" />
+            <state relative-caret-position="808">
+              <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -144,13 +130,11 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/dashboard" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/header.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Reports.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Section.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Project.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Module.php" />
@@ -200,6 +184,8 @@
         <option value="$PROJECT_DIR$/application/views/tpvics/sync_report.php" />
         <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/dashboard.php" />
+        <option value="$PROJECT_DIR$/dashboard/application/views/tpvics/randomized_households.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/randomized_households.php" />
       </list>
     </option>
   </component>
@@ -225,23 +211,25 @@
             <path>
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
@@ -338,7 +326,8 @@
       <workItem from="1591853273435" duration="2257000" />
       <workItem from="1592031931909" duration="2582000" />
       <workItem from="1592050190725" duration="46000" />
-      <workItem from="1592308143823" duration="1578000" />
+      <workItem from="1592308143823" duration="1973000" />
+      <workItem from="1592310254293" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="Collection">
       <created>1587970994484</created>
@@ -673,13 +662,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143812000" />
+    <option name="totallyTimeSpent" value="144673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22493887" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22738387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -704,8 +693,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Collection" />
-    <MESSAGE value="Randomized" />
     <MESSAGE value="Randomized changes" />
     <MESSAGE value="changes" />
     <MESSAGE value="Skip Questions" />
@@ -729,7 +716,9 @@
     <MESSAGE value="users" />
     <MESSAGE value="Randomization" />
     <MESSAGE value="Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+    <MESSAGE value="Refused" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/vcs.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;application/config/database.php&#10;#&#9;application/controllers/Tpvics.php&#10;#&#9;application/controllers/Tpvics_.php&#10;#&#9;application/controllers/a.php&#10;#&#9;application/modules/master/models/master_model.php&#10;#&#9;application/modules/users/views/edit_user.php&#10;#&#9;application/modules/users/views/index.php&#10;#&#9;application/modules/users/views/register.php&#10;#&#9;application/views/includes/sidebar.php&#10;#&#9;application/views/scans/get_excel.php&#10;#&#9;application/views/tpvics/get_excel.php&#10;#&#9;application/views/tpvics/index.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/vcs.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;application/config/database.php&#10;#&#9;application/controllers/Tpvics.php&#10;#&#9;application/controllers/Tpvics_.php&#10;#&#9;application/controllers/a.php&#10;#&#9;application/modules/master/models/master_model.php&#10;#&#9;application/modules/users/views/edit_user.php&#10;#&#9;application/modules/users/views/index.php&#10;#&#9;application/modules/users/views/register.php&#10;#&#9;application/views/includes/sidebar.php&#10;#&#9;application/views/scans/get_excel.php&#10;#&#9;application/views/tpvics/get_excel.php&#10;#&#9;application/views/tpvics/index.php" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -761,20 +750,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics_.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="1058" column="44" selection-start-line="1058" selection-start-column="39" selection-end-line="1058" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../uen/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2728">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../uen/application/modules/master/controllers/master.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27" />
@@ -1084,11 +1059,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="271" column="93" selection-start-line="271" selection-start-column="85" selection-end-line="271" selection-end-column="93" />
+        <state relative-caret-position="195">
+          <caret line="157" column="35" lean-forward="true" selection-start-line="157" selection-start-column="35" selection-end-line="157" selection-end-column="35" />
           <folding>
             <element signature="e#487#588#0#PHP" />
-            <element signature="e#5502#9590#0#PHP" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
             <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
@@ -1104,8 +1078,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="326" column="30" lean-forward="true" selection-start-line="326" selection-start-column="30" selection-end-line="326" selection-end-column="30" />
+        <state relative-caret-position="604">
+          <caret line="305" column="73" lean-forward="true" selection-start-line="305" selection-start-column="73" selection-end-line="305" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/application/views/tpvics/randomized_households.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="57" column="66" lean-forward="true" selection-end-line="99" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/randomized_households.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="808">
+          <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
         </state>
       </provider>
     </entry>
