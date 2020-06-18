@@ -525,8 +525,6 @@ sum(case when hh12 = '1'  then 1 else 0 end) as target_children,
                               where   l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
                                 group by l.enumcode, l.hh02
                             order by l.enumcode,l.hh02");
-
-
             }
         } else {
             /*else*/
