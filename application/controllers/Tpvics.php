@@ -316,15 +316,12 @@ order by l.enumcode,l.hh02");
                                 SUBSTRING (dist_id, 1, 1)");
     }
 
-    /*function showDir()
-    {
-        for ($i = 135; $i <= 164; $i++) {
-            echo '<br>INSERT INTO users_groups (user_id, group_id) VALUES ("' . $i . '", 3);';
-        }
-          $dir    = 'C:\xampp\htdocs\tpvics\application\controllers';
+    /* function showDir()
+     {
+         $dir = 'C:\xampp\htdocs\tpvics\application\controllers';
          $files1 = scandir($dir);
          print_r($files1);
-    }*/
+     }*/
 
     function index()
     {
