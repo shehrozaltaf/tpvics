@@ -297,7 +297,7 @@
                                     if ($row5->randomized_households > 0) {
                                         if ($row5->collected_forms == 0) {
                                             $status = '<span class="label label-info">Pending</span>';
-                                        } else if ($row5->collected_forms > 0 and $row5->collected_forms < 30) {
+                                        } else if ($row5->collected_forms > 0 and $row5->collected_forms < 15) {
                                             $status = '<span class="label label-danger">In Progress</span>';
                                         } else {
                                             $status = '<span class="label label-success">Completed</span>';

@@ -72,37 +72,37 @@ class Tpvics extends MX_Controller
 
             foreach ($c_r_clusters->result() as $r) {
                 if ($r->dist_id == '1') {
-                    if ($r->hh_collected >= 30) {
+                    if ($r->hh_collected >= 15) {
                         $cc_d1 = $cc_d1 + 1;
                     } else {
                         $rc_d1 = $rc_d1 + 1;
                     }
                 } else if ($r->dist_id == '2') {
-                    if ($r->hh_collected >= 30) {
+                    if ($r->hh_collected >= 15) {
                         $cc_d2 = $cc_d2 + 1;
                     } else {
                         $rc_d2 = $rc_d2 + 1;
                     }
                 } else if ($r->dist_id >= '3') {
-                    if ($r->hh_collected >= 30) {
+                    if ($r->hh_collected >= 15) {
                         $cc_d3 = $cc_d3 + 1;
                     } else {
                         $rc_d3 = $rc_d3 + 1;
                     }
                 } else if ($r->dist_id == '4') {
-                    if ($r->hh_collected >= 30) {
+                    if ($r->hh_collected >= 15) {
                         $cc_d4 = $cc_d4 + 1;
                     } else {
                         $rc_d4 = $rc_d4 + 1;
                     }
                 } else if ($r->dist_id == '7') {
-                    if ($r->hh_collected >= 30) {
+                    if ($r->hh_collected >= 15) {
                         $cc_d7 = $cc_d7 + 1;
                     } else {
                         $rc_d7 = $rc_d7 + 1;
                     }
                 } else if ($r->dist_id == '9') {
-                    if ($r->hh_collected >= 30) {
+                    if ($r->hh_collected >= 15) {
                         $cc_d9 = $cc_d9 + 1;
                     } else {
                         $rc_d9 = $rc_d9 + 1;
@@ -236,7 +236,7 @@ order by l.enumcode,l.hh02");
 
                 if ($r->dist_id == '2') {
 
-                    if ($r->hh_collected == 30) {
+                    if ($r->hh_collected == 15) {
                         $rc_d2 = $rc_d2 + 1;
                     } else {
                         $cc_d2 = $cc_d2 + 1;
@@ -244,7 +244,7 @@ order by l.enumcode,l.hh02");
 
                 } else if ($r->dist_id == '3') {
 
-                    if ($r->hh_collected == 30) {
+                    if ($r->hh_collected == 15) {
                         $rc_d3 = $rc_d3 + 1;
                     } else {
                         $cc_d3 = $cc_d3 + 1;
@@ -646,7 +646,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
     function systematic_randomizer()
     {
         $source = 'listings';
-        $sample = 30;
+        $sample = 15;
         $columns = 'col_id, hh02, tabNo, hh03,  hh07, hh08, hh09, enumcode, uid';
         $cluster = $this->uri->segment(3);
         $randomization_status = $this->tpvics->query("select randomized from clusters where cluster_no = '$cluster'")->row()->randomized;
@@ -673,7 +673,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                 $random_point = $random_start;
                 $index = floor($random_start);
                 $result = $dataset->result_array();
-                for ($i = 1; $i <= 30; $i++) {
+                for ($i = 1; $i <= 15; $i++) {
                     $data = array(
                         'randDT' => date('Y-m-d h:i:s'),
                         'uid' => $result[$index - 1]['uid'],
