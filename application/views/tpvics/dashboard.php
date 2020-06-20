@@ -259,6 +259,7 @@
                                     <th>Refused</th>
                                     <th>Not Elig Child</th>
                                     <th>Other</th>
+                                    <th>HH atleast 1 child</th>
                                     <th>Status</th>
                                 </tr>
                                 </thead>
@@ -295,6 +296,18 @@
                                     }
 
                                     if ($row5->randomized_households > 0) {
+                                        if ($row5->one_child == 0) {
+                                            $status = '<span class="label label-info">Pending</span>';
+                                        } else if ($row5->one_child > 0 and $row5->one_child < 13) {
+                                            $status = '<span class="label label-danger">In Progress</span>';
+                                        } else {
+                                            $status = '<span class="label label-success">Completed</span>';
+                                        }
+                                    } else {
+                                        $status = '<span class="label label-warning">Not Randomized</span>';
+                                    }
+
+                                    /*  if ($row5->randomized_households > 0) {
                                         if ($row5->collected_forms == 0) {
                                             $status = '<span class="label label-info">Pending</span>';
                                         } else if ($row5->collected_forms > 0 and $row5->collected_forms < 15) {
@@ -304,7 +317,7 @@
                                         }
                                     } else {
                                         $status = '<span class="label label-warning">Not Randomized</span>';
-                                    }
+                                    }*/
 
                                     ?>
 
@@ -326,6 +339,7 @@
                                         <td><?php echo $row5->refused_forms; ?></td>
                                         <td><?php echo $row5->not_elig; ?></td>
                                         <td><?php echo $row5->remaining_forms; ?></td>
+                                        <td><?php echo(isset($row5->one_child) && $row5->one_child != '' ? $row5->one_child : 0); ?></td>
                                         <!-- <td>
                                             <strong><a href="<?php /*echo base_url() . 'index.php/tpvics/cluster_progress/' . $row5->hh02; */ ?>"
                                                        class="name"

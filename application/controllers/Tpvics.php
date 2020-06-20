@@ -140,7 +140,16 @@ class Tpvics extends MX_Controller
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=3 ) as refused_forms, 
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as not_elig, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms,
+(SELECT count(distinct fa.hhno) FROM forms fa
+left join child_table cb on fa.cluster_code=cb.cluster_code and fa.hhno=cb.hhno
+where cb.hhno!='NULL' 
+AND left(fa.username,3) not in ('USER','DMU','tes') 
+and left(cb.username,3) not in  ('USER','DMU','tes')
+and cb.ec22=1
+and fa.cluster_code = l.hh02
+GROUP BY fa.cluster_code 
+) as one_child 
 					from clusters c
 					inner join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (l.enumcode, 1, 1) = '$d' and c.randomized = '1'
@@ -154,7 +163,16 @@ class Tpvics extends MX_Controller
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=3 ) as refused_forms, 
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as not_elig, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms,
+(SELECT count(distinct fa.hhno) FROM forms fa
+left join child_table cb on fa.cluster_code=cb.cluster_code and fa.hhno=cb.hhno
+where cb.hhno!='NULL' 
+AND left(fa.username,3) not in ('USER','DMU','tes') 
+and left(cb.username,3) not in  ('USER','DMU','tes')
+and cb.ec22=1
+and fa.cluster_code = l.hh02
+GROUP BY fa.cluster_code 
+) as one_child 
 					from clusters c
 					inner join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (l.enumcode, 1, 1)= '$d' and c.randomized = '1'
@@ -169,7 +187,16 @@ class Tpvics extends MX_Controller
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=3 ) as refused_forms, 
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as not_elig, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms,
+(SELECT count(distinct fa.hhno) FROM forms fa
+left join child_table cb on fa.cluster_code=cb.cluster_code and fa.hhno=cb.hhno
+where cb.hhno!='NULL' 
+AND left(fa.username,3) not in ('USER','DMU','tes') 
+and left(cb.username,3) not in  ('USER','DMU','tes')
+and cb.ec22=1
+and fa.cluster_code = l.hh02
+GROUP BY fa.cluster_code 
+) as one_child 
 					from clusters c
 					inner join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (l.enumcode, 1, 1) = '$d' and c.randomized = '1'
@@ -195,7 +222,16 @@ class Tpvics extends MX_Controller
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=1 ) as completed_forms, 
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=3 ) as refused_forms, 
 (select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21=5 ) as not_elig, 
-(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms 
+(select count(distinct hhno) from forms where  cluster_code = l.hh02 and hh21 in (2,4,96)) as remaining_forms,
+(SELECT count(distinct fa.hhno) FROM forms fa
+left join child_table cb on fa.cluster_code=cb.cluster_code and fa.hhno=cb.hhno
+where cb.hhno!='NULL' 
+AND left(fa.username,3) not in ('USER','DMU','tes') 
+and left(cb.username,3) not in  ('USER','DMU','tes')
+and cb.ec22=1
+and fa.cluster_code = l.hh02
+GROUP BY fa.cluster_code 
+) as one_child  
 from clusters c
 left join listings l on l.hh02 = c.cluster_no
 where  c.randomized = '1' and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')

@@ -19,12 +19,12 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+            <state relative-caret-position="374">
+              <caret line="198" column="15" lean-forward="true" selection-start-line="198" selection-start-column="15" selection-end-line="198" selection-end-column="15" />
               <folding>
                 <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
                 <element signature="e#487#588#0#PHP" />
@@ -33,7 +33,6 @@
                 <element signature="e#15469#15515#0#PHP" />
                 <element signature="e#15524#16116#0#PHP" />
                 <element signature="e#16132#16479#0#PHP" />
-                <element signature="n#index#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
@@ -50,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="301" column="48" lean-forward="true" selection-start-line="301" selection-start-column="48" selection-end-line="301" selection-end-column="48" />
+            <state relative-caret-position="527">
+              <caret line="351" column="42" lean-forward="true" selection-start-line="351" selection-start-column="42" selection-end-line="351" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -179,8 +178,8 @@
         <option value="$PROJECT_DIR$/dashboard/application/views/tpvics/randomized_households.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/randomized_households.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/dashboard.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
       </list>
     </option>
   </component>
@@ -196,6 +195,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,7 +231,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -326,14 +325,9 @@
       <workItem from="1592457738539" duration="602000" />
       <workItem from="1592460873912" duration="2470000" />
       <workItem from="1592475145340" duration="3048000" />
-      <workItem from="1592579397693" duration="1338000" />
-    </task>
-    <task id="LOCAL-00004" summary="Randomized">
-      <created>1588163239268</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1588163239268</updated>
+      <workItem from="1592579397693" duration="2033000" />
+      <workItem from="1592632241737" duration="178000" />
+      <workItem from="1592655503662" duration="2689000" />
     </task>
     <task id="LOCAL-00005" summary="Randomized changes">
       <created>1588163432362</created>
@@ -671,17 +665,24 @@
       <option name="project" value="LOCAL" />
       <updated>1592480306062</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="randomization cahnges">
+      <created>1592581315612</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1592581315613</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156279000" />
+    <option name="totallyTimeSpent" value="159841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24572127" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25183374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -709,7 +710,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/dashboard" />
     </ignored-roots>
-    <MESSAGE value="Skip Questions" />
     <MESSAGE value="File filtering" />
     <MESSAGE value="Sync Report" />
     <MESSAGE value="Skip Question" />
@@ -734,7 +734,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/vcs.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;application/config/database.php&#10;#&#9;application/controllers/Tpvics.php&#10;#&#9;application/controllers/Tpvics_.php&#10;#&#9;application/controllers/a.php&#10;#&#9;application/modules/master/models/master_model.php&#10;#&#9;application/modules/users/views/edit_user.php&#10;#&#9;application/modules/users/views/index.php&#10;#&#9;application/modules/users/views/register.php&#10;#&#9;application/views/includes/sidebar.php&#10;#&#9;application/views/scans/get_excel.php&#10;#&#9;application/views/tpvics/get_excel.php&#10;#&#9;application/views/tpvics/index.php" />
     <MESSAGE value="changes" />
     <MESSAGE value="clusters" />
-    <option name="LAST_COMMIT_MESSAGE" value="clusters" />
+    <MESSAGE value="randomization cahnges" />
+    <option name="LAST_COMMIT_MESSAGE" value="randomization cahnges" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1065,15 +1066,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="301" column="48" lean-forward="true" selection-start-line="301" selection-start-column="48" selection-end-line="301" selection-end-column="48" />
+        <state relative-caret-position="527">
+          <caret line="351" column="42" lean-forward="true" selection-start-line="351" selection-start-column="42" selection-end-line="351" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+        <state relative-caret-position="374">
+          <caret line="198" column="15" lean-forward="true" selection-start-line="198" selection-start-column="15" selection-end-line="198" selection-end-column="15" />
           <folding>
             <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
             <element signature="e#487#588#0#PHP" />
@@ -1082,7 +1083,6 @@
             <element signature="e#15469#15515#0#PHP" />
             <element signature="e#15524#16116#0#PHP" />
             <element signature="e#16132#16479#0#PHP" />
-            <element signature="n#index#0;n#Tpvics#0;n#!!top" />
             <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
