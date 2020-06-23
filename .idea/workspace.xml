@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/tpvics/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,48 +15,7 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2704">
-              <caret line="543" column="43" lean-forward="true" selection-start-line="543" selection-start-column="43" selection-end-line="543" selection-end-column="43" />
-              <folding>
-                <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#487#588#0#PHP" />
-                <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#collected_households#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/tpvics/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="190" column="143" selection-start-line="190" selection-start-column="137" selection-end-line="190" selection-end-column="143" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -208,30 +162,6 @@
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -336,13 +266,6 @@
       <workItem from="1592655503662" duration="2751000" />
       <workItem from="1592816392484" duration="45000" />
       <workItem from="1592892061516" duration="6658000" />
-    </task>
-    <task id="LOCAL-00006" summary="Randomized changes">
-      <created>1588232817006</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1588232817006</updated>
     </task>
     <task id="LOCAL-00007" summary="changes">
       <created>1588585632720</created>
@@ -680,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592658673011</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Gilgit &amp; Azad Jammu">
+      <created>1592921706890</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1592921706891</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -688,7 +618,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25794622" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -718,7 +647,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/dashboard" />
     </ignored-roots>
-    <MESSAGE value="Sync Report" />
     <MESSAGE value="Skip Question" />
     <MESSAGE value="Sync Report Households" />
     <MESSAGE value="User role" />
@@ -743,7 +671,8 @@
     <MESSAGE value="clusters" />
     <MESSAGE value="randomization cahnges" />
     <MESSAGE value="househoild atleast one child" />
-    <option name="LAST_COMMIT_MESSAGE" value="househoild atleast one child" />
+    <MESSAGE value="Gilgit &amp; Azad Jammu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gilgit &amp; Azad Jammu" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1083,8 +1012,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2704">
-          <caret line="543" column="43" lean-forward="true" selection-start-line="543" selection-start-column="43" selection-end-line="543" selection-end-column="43" />
+        <state relative-caret-position="101">
+          <caret line="708" column="9" lean-forward="true" selection-start-line="708" selection-start-column="9" selection-end-line="708" selection-end-column="9" />
           <folding>
             <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
             <element signature="e#487#588#0#PHP" />
