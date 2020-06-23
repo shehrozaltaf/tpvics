@@ -94,6 +94,8 @@
                                                             $district2 = 'BALOCHISTAN';
                                                         } else if ($row4->dist_id == 7) {
                                                             $district2 = 'GILGIT BALTISTAN';
+                                                        } else if ($row4->dist_id == 8) {
+                                                            $district2 = 'AZAD JAMMU AND KASHMIR';
                                                         } else if ($row4->dist_id == 9) {
                                                             $district2 = 'ADJACENT AREAS-FR';
                                                         }
@@ -139,11 +141,16 @@
                                                         <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d4'; ?>"><strong>BALOCHISTAN</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $cc_d4; ?></span></a>
                                                     </li>
-                                                    <!-- <li>
-                                                        <a href="<?php /*echo base_url() . 'index.php/tpvics/dashboard/cc_d7'; */ ?>"><strong>GILGIT
+                                                    <li>
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d7'; ?>"><strong>GILGIT
                                                                 BALTISTAN</strong><span
-                                                                    class="pull-right badge bg-green"><?php /*echo $cc_d7; */ ?></span></a>
-                                                    </li>-->
+                                                                    class="pull-right badge bg-green"><?php echo $cc_d7; ?></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d8'; ?>"><strong>AZAD
+                                                                JAMMU AND KASHMIR</strong><span
+                                                                    class="pull-right badge bg-green"><?php echo $cc_d8; ?></span></a>
+                                                    </li>
                                                     <li>
                                                         <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/cc_d9'; ?>"><strong>ADJACENT
                                                                 AREAS-FR</strong><span
@@ -197,11 +204,16 @@
                                                         <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d4'; ?>"><strong>BALOCHISTAN</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $rc_d4; ?></span></a>
                                                     </li>
-                                                    <!-- <li>
-                                                        <a href="<?php /*echo base_url() . 'index.php/tpvics/dashboard/rc_d7'; */ ?>"><strong>GILGIT
+                                                    <li>
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d7'; ?>"><strong>GILGIT
                                                                 BALTISTAN</strong><span
-                                                                    class="pull-right badge bg-red"><?php /*echo $rc_d7; */ ?></span></a>
-                                                    </li>-->
+                                                                    class="pull-right badge bg-red"><?php echo $rc_d7; ?></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d8'; ?>"><strong>AZAD
+                                                                JAMMU AND KASHMIR</strong><span
+                                                                    class="pull-right badge bg-red"><?php echo $rc_d8; ?></span></a>
+                                                    </li>
                                                     <li>
                                                         <a href="<?php echo base_url() . 'index.php/tpvics/dashboard/rc_d9'; ?>"><strong>ADJACENT
                                                                 AREAS-FR</strong><span

@@ -38,6 +38,8 @@ class Tpvics extends MX_Controller
                     $myTotalArray['district'] = 'BALOCHISTAN';
                 } elseif ($row->provinceId == 7) {
                     $myTotalArray['district'] = 'GILGIT BALTISTAN';
+                } elseif ($row->provinceId == 8) {
+                    $myTotalArray['district'] = 'AZAD JAMMU AND KASHMIR';
                 } elseif ($row->provinceId == 9) {
                     $myTotalArray['district'] = 'ADJACENT AREAS-FR';
                 }
@@ -61,6 +63,7 @@ class Tpvics extends MX_Controller
             $cc_d3 = 0;
             $cc_d4 = 0;
             $cc_d7 = 0;
+            $cc_d8 = 0;
             $cc_d9 = 0;
 
             $rc_d1 = 0;
@@ -68,6 +71,7 @@ class Tpvics extends MX_Controller
             $rc_d3 = 0;
             $rc_d4 = 0;
             $rc_d7 = 0;
+            $rc_d8 = 0;
             $rc_d9 = 0;
 
             foreach ($c_r_clusters->result() as $r) {
@@ -101,6 +105,12 @@ class Tpvics extends MX_Controller
                     } else {
                         $rc_d7 = $rc_d7 + 1;
                     }
+                } else if ($r->dist_id == '8') {
+                    if ($r->hh_collected >= 15) {
+                        $cc_d8 = $cc_d8 + 1;
+                    } else {
+                        $rc_d8 = $rc_d8 + 1;
+                    }
                 } else if ($r->dist_id == '9') {
                     if ($r->hh_collected >= 15) {
                         $cc_d9 = $cc_d9 + 1;
@@ -115,8 +125,9 @@ class Tpvics extends MX_Controller
             $this->data['cc_d3'] = $cc_d3;
             $this->data['cc_d4'] = $cc_d4;
             $this->data['cc_d7'] = $cc_d7;
+            $this->data['cc_d8'] = $cc_d8;
             $this->data['cc_d9'] = $cc_d9;
-            $this->data['cc_total'] = $cc_d1 + $cc_d2 + $cc_d3 + $cc_d4 + $cc_d7 + $cc_d9;
+            $this->data['cc_total'] = $cc_d1 + $cc_d2 + $cc_d3 + $cc_d4 + $cc_d7 + $cc_d8 + $cc_d9;
 
             // Remaining Clusters
             $this->data['rc_d1'] = $rc_d1;
@@ -124,8 +135,9 @@ class Tpvics extends MX_Controller
             $this->data['rc_d3'] = $rc_d3;
             $this->data['rc_d4'] = $rc_d4;
             $this->data['rc_d7'] = $rc_d7;
+            $this->data['rc_d8'] = $rc_d8;
             $this->data['rc_d9'] = $rc_d9;
-            $this->data['rc_total'] = $rc_d1 + $rc_d2 + $rc_d3 + $rc_d4 + $rc_d7 + $rc_d9;
+            $this->data['rc_total'] = $rc_d1 + $rc_d2 + $rc_d3 + $rc_d4 + $rc_d7 + $rc_d8 + $rc_d9;
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -378,6 +390,8 @@ order by l.enumcode,l.hh02");
                     $myTotalArray['district'] = 'BALOCHISTAN';
                 } elseif ($row->provinceId == 7) {
                     $myTotalArray['district'] = 'GILGIT BALTISTAN';
+                } elseif ($row->provinceId == 8) {
+                    $myTotalArray['district'] = 'AZAD JAMMU AND KASHMIR';
                 } elseif ($row->provinceId == 9) {
                     $myTotalArray['district'] = 'ADJACENT AREAS-FR';
                 }
@@ -397,6 +411,7 @@ order by l.enumcode,l.hh02");
             $d3_t = 0;
             $d4_t = 0;
             $d7_t = 0;
+            $d8_t = 0;
             $d9_t = 0;
 
             $d1_c = 0;
@@ -404,6 +419,7 @@ order by l.enumcode,l.hh02");
             $d3_c = 0;
             $d4_c = 0;
             $d7_c = 0;
+            $d8_c = 0;
             $d9_c = 0;
 
             $d1_ip = 0;
@@ -411,6 +427,7 @@ order by l.enumcode,l.hh02");
             $d3_ip = 0;
             $d4_ip = 0;
             $d7_ip = 0;
+            $d8_ip = 0;
             $d9_ip = 0;
 
             foreach ($cip_clusters->result() as $row) {
@@ -449,6 +466,13 @@ order by l.enumcode,l.hh02");
                     } else {
                         $d7_ip = $d7_ip + 1;
                     }
+                } else if ($row->provinceId == 8) {
+                    $d8_t = $d8_t + 1;
+                    if ($row->collecting_tabs == $row->completed_tabs) {
+                        $d8_c = $d8_c + 1;
+                    } else {
+                        $d8_ip = $d8_ip + 1;
+                    }
                 } else if ($row->provinceId == 9) {
                     $d9_t = $d9_t + 1;
                     if ($row->collecting_tabs == $row->completed_tabs) {
@@ -464,6 +488,7 @@ order by l.enumcode,l.hh02");
             $this->data['d3_t'] = $d3_t;
             $this->data['d4_t'] = $d4_t;
             $this->data['d7_t'] = $d7_t;
+            $this->data['d8_t'] = $d8_t;
             $this->data['d9_t'] = $d9_t;
 
             $this->data['d1_c'] = $d1_c;
@@ -471,6 +496,7 @@ order by l.enumcode,l.hh02");
             $this->data['d3_c'] = $d3_c;
             $this->data['d4_c'] = $d4_c;
             $this->data['d7_c'] = $d7_c;
+            $this->data['d8_c'] = $d8_c;
             $this->data['d9_c'] = $d9_c;
 
             $this->data['d1_ip'] = $d1_ip;
@@ -478,6 +504,7 @@ order by l.enumcode,l.hh02");
             $this->data['d3_ip'] = $d3_ip;
             $this->data['d4_ip'] = $d4_ip;
             $this->data['d7_ip'] = $d7_ip;
+            $this->data['d8_ip'] = $d8_ip;
             $this->data['d9_ip'] = $d9_ip;
 
             $all_clusters = $total_clusters_by_district;
@@ -486,6 +513,7 @@ order by l.enumcode,l.hh02");
             $this->data['d3_r'] = 0;
             $this->data['d4_r'] = 0;
             $this->data['d7_r'] = 0;
+            $this->data['d8_r'] = 0;
             $this->data['d9_r'] = 0;
             foreach ($all_clusters->result() as $row2) {
                 if ($row2->provinceId == 1) {
@@ -498,14 +526,16 @@ order by l.enumcode,l.hh02");
                     $this->data['d4_r'] = $row2->clusters_by_district - $d4_t;
                 } else if ($row2->provinceId == 7) {
                     $this->data['d7_r'] = $row2->clusters_by_district - $d7_t;
+                } else if ($row2->provinceId == 8) {
+                    $this->data['d8_r'] = $row2->clusters_by_district - $d8_t;
                 } else if ($row2->provinceId == 9) {
                     $this->data['d9_r'] = $row2->clusters_by_district - $d9_t;
                 }
             }
-            $this->data['gt_c'] = $d1_c + $d2_c + $d3_c + $d4_c + $d7_c + $d9_c;
-            $this->data['gt_ip'] = $d1_ip + $d2_ip + $d3_ip + $d4_ip + $d7_ip + $d9_ip;
+            $this->data['gt_c'] = $d1_c + $d2_c + $d3_c + $d4_c + $d7_c + $d8_c + $d9_c;
+            $this->data['gt_ip'] = $d1_ip + $d2_ip + $d3_ip + $d4_ip + $d7_ip + $d8_ip + $d9_ip;
             $this->data['gt_r'] = $this->data['d1_r'] + $this->data['d2_r'] + $this->data['d3_r'] + $this->data['d4_r']
-                + $this->data['d7_r'] + $this->data['d9_r'];
+                + $this->data['d7_r'] + $this->data['d8_r'] + $this->data['d9_r'];
             $district_cluster_type = $this->uri->segment(3);
             if (!empty($district_cluster_type)) {
                 $district = substr($district_cluster_type, 1, 1);
@@ -542,11 +572,15 @@ from clusters c
 					left join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (c.dist_id, 1, 1) = '$district' 
 					and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
-					and (select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) != (select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs)
+					and 
+					(select count(distinct deviceid) from listings where hh02 = l.hh02 and enumcode = l.enumcode) != 
+					(select count(*) completed_tabs from(select deviceid, max(cast(hh03 as int)) ms from listings 
+					where enumcode = l.enumcode and hh02 = l.hh02 and hh04 = 9 group by deviceid) AS completed_tabs)
 					group by l.enumcode, l.hh02
 					order by l.enumcode,l.hh02");
                 }
             } else {
+
                 $this->data['get_list'] = $this->tpvics->query("SELECT
 	l.enumcode,
 	l.hh02, 

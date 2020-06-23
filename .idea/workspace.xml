@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tpvics/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,17 +24,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="198" column="15" lean-forward="true" selection-start-line="198" selection-start-column="15" selection-end-line="198" selection-end-column="15" />
+            <state relative-caret-position="-2704">
+              <caret line="543" column="43" lean-forward="true" selection-start-line="543" selection-start-column="43" selection-end-line="543" selection-end-column="43" />
               <folding>
                 <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
                 <element signature="e#487#588#0#PHP" />
-                <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
-                <element signature="e#15358#15515#0#PHP" />
-                <element signature="e#15469#15515#0#PHP" />
-                <element signature="e#15524#16116#0#PHP" />
-                <element signature="e#16132#16479#0#PHP" />
                 <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
                 <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#collected_households#0;n#Tpvics#0;n#!!top" />
@@ -47,10 +44,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/tpvics/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="351" column="42" lean-forward="true" selection-start-line="351" selection-start-column="42" selection-end-line="351" selection-end-column="42" />
+            <state relative-caret-position="271">
+              <caret line="190" column="143" selection-start-line="190" selection-start-column="137" selection-end-line="190" selection-end-column="143" />
             </state>
           </provider>
         </entry>
@@ -59,13 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>scans/</find>
-      <find>scans</find>
-      <find>skiq</find>
-      <find>20</find>
-      <find>comp</find>
-      <find>$division</find>
-      <find>_insert</find>
       <find>get</find>
       <find>logged_in</find>
       <find>index</find>
@@ -89,6 +88,13 @@
       <find>hh10=</find>
       <find>hh08a1 = '1'</find>
       <find>30</find>
+      <find>$d4_t</find>
+      <find>d1_t</find>
+      <find>$d1_t</find>
+      <find>as status</find>
+      <find>household</find>
+      <find>$status</find>
+      <find>KHYBER</find>
     </findStrings>
     <replaceStrings>
       <replace>hh18</replace>
@@ -169,7 +175,6 @@
         <option value="$PROJECT_DIR$/application/modules/users/views/edit_user.php" />
         <option value="$PROJECT_DIR$/application/modules/users/controllers/Users.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/database.php" />
-        <option value="$PROJECT_DIR$/application/views/tpvics/index.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/get_excel.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/randomized_households.php" />
         <option value="$PROJECT_DIR$/application/modules/master/models/master_model.php" />
@@ -178,13 +183,14 @@
         <option value="$PROJECT_DIR$/dashboard/application/views/tpvics/randomized_households.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/randomized_households.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/views/tpvics/index.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/dashboard.php" />
         <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="833" />
     <option name="width" value="854" />
     <option name="height" value="1017" />
   </component>
@@ -195,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,6 +236,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -327,14 +333,9 @@
       <workItem from="1592475145340" duration="3048000" />
       <workItem from="1592579397693" duration="2033000" />
       <workItem from="1592632241737" duration="178000" />
-      <workItem from="1592655503662" duration="2689000" />
-    </task>
-    <task id="LOCAL-00005" summary="Randomized changes">
-      <created>1588163432362</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1588163432362</updated>
+      <workItem from="1592655503662" duration="2751000" />
+      <workItem from="1592816392484" duration="45000" />
+      <workItem from="1592892061516" duration="6658000" />
     </task>
     <task id="LOCAL-00006" summary="Randomized changes">
       <created>1588232817006</created>
@@ -672,17 +673,24 @@
       <option name="project" value="LOCAL" />
       <updated>1592581315613</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="househoild atleast one child">
+      <created>1592658673009</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1592658673011</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159841000" />
+    <option name="totallyTimeSpent" value="166606000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25183374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25794622" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -710,7 +718,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/dashboard" />
     </ignored-roots>
-    <MESSAGE value="File filtering" />
     <MESSAGE value="Sync Report" />
     <MESSAGE value="Skip Question" />
     <MESSAGE value="Sync Report Households" />
@@ -735,7 +742,8 @@
     <MESSAGE value="changes" />
     <MESSAGE value="clusters" />
     <MESSAGE value="randomization cahnges" />
-    <option name="LAST_COMMIT_MESSAGE" value="randomization cahnges" />
+    <MESSAGE value="househoild atleast one child" />
+    <option name="LAST_COMMIT_MESSAGE" value="househoild atleast one child" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -767,11 +775,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../uen/application/modules/master/controllers/master.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/index2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -989,13 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tpvics/get_excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="93" column="29" lean-forward="true" selection-start-line="91" selection-start-column="11" selection-end-line="93" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../uen/application/modules/master/models/master_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1043,13 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tpvics/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1579">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/skipQuestions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -1064,26 +1053,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics_.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/get_excel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="351" column="42" lean-forward="true" selection-start-line="351" selection-start-column="42" selection-end-line="351" selection-end-column="42" />
+        <state relative-caret-position="271">
+          <caret line="190" column="143" selection-start-line="190" selection-start-column="137" selection-end-line="190" selection-end-column="143" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="198" column="15" lean-forward="true" selection-start-line="198" selection-start-column="15" selection-end-line="198" selection-end-column="15" />
+        <state relative-caret-position="-2704">
+          <caret line="543" column="43" lean-forward="true" selection-start-line="543" selection-start-column="43" selection-end-line="543" selection-end-column="43" />
           <folding>
             <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
             <element signature="e#487#588#0#PHP" />
-            <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
-            <element signature="e#15358#15515#0#PHP" />
-            <element signature="e#15469#15515#0#PHP" />
-            <element signature="e#15524#16116#0#PHP" />
-            <element signature="e#16132#16479#0#PHP" />
             <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
+            <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
             <element signature="n#collected_households#0;n#Tpvics#0;n#!!top" />

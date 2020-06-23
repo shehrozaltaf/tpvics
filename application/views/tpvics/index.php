@@ -101,11 +101,16 @@
                                                         <a href="<?php echo base_url() . 'index.php/tpvics/index/d4_c'; ?>"><strong>BALOCHISTAN</strong><span
                                                                     class="pull-right badge bg-green"><?php echo $d4_c; ?></span></a>
                                                     </li>
-                                                    <!--<li>
-                                                        <a href="<?php /*echo base_url() . 'index.php/tpvics/index/d7_c'; */ ?>"><strong>GILGIT
+                                                    <li>
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d7_c'; ?>"><strong>GILGIT
                                                                 BALTISTAN</strong><span
-                                                                    class="pull-right badge bg-green"><?php /*echo $d7_c; */ ?></span></a>
-                                                    </li>-->
+                                                                    class="pull-right badge bg-green"><?php echo $d7_c; ?></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d8_c'; ?>"><strong>AZAD
+                                                                JAMMU AND KASHMIR</strong><span
+                                                                    class="pull-right badge bg-green"><?php echo $d8_c; ?></span></a>
+                                                    </li>
                                                     <li>
                                                         <a href="<?php echo base_url() . 'index.php/tpvics/index/d9_c'; ?>"><strong>ADJACENT
                                                                 AREAS-FR</strong><span
@@ -156,11 +161,17 @@
                                                         <a href="<?php echo base_url() . 'index.php/tpvics/index/d4_ip'; ?>"><strong>BALOCHISTAN</strong><span
                                                                     class="pull-right badge bg-orange"><?php echo $d4_ip; ?></span></a>
                                                     </li>
-                                                    <!-- <li>
-                                                        <a href="<?php /*echo base_url() . 'index.php/tpvics/index/d7_ip'; */ ?>"><strong>GILGIT
+                                                    <li>
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d7_ip'; ?>"><strong>GILGIT
                                                                 BALTISTAN</strong><span
-                                                                    class="pull-right badge bg-orange"><?php /*echo $d7_ip; */ ?></span></a>
-                                                    </li>-->
+                                                                    class="pull-right badge bg-orange"><?php echo $d7_ip; ?></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo base_url() . 'index.php/tpvics/index/d8_ip'; ?>"><strong>AZAD
+                                                                JAMMU AND KASHMIR</strong><span
+                                                                    class="pull-right badge bg-orange"><?php echo $d8_ip; ?></span></a>
+                                                    </li>
+
                                                     <li>
                                                         <a href="<?php echo base_url() . 'index.php/tpvics/index/d9_ip'; ?>"><strong>ADJACENT
                                                                 AREAS-FR</strong><span
@@ -207,9 +218,13 @@
                                                     <li><a href="#"><strong>BALOCHISTAN</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $d4_r; ?></span></a>
                                                     </li>
-                                                    <!--   <li><a href="#"><strong>GILGIT BALTISTAN</strong><span
-                                                                    class="pull-right badge bg-red"><?php /*echo $d7_r; */ ?></span></a>
-                                                    </li>-->
+                                                    <li><a href="#"><strong>GILGIT BALTISTAN</strong><span
+                                                                    class="pull-right badge bg-red"><?php echo $d7_r; ?></span></a>
+                                                    </li>
+                                                    <li><a href="#"><strong>AZAD
+                                                                JAMMU AND KASHMIR</strong><span
+                                                                    class="pull-right badge bg-red"><?php echo $d8_r; ?></span></a>
+                                                    </li>
                                                     <li><a href="#"><strong>ADJACENT AREAS-FR</strong><span
                                                                     class="pull-right badge bg-red"><?php echo $d9_r; ?></span></a>
                                                     </li>
@@ -285,6 +300,8 @@
                                         $province = 'Balochistan';
                                     } elseif ($row2->enumcode == 7) {
                                         $province = 'Gilgit Baltistan';
+                                    } elseif ($row2->enumcode == 8) {
+                                        $province = 'AZAD JAMMU AND KASHMIR';
                                     } elseif ($row2->enumcode == 9) {
                                         $province = 'Adjacent Areas-FR';
                                     } else {
