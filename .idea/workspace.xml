@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="" />
+    <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,12 +18,33 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="174" column="77" selection-start-line="174" selection-start-column="73" selection-end-line="174" selection-end-column="77" />
+              <folding>
+                <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#487#588#0#PHP" />
+                <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#collected_households#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get</find>
-      <find>logged_in</find>
       <find>index</find>
       <find>index_page</find>
       <find>edit_user</find>
@@ -49,6 +73,8 @@
       <find>household</find>
       <find>$status</find>
       <find>KHYBER</find>
+      <find>randomized_clusters</find>
+      <find>$c_r_clusters</find>
     </findStrings>
     <replaceStrings>
       <replace>hh18</replace>
@@ -155,6 +181,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,11 +189,21 @@
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -266,13 +303,10 @@
       <workItem from="1592655503662" duration="2751000" />
       <workItem from="1592816392484" duration="45000" />
       <workItem from="1592892061516" duration="6658000" />
-    </task>
-    <task id="LOCAL-00007" summary="changes">
-      <created>1588585632720</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1588585632720</updated>
+      <workItem from="1592921909817" duration="40000" />
+      <workItem from="1592996045223" duration="3552000" />
+      <workItem from="1593062147834" duration="80000" />
+      <workItem from="1593071561928" duration="2348000" />
     </task>
     <task id="LOCAL-00008" summary="Skip Questions">
       <created>1588673452552</created>
@@ -610,16 +644,24 @@
       <option name="project" value="LOCAL" />
       <updated>1592921706891</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Gilgit &amp; Azad Jammu">
+      <created>1592921942011</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1592921942011</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166606000" />
+    <option name="totallyTimeSpent" value="172626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25794622" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27017114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1005,15 +1047,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="190" column="143" selection-start-line="190" selection-start-column="137" selection-end-line="190" selection-end-column="143" />
+        <state relative-caret-position="410">
+          <caret line="342" column="110" selection-start-line="342" selection-start-column="89" selection-end-line="342" selection-end-column="110" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="708" column="9" lean-forward="true" selection-start-line="708" selection-start-column="9" selection-end-line="708" selection-end-column="9" />
+        <state relative-caret-position="374">
+          <caret line="174" column="77" selection-start-line="174" selection-start-column="73" selection-end-line="174" selection-end-column="77" />
           <folding>
             <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
             <element signature="e#487#588#0#PHP" />

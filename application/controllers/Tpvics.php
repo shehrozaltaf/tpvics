@@ -189,6 +189,7 @@ GROUP BY fa.cluster_code
 					inner join listings l on l.hh02 = c.cluster_no
 					where SUBSTRING (l.enumcode, 1, 1)= '$d' and c.randomized = '1'
 					and l.username not in('afg12345','user0001','user0113','user0123','user0211','user0234','user0252','user0414','user0432', 'user0434')
+					
 					and (select count(*) from bl_randomised where dist_id = l.enumcode and hh02 = l.hh02) = (select count(distinct rndid) from forms where SUBSTRING(cluster_code, 1, 3) = l.enumcode and cluster_code = l.hh02 and istatus > 0 and istatus < 96 and istatus is not null and istatus != '' and istatus != 'null')
 					group by l.enumcode, l.hh02
 					order by l.enumcode,l.hh02");
