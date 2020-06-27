@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tpvics/skipQuestions.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/skipQuestions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +18,30 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+            <state relative-caret-position="866">
+              <caret line="1040" column="21" selection-start-line="1023" selection-start-column="27" selection-end-line="1040" selection-end-column="21" />
+              <folding>
+                <element signature="e#487#588#0#PHP" />
+                <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/tpvics/skipQuestions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -32,7 +50,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>edit_user</find>
       <find>edit</find>
       <find>$cc_d1</find>
       <find>collected_households</find>
@@ -62,6 +79,7 @@
       <find>get_randomized_status</find>
       <find>addExcelData</find>
       <find>$table</find>
+      <find>skip</find>
     </findStrings>
     <replaceStrings>
       <replace>hh18</replace>
@@ -102,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Project.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Module.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Language.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Documents.php" />
@@ -153,6 +170,7 @@
         <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/application/views/tpvics/skipQuestions.php" />
       </list>
     </option>
   </component>
@@ -174,6 +192,30 @@
           <expand>
             <path>
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -284,14 +326,9 @@
       <workItem from="1593062147834" duration="80000" />
       <workItem from="1593071561928" duration="6050000" />
       <workItem from="1593094151615" duration="1221000" />
-      <workItem from="1593196752715" duration="47000" />
-    </task>
-    <task id="LOCAL-00009" summary="Skip Questions">
-      <created>1588675498959</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1588675498959</updated>
+      <workItem from="1593196752715" duration="149000" />
+      <workItem from="1593238263107" duration="134000" />
+      <workItem from="1593251500208" duration="859000" />
     </task>
     <task id="LOCAL-00010" summary="Skip Questions">
       <created>1588680861865</created>
@@ -629,17 +666,24 @@
       <option name="project" value="LOCAL" />
       <updated>1593087255759</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="imasges">
+      <created>1593196883957</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1593196883958</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177596000" />
+    <option name="totallyTimeSpent" value="178691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27689487" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28422982" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -667,7 +711,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/dashboard" />
     </ignored-roots>
-    <MESSAGE value="Skip Question" />
     <MESSAGE value="Sync Report Households" />
     <MESSAGE value="User role" />
     <MESSAGE value="Randomization Schedular" />
@@ -692,7 +735,8 @@
     <MESSAGE value="househoild atleast one child" />
     <MESSAGE value="Gilgit &amp; Azad Jammu" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="imasges" />
+    <option name="LAST_COMMIT_MESSAGE" value="imasges" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -953,13 +997,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/application/views/tpvics/randomized_households.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/randomized_households.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/tpvics/skipQuestions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics_.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1023,10 +1060,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="59" column="65" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="1072" column="16" lean-forward="true" selection-start-line="1072" selection-start-column="16" selection-end-line="1072" selection-end-column="16" />
+        <state relative-caret-position="866">
+          <caret line="1040" column="21" selection-start-line="1023" selection-start-column="27" selection-end-line="1040" selection-end-column="21" />
           <folding>
             <element signature="e#487#588#0#PHP" />
             <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
@@ -1034,16 +1078,15 @@
             <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
             <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
             <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
             <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/skipQuestions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+        <state relative-caret-position="34">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
         </state>
       </provider>
     </entry>

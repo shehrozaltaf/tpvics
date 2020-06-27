@@ -41,7 +41,8 @@
                                                 echo 'Skip Pecentage';
                                             } else {
                                                 echo strtoupper($k);
-                                            } ?></th>
+                                            } ?>
+                                        </th>
 
                                     <?php } ?>
                                 </tr>
