@@ -737,8 +737,10 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
 		and hh08a1 = '1' and hh12 = '1'  and hh02 = '$cluster' order by tabNo, deviceid, cast(hh03 as int), cast(hh07 as int)");
         if ($dataset->num_rows() > 0) {
             $residential_structures = $this->tpvics->query("select distinct hh03, tabNo from listings where hh02 = '$cluster' and hh08a1 = '1' and hh12='1' ")->num_rows();
-            $this->tpvics->query("update clusters set randomized = '1' where cluster_no = '$cluster'");
+//            $this->tpvics->query("update clusters set randomized = '1' where cluster_no = '$cluster'");
             if ($dataset->num_rows() > $sample) {
+                echo 'if';
+                exit();
                 $quotient = $dataset->num_rows() / $sample;
                 $random_start = rand(1, $quotient);
                 $random_point = $random_start;
@@ -763,7 +765,7 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                         'tabNo' => $result[$index - 1]['tabNo'],
                         'user_id' => $this->users->db->username,
                     );
-                    $this->tpvics->insert('bl_randomised', $data);
+//                    $this->tpvics->insert('bl_randomised', $data);
                     $random_point = $random_point + $quotient;
                     $index = floor($random_point);
                 }
@@ -771,15 +773,18 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                 $flash_msg = "Cluster No " . $cluster . " Randomized successfully";
                 $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
                 $this->session->set_flashdata('message', $value);
-                if ($this->users->in_group('admin') || $this->users->in_group('management')) {
-                    redirect('index.php/Tpvics/index/' . $this->uri->segment(4));
-                } else {
-                    redirect('index.php/Tpvics/index');
-                }
+                /* if ($this->users->in_group('admin') || $this->users->in_group('management')) {
+                     redirect('index.php/Tpvics/index/' . $this->uri->segment(4));
+                 } else {
+                     redirect('index.php/Tpvics/index');
+                 }*/
             } else {
                 $result = $dataset->result_array();
+
                 $quotient = $dataset->num_rows() / count($result);
+
                 $random_start = rand(1, $quotient);
+
                 for ($i = 0; $i < count($result); $i++) {
                     $data = array(
                         'randDT' => date('Y-m-d h:i:s'),
@@ -799,16 +804,21 @@ not EXISTS ( SELECT b.hh02 FROM bl_randomised b WHERE a.hh02 = b.hh02 ) group by
                         'tabNo' => $result[$i]['tabNo'],
                         'user_id' => $this->users->db->username,
                     );
-                    $this->tpvics->insert('bl_randomised', $data);
+                    echo '<pre>';
+                    print_r($data);
+                    echo '</pre>';
+//                    $this->tpvics->insert('bl_randomised', $data);
                 }
+
+                exit();
                 $flash_msg = "Cluster No " . $cluster . " Randomized successfully";
                 $value = '<div class="callout callout-success"><p>' . $flash_msg . '</p></div>';
                 $this->session->set_flashdata('message', $value);
-                if ($this->users->in_group('admin') || $this->users->in_group('management')) {
+                /*if ($this->users->in_group('admin') || $this->users->in_group('management')) {
                     redirect('index.php/Tpvics/index/' . $this->uri->segment(4));
                 } else {
                     redirect('index.php/Tpvics/index');
-                }
+                }*/
             }
         } else {
             $flash_msg = "Cluster No " . $cluster . " Has Zero Households";

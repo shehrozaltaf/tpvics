@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2a4d5b48-6c6b-4ee8-b225-0a413df0dcc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/tpvics/skipQuestions.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tpvics/skipQuestions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Tpvics.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Tpvics.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,29 +19,241 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="866">
-              <caret line="1040" column="21" selection-start-line="1023" selection-start-column="27" selection-end-line="1040" selection-end-column="21" />
+            <state relative-caret-position="51">
+              <caret line="3" column="28" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
               <folding>
+                <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
                 <element signature="e#487#588#0#PHP" />
+                <element signature="n#dashboard#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#716#16984#0#PHP" />
+                <element signature="e#927#2008#0#PHP" />
+                <element signature="e#1126#1937#0#PHP" />
+                <element signature="e#1243#1351#0#PHP" />
+                <element signature="e#1352#1459#0#PHP" />
+                <element signature="e#1460#1573#0#PHP" />
+                <element signature="e#1574#1692#0#PHP" />
+                <element signature="e#1693#1817#0#PHP" />
+                <element signature="e#1818#1937#0#PHP" />
+                <element signature="e#2132#2358#0#PHP" />
+                <element signature="e#2389#2746#0#PHP" />
+                <element signature="e#3099#4845#0#PHP" />
+                <element signature="e#3157#4831#0#PHP" />
+                <element signature="e#3203#3373#0#PHP" />
+                <element signature="e#3300#3373#0#PHP" />
+                <element signature="e#3397#4831#0#PHP" />
+                <element signature="e#3443#3613#0#PHP" />
+                <element signature="e#3540#3613#0#PHP" />
+                <element signature="e#3637#4831#0#PHP" />
+                <element signature="e#3683#3853#0#PHP" />
+                <element signature="e#3780#3853#0#PHP" />
+                <element signature="e#3877#4831#0#PHP" />
+                <element signature="e#3923#4093#0#PHP" />
+                <element signature="e#4020#4093#0#PHP" />
+                <element signature="e#4117#4831#0#PHP" />
+                <element signature="e#4163#4333#0#PHP" />
+                <element signature="e#4260#4333#0#PHP" />
+                <element signature="e#4357#4831#0#PHP" />
+                <element signature="e#4403#4573#0#PHP" />
+                <element signature="e#4500#4573#0#PHP" />
+                <element signature="e#4597#4831#0#PHP" />
+                <element signature="e#4643#4813#0#PHP" />
+                <element signature="e#4740#4813#0#PHP" />
+                <element signature="e#5844#13680#0#PHP" />
+                <element signature="e#6019#11133#0#PHP" />
+                <element signature="e#6087#7495#0#PHP" />
+                <element signature="e#7520#11133#0#PHP" />
+                <element signature="e#7587#9307#0#PHP" />
+                <element signature="e#9332#11133#0#PHP" />
+                <element signature="e#9399#11114#0#PHP" />
+                <element signature="e#11148#13680#0#PHP" />
+                <element signature="e#11171#12283#0#PHP" />
+                <element signature="e#12326#13665#0#PHP" />
+                <element signature="e#13693#16984#0#PHP" />
+                <element signature="e#13856#14008#0#PHP" />
+                <element signature="e#14061#14269#0#PHP" />
+                <element signature="e#14301#14859#0#PHP" />
+                <element signature="e#14972#15522#0#PHP" />
+                <element signature="e#15031#15508#0#PHP" />
+                <element signature="e#15078#15248#0#PHP" />
+                <element signature="e#15175#15248#0#PHP" />
+                <element signature="e#15273#15508#0#PHP" />
+                <element signature="e#15320#15490#0#PHP" />
+                <element signature="e#15417#15490#0#PHP" />
+                <element signature="e#15915#16972#0#PHP" />
+                <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#17242#17399#0#PHP" />
+                <element signature="e#17353#17399#0#PHP" />
+                <element signature="e#17408#18000#0#PHP" />
+                <element signature="e#18016#18363#0#PHP" />
+                <element signature="e#18376#18540#0#PHP" />
+                <element signature="n#index#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#18656#35451#0#PHP" />
+                <element signature="e#18867#19948#0#PHP" />
+                <element signature="e#19066#19877#0#PHP" />
+                <element signature="e#19183#19291#0#PHP" />
+                <element signature="e#19292#19399#0#PHP" />
+                <element signature="e#19400#19513#0#PHP" />
+                <element signature="e#19514#19632#0#PHP" />
+                <element signature="e#19633#19757#0#PHP" />
+                <element signature="e#19758#19877#0#PHP" />
+                <element signature="e#20050#20748#0#PHP" />
+                <element signature="e#21255#23444#0#PHP" />
+                <element signature="e#21315#23430#0#PHP" />
+                <element signature="e#21403#21594#0#PHP" />
+                <element signature="e#21521#21594#0#PHP" />
+                <element signature="e#21618#23430#0#PHP" />
+                <element signature="e#21706#21897#0#PHP" />
+                <element signature="e#21824#21897#0#PHP" />
+                <element signature="e#21921#23430#0#PHP" />
+                <element signature="e#22009#22200#0#PHP" />
+                <element signature="e#22127#22200#0#PHP" />
+                <element signature="e#22224#23430#0#PHP" />
+                <element signature="e#22312#22503#0#PHP" />
+                <element signature="e#22430#22503#0#PHP" />
+                <element signature="e#22527#23430#0#PHP" />
+                <element signature="e#22615#22806#0#PHP" />
+                <element signature="e#22733#22806#0#PHP" />
+                <element signature="e#22830#23430#0#PHP" />
+                <element signature="e#22918#23109#0#PHP" />
+                <element signature="e#23036#23109#0#PHP" />
+                <element signature="e#23133#23430#0#PHP" />
+                <element signature="e#23221#23412#0#PHP" />
+                <element signature="e#23339#23412#0#PHP" />
+                <element signature="e#24652#25645#0#PHP" />
+                <element signature="e#24713#25631#0#PHP" />
+                <element signature="e#24845#25631#0#PHP" />
+                <element signature="e#24977#25631#0#PHP" />
+                <element signature="e#25109#25631#0#PHP" />
+                <element signature="e#25241#25631#0#PHP" />
+                <element signature="e#25373#25631#0#PHP" />
+                <element signature="e#25505#25631#0#PHP" />
+                <element signature="e#26108#30830#0#PHP" />
+                <element signature="e#26299#29474#0#PHP" />
+                <element signature="e#26373#27867#0#PHP" />
+                <element signature="e#27887#29474#0#PHP" />
+                <element signature="e#27941#29455#0#PHP" />
+                <element signature="e#29489#30830#0#PHP" />
+                <element signature="e#29539#30815#0#PHP" />
+                <element signature="e#30841#35451#0#PHP" />
+                <element signature="e#31024#31243#0#PHP" />
+                <element signature="e#31273#31946#0#PHP" />
+                <element signature="e#32100#32776#0#PHP" />
+                <element signature="e#32160#32762#0#PHP" />
+                <element signature="e#32248#32439#0#PHP" />
+                <element signature="e#32366#32439#0#PHP" />
+                <element signature="e#32464#32762#0#PHP" />
+                <element signature="e#32552#32743#0#PHP" />
+                <element signature="e#32670#32743#0#PHP" />
+                <element signature="e#33294#33622#0#PHP" />
+                <element signature="e#33356#33608#0#PHP" />
+                <element signature="e#33485#33608#0#PHP" />
+                <element signature="e#33841#35440#0#PHP" />
+                <element signature="e#35506#35685#0#PHP" />
+                <element signature="e#35695#35799#0#PHP" />
+                <element signature="e#35831#36013#0#PHP" />
+                <element signature="e#36023#36234#0#PHP" />
+                <element signature="e#36086#36224#0#PHP" />
+                <element signature="e#36357#36550#0#PHP" />
+                <element signature="e#36409#36540#0#PHP" />
                 <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#37157#37689#0#PHP" />
+                <element signature="e#37436#37679#0#PHP" />
+                <element signature="e#37607#37679#0#PHP" />
+                <element signature="e#37709#38033#0#PHP" />
+                <element signature="e#38043#43282#0#PHP" />
+                <element signature="e#38365#42769#0#PHP" />
+                <element signature="e#38728#40142#0#PHP" />
+                <element signature="e#38787#39940#0#PHP" />
+                <element signature="e#40407#40675#0#PHP" />
+                <element signature="e#40690#42769#0#PHP" />
+                <element signature="e#40887#42203#0#PHP" />
+                <element signature="e#40957#42010#0#PHP" />
+                <element signature="e#42492#42755#0#PHP" />
+                <element signature="e#42780#43282#0#PHP" />
+                <element signature="e#43029#43272#0#PHP" />
+                <element signature="e#43200#43272#0#PHP" />
                 <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#43498#44036#0#PHP" />
+                <element signature="e#44600#44856#0#PHP" />
+                <element signature="e#45377#45546#0#PHP" />
+                <element signature="e#46244#46655#0#PHP" />
+                <element signature="n#get_excel#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#47897#48740#0#PHP" />
                 <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#randomized_households#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#49213#49370#0#PHP" />
+                <element signature="n#collected_households#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#49715#49850#0#PHP" />
                 <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
                 <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
-                <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
+                <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#52215#52318#0#PHP" />
+                <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
+                <element signature="e#52917#56864#0#PHP" />
+                <element signature="e#52979#53073#0#PHP" />
+                <element signature="e#53167#56864#0#PHP" />
+                <element signature="e#53186#53412#0#PHP" />
+                <element signature="e#53321#53412#0#PHP" />
+                <element signature="e#53425#56853#0#PHP" />
+                <element signature="e#53739#56741#0#PHP" />
+                <element signature="e#53996#54571#0#PHP" />
+                <element signature="e#54340#54549#0#PHP" />
+                <element signature="e#54449#54549#0#PHP" />
+                <element signature="e#54660#54922#0#PHP" />
+                <element signature="e#54756#54861#0#PHP" />
+                <element signature="e#55260#56251#0#PHP" />
+                <element signature="e#55328#56229#0#PHP" />
+                <element signature="e#56272#56610#0#PHP" />
+                <element signature="e#56629#56741#0#PHP" />
+                <element signature="e#56756#56853#0#PHP" />
+                <element signature="e#57143#59708#0#PHP" />
+                <element signature="e#57205#57299#0#PHP" />
+                <element signature="e#57393#59708#0#PHP" />
+                <element signature="e#57412#57638#0#PHP" />
+                <element signature="e#57547#57638#0#PHP" />
+                <element signature="e#57651#59697#0#PHP" />
+                <element signature="e#57965#59585#0#PHP" />
+                <element signature="e#58222#58797#0#PHP" />
+                <element signature="e#58566#58775#0#PHP" />
+                <element signature="e#58675#58775#0#PHP" />
+                <element signature="e#58856#59118#0#PHP" />
+                <element signature="e#58952#59057#0#PHP" />
+                <element signature="e#59214#59454#0#PHP" />
+                <element signature="e#59344#59454#0#PHP" />
+                <element signature="e#59473#59585#0#PHP" />
+                <element signature="e#59600#59697#0#PHP" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/tpvics/skipQuestions.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/tpvics/upload_excel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+            <state relative-caret-position="1122">
+              <caret line="66" column="30" selection-start-line="63" selection-start-column="24" selection-end-line="66" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/tpvics/sync_report.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="41" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1479">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
             </state>
           </provider>
         </entry>
@@ -50,7 +262,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>edit</find>
       <find>$cc_d1</find>
       <find>collected_households</find>
       <find>ml_</find>
@@ -80,6 +291,7 @@
       <find>addExcelData</find>
       <find>$table</find>
       <find>skip</find>
+      <find>insert</find>
     </findStrings>
     <replaceStrings>
       <replace>hh18</replace>
@@ -167,15 +379,16 @@
         <option value="$PROJECT_DIR$/application/views/tpvics/index.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/dashboard.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/collected_households.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/application/views/tpvics/skipQuestions.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Tpvics.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="854" />
     <option name="height" value="1017" />
   </component>
@@ -198,6 +411,12 @@
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpvics" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpvics" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tpvics" type="b2602c69:ProjectViewProjectNode" />
@@ -234,6 +453,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/users" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/application/controllers/a.php" />
   </component>
@@ -328,14 +553,10 @@
       <workItem from="1593094151615" duration="1221000" />
       <workItem from="1593196752715" duration="149000" />
       <workItem from="1593238263107" duration="134000" />
-      <workItem from="1593251500208" duration="859000" />
-    </task>
-    <task id="LOCAL-00010" summary="Skip Questions">
-      <created>1588680861865</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1588680861865</updated>
+      <workItem from="1593251500208" duration="887000" />
+      <workItem from="1593263003398" duration="3873000" />
+      <workItem from="1594460340312" duration="2574000" />
+      <workItem from="1594465557954" duration="1260000" />
     </task>
     <task id="LOCAL-00011" summary="Skip Questions">
       <created>1588850851220</created>
@@ -673,17 +894,24 @@
       <option name="project" value="LOCAL" />
       <updated>1593196883958</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="images">
+      <created>1593252972363</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1593252972364</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178691000" />
+    <option name="totallyTimeSpent" value="186426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28422982" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29523227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -711,7 +939,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/dashboard" />
     </ignored-roots>
-    <MESSAGE value="Sync Report Households" />
     <MESSAGE value="User role" />
     <MESSAGE value="Randomization Schedular" />
     <MESSAGE value="Line listing &amp; Randomization" />
@@ -736,7 +963,8 @@
     <MESSAGE value="Gilgit &amp; Azad Jammu" />
     <MESSAGE value="changes" />
     <MESSAGE value="imasges" />
-    <option name="LAST_COMMIT_MESSAGE" value="imasges" />
+    <MESSAGE value="images" />
+    <option name="LAST_COMMIT_MESSAGE" value="images" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -768,13 +996,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/tpvics/make_pdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/cluster_progress.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -988,13 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tpvics/sync_report.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/application/views/tpvics/randomized_households.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/randomized_households.php" />
     <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics_.php">
@@ -1046,20 +1260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tpvics/upload_excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="44" column="80" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="75" selection-start-line="75" selection-end-line="101" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1067,26 +1267,248 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="866">
-          <caret line="1040" column="21" selection-start-line="1023" selection-start-column="27" selection-end-line="1040" selection-end-column="21" />
-          <folding>
-            <element signature="e#487#588#0#PHP" />
-            <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
-            <element signature="n#__destruct#0;n#Tpvics#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/tpvics/skipQuestions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/upload_excel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="30" selection-start-line="63" selection-start-column="24" selection-end-line="66" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tpvics/sync_report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="41" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/third_party/MX/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Tpvics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding>
+            <element signature="n#__construct#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#487#588#0#PHP" />
+            <element signature="n#dashboard#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#716#16984#0#PHP" />
+            <element signature="e#927#2008#0#PHP" />
+            <element signature="e#1126#1937#0#PHP" />
+            <element signature="e#1243#1351#0#PHP" />
+            <element signature="e#1352#1459#0#PHP" />
+            <element signature="e#1460#1573#0#PHP" />
+            <element signature="e#1574#1692#0#PHP" />
+            <element signature="e#1693#1817#0#PHP" />
+            <element signature="e#1818#1937#0#PHP" />
+            <element signature="e#2132#2358#0#PHP" />
+            <element signature="e#2389#2746#0#PHP" />
+            <element signature="e#3099#4845#0#PHP" />
+            <element signature="e#3157#4831#0#PHP" />
+            <element signature="e#3203#3373#0#PHP" />
+            <element signature="e#3300#3373#0#PHP" />
+            <element signature="e#3397#4831#0#PHP" />
+            <element signature="e#3443#3613#0#PHP" />
+            <element signature="e#3540#3613#0#PHP" />
+            <element signature="e#3637#4831#0#PHP" />
+            <element signature="e#3683#3853#0#PHP" />
+            <element signature="e#3780#3853#0#PHP" />
+            <element signature="e#3877#4831#0#PHP" />
+            <element signature="e#3923#4093#0#PHP" />
+            <element signature="e#4020#4093#0#PHP" />
+            <element signature="e#4117#4831#0#PHP" />
+            <element signature="e#4163#4333#0#PHP" />
+            <element signature="e#4260#4333#0#PHP" />
+            <element signature="e#4357#4831#0#PHP" />
+            <element signature="e#4403#4573#0#PHP" />
+            <element signature="e#4500#4573#0#PHP" />
+            <element signature="e#4597#4831#0#PHP" />
+            <element signature="e#4643#4813#0#PHP" />
+            <element signature="e#4740#4813#0#PHP" />
+            <element signature="e#5844#13680#0#PHP" />
+            <element signature="e#6019#11133#0#PHP" />
+            <element signature="e#6087#7495#0#PHP" />
+            <element signature="e#7520#11133#0#PHP" />
+            <element signature="e#7587#9307#0#PHP" />
+            <element signature="e#9332#11133#0#PHP" />
+            <element signature="e#9399#11114#0#PHP" />
+            <element signature="e#11148#13680#0#PHP" />
+            <element signature="e#11171#12283#0#PHP" />
+            <element signature="e#12326#13665#0#PHP" />
+            <element signature="e#13693#16984#0#PHP" />
+            <element signature="e#13856#14008#0#PHP" />
+            <element signature="e#14061#14269#0#PHP" />
+            <element signature="e#14301#14859#0#PHP" />
+            <element signature="e#14972#15522#0#PHP" />
+            <element signature="e#15031#15508#0#PHP" />
+            <element signature="e#15078#15248#0#PHP" />
+            <element signature="e#15175#15248#0#PHP" />
+            <element signature="e#15273#15508#0#PHP" />
+            <element signature="e#15320#15490#0#PHP" />
+            <element signature="e#15417#15490#0#PHP" />
+            <element signature="e#15915#16972#0#PHP" />
+            <element signature="n#clusters_by_district#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#17242#17399#0#PHP" />
+            <element signature="e#17353#17399#0#PHP" />
+            <element signature="e#17408#18000#0#PHP" />
+            <element signature="e#18016#18363#0#PHP" />
+            <element signature="e#18376#18540#0#PHP" />
+            <element signature="n#index#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#18656#35451#0#PHP" />
+            <element signature="e#18867#19948#0#PHP" />
+            <element signature="e#19066#19877#0#PHP" />
+            <element signature="e#19183#19291#0#PHP" />
+            <element signature="e#19292#19399#0#PHP" />
+            <element signature="e#19400#19513#0#PHP" />
+            <element signature="e#19514#19632#0#PHP" />
+            <element signature="e#19633#19757#0#PHP" />
+            <element signature="e#19758#19877#0#PHP" />
+            <element signature="e#20050#20748#0#PHP" />
+            <element signature="e#21255#23444#0#PHP" />
+            <element signature="e#21315#23430#0#PHP" />
+            <element signature="e#21403#21594#0#PHP" />
+            <element signature="e#21521#21594#0#PHP" />
+            <element signature="e#21618#23430#0#PHP" />
+            <element signature="e#21706#21897#0#PHP" />
+            <element signature="e#21824#21897#0#PHP" />
+            <element signature="e#21921#23430#0#PHP" />
+            <element signature="e#22009#22200#0#PHP" />
+            <element signature="e#22127#22200#0#PHP" />
+            <element signature="e#22224#23430#0#PHP" />
+            <element signature="e#22312#22503#0#PHP" />
+            <element signature="e#22430#22503#0#PHP" />
+            <element signature="e#22527#23430#0#PHP" />
+            <element signature="e#22615#22806#0#PHP" />
+            <element signature="e#22733#22806#0#PHP" />
+            <element signature="e#22830#23430#0#PHP" />
+            <element signature="e#22918#23109#0#PHP" />
+            <element signature="e#23036#23109#0#PHP" />
+            <element signature="e#23133#23430#0#PHP" />
+            <element signature="e#23221#23412#0#PHP" />
+            <element signature="e#23339#23412#0#PHP" />
+            <element signature="e#24652#25645#0#PHP" />
+            <element signature="e#24713#25631#0#PHP" />
+            <element signature="e#24845#25631#0#PHP" />
+            <element signature="e#24977#25631#0#PHP" />
+            <element signature="e#25109#25631#0#PHP" />
+            <element signature="e#25241#25631#0#PHP" />
+            <element signature="e#25373#25631#0#PHP" />
+            <element signature="e#25505#25631#0#PHP" />
+            <element signature="e#26108#30830#0#PHP" />
+            <element signature="e#26299#29474#0#PHP" />
+            <element signature="e#26373#27867#0#PHP" />
+            <element signature="e#27887#29474#0#PHP" />
+            <element signature="e#27941#29455#0#PHP" />
+            <element signature="e#29489#30830#0#PHP" />
+            <element signature="e#29539#30815#0#PHP" />
+            <element signature="e#30841#35451#0#PHP" />
+            <element signature="e#31024#31243#0#PHP" />
+            <element signature="e#31273#31946#0#PHP" />
+            <element signature="e#32100#32776#0#PHP" />
+            <element signature="e#32160#32762#0#PHP" />
+            <element signature="e#32248#32439#0#PHP" />
+            <element signature="e#32366#32439#0#PHP" />
+            <element signature="e#32464#32762#0#PHP" />
+            <element signature="e#32552#32743#0#PHP" />
+            <element signature="e#32670#32743#0#PHP" />
+            <element signature="e#33294#33622#0#PHP" />
+            <element signature="e#33356#33608#0#PHP" />
+            <element signature="e#33485#33608#0#PHP" />
+            <element signature="e#33841#35440#0#PHP" />
+            <element signature="e#35506#35685#0#PHP" />
+            <element signature="e#35695#35799#0#PHP" />
+            <element signature="e#35831#36013#0#PHP" />
+            <element signature="e#36023#36234#0#PHP" />
+            <element signature="e#36086#36224#0#PHP" />
+            <element signature="e#36357#36550#0#PHP" />
+            <element signature="e#36409#36540#0#PHP" />
+            <element signature="n#systematic_randomizer#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#37157#37689#0#PHP" />
+            <element signature="e#37436#37679#0#PHP" />
+            <element signature="e#37607#37679#0#PHP" />
+            <element signature="e#37709#38033#0#PHP" />
+            <element signature="e#38043#43282#0#PHP" />
+            <element signature="e#38365#42769#0#PHP" />
+            <element signature="e#38728#40142#0#PHP" />
+            <element signature="e#38787#39940#0#PHP" />
+            <element signature="e#40407#40675#0#PHP" />
+            <element signature="e#40690#42769#0#PHP" />
+            <element signature="e#40887#42203#0#PHP" />
+            <element signature="e#40957#42010#0#PHP" />
+            <element signature="e#42492#42755#0#PHP" />
+            <element signature="e#42780#43282#0#PHP" />
+            <element signature="e#43029#43272#0#PHP" />
+            <element signature="e#43200#43272#0#PHP" />
+            <element signature="n#make_pdf#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#43498#44036#0#PHP" />
+            <element signature="e#44600#44856#0#PHP" />
+            <element signature="e#45377#45546#0#PHP" />
+            <element signature="e#46244#46655#0#PHP" />
+            <element signature="n#get_excel#0;n#Tpvics#0;n#!!top" />
+            <element signature="n#cluster_progress#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#47897#48740#0#PHP" />
+            <element signature="n#test_data#0;n#Tpvics#0;n#!!top" />
+            <element signature="n#randomized_households#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#49213#49370#0#PHP" />
+            <element signature="n#collected_households#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#49715#49850#0#PHP" />
+            <element signature="n#sync_report#0;n#Tpvics#0;n#!!top" />
+            <element signature="n#getHousehold#0;n#Tpvics#0;n#!!top" />
+            <element signature="n#skipQuestions#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#52215#52318#0#PHP" />
+            <element signature="n#addExcelData2#0;n#Tpvics#0;n#!!top" />
+            <element signature="e#52917#56864#0#PHP" />
+            <element signature="e#52979#53073#0#PHP" />
+            <element signature="e#53167#56864#0#PHP" />
+            <element signature="e#53186#53412#0#PHP" />
+            <element signature="e#53321#53412#0#PHP" />
+            <element signature="e#53425#56853#0#PHP" />
+            <element signature="e#53739#56741#0#PHP" />
+            <element signature="e#53996#54571#0#PHP" />
+            <element signature="e#54340#54549#0#PHP" />
+            <element signature="e#54449#54549#0#PHP" />
+            <element signature="e#54660#54922#0#PHP" />
+            <element signature="e#54756#54861#0#PHP" />
+            <element signature="e#55260#56251#0#PHP" />
+            <element signature="e#55328#56229#0#PHP" />
+            <element signature="e#56272#56610#0#PHP" />
+            <element signature="e#56629#56741#0#PHP" />
+            <element signature="e#56756#56853#0#PHP" />
+            <element signature="e#57143#59708#0#PHP" />
+            <element signature="e#57205#57299#0#PHP" />
+            <element signature="e#57393#59708#0#PHP" />
+            <element signature="e#57412#57638#0#PHP" />
+            <element signature="e#57547#57638#0#PHP" />
+            <element signature="e#57651#59697#0#PHP" />
+            <element signature="e#57965#59585#0#PHP" />
+            <element signature="e#58222#58797#0#PHP" />
+            <element signature="e#58566#58775#0#PHP" />
+            <element signature="e#58675#58775#0#PHP" />
+            <element signature="e#58856#59118#0#PHP" />
+            <element signature="e#58952#59057#0#PHP" />
+            <element signature="e#59214#59454#0#PHP" />
+            <element signature="e#59344#59454#0#PHP" />
+            <element signature="e#59473#59585#0#PHP" />
+            <element signature="e#59600#59697#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
